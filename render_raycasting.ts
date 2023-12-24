@@ -69,7 +69,7 @@ namespace Render {
         WallScale = HalfTileImgScale, WallHeight = TileSize * WallScale
         H = X0 - TileSize * HalfTileImgScale, V = Y0 - TileSize * HalfTileImgScale
         AD_BC_Fpx2 = (one2 / Scale_Square) | 0
-        raycastingRender.lastRenderAngle=-1 // force refresh
+        myRender.lastRenderAngle=-1 // force refresh
     }
 
     export function getScaleY(){
@@ -81,7 +81,7 @@ namespace Render {
     export function setScaleY(value: number){
         TileImgScaleY = Math.clamp(1 / 8, Math.min(TileImgScaleX, Max_TileImgScaleY), value)
         // info.player4.setScore(TileImgScaleY*100)
-        raycastingRender.lastRenderAngle = -1 // force refresh
+        myRender.lastRenderAngle = -1 // force refresh
     }
 
     function rotatePoint(xIn: number, yIn: number) {
@@ -101,7 +101,7 @@ namespace Render {
 
     export const defaultFov = SW / SH / 2  //Wall just fill screen height when standing 1 tile away
 
-    export class RayCastingRender{
+    export class IsometricRender_Sideview{
 
         private tempScreen: Image = screen // image.create(SW, SH)
         private tempBackground: scene.BackgroundLayer //for "see through" when scene popped out
@@ -909,5 +909,5 @@ namespace Render {
     }
 
     //%fixedinstance
-    export const raycastingRender = new Render.RayCastingRender()
+    export const myRender = new Render.IsometricRender_Sideview()
 }

@@ -1,4 +1,4 @@
-namespace userconfig { //other console
+namespace userconfig {
     export const ARCADE_SCREEN_WIDTH = 320
     export const ARCADE_SCREEN_HEIGHT = 240
 }
@@ -10,11 +10,11 @@ const spawnTile = sprites.castle.tileGrass1
 scene.setBackgroundColor(0)
 // effects.blizzard.startScreenEffect(99999999, 99)
 
-const rcRender = Render.raycastingRender
+const myRender = Render.myRender
 let angle = 45
 Render.setViewAngleInDegree(angle)
 /**/
-rcRender.setWallSideTexture(img`
+myRender.setWallSideTexture(img`
     7 7 7 7 7 7 7 5 7 7 7 7 6 5 7 7
     7 5 7 7 7 7 7 6 7 7 7 6 5 7 7 7
     7 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7
@@ -50,7 +50,7 @@ rcRender.setWallSideTexture(img`
     7 7 5 7 7 7 7 7 7 7 7 7 7 7 7 7
 `)
 
-rcRender.setWallSideTexture(img`
+myRender.setWallSideTexture(img`
     . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
     4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 f
     4 5 f 5 5 5 5 5 5 5 5 5 5 f 5 f
@@ -86,7 +86,7 @@ rcRender.setWallSideTexture(img`
     f f f f f f f f f f f f f f f f
 `)
 
-rcRender.setWallSideTexture(img`
+myRender.setWallSideTexture(img`
     d 1 d d d d d d d 1 d d d d d d
     d 1 d d d d d d d 1 d d d d d d
     d 1 d d d d d d d 1 d d d d d d
@@ -107,16 +107,16 @@ rcRender.setWallSideTexture(img`
 
 
 // Render.moveWithController(0, 0, 0)
-controller.moveSprite(rcRender.sprSelf, 55, 0)
-rcRender.sprSelf.setScale(1)
-rcRender.sprSelf.ay=500
-tiles.placeOnTile(rcRender.sprSelf, tiles.getTileLocation(2, 8))
-Render.setSpriteAnimations(rcRender.sprSelf, Render.createAnimations(150, texturesHero[0], texturesHero[1], texturesHero[2], texturesHero[3]))
+controller.moveSprite(myRender.sprSelf, 55, 0)
+myRender.sprSelf.setScale(1)
+myRender.sprSelf.ay=500
+tiles.placeOnTile(myRender.sprSelf, tiles.getTileLocation(2, 8))
+Render.setSpriteAnimations(myRender.sprSelf, Render.createAnimations(150, texturesHero[0], texturesHero[1], texturesHero[2], texturesHero[3]))
 
 let count = 0
 function createSprite(x: number, y: number, vx: number, vy: number, textures: Image[][], kind: number) {
     const spr = sprites.create(textures[0][0], kind)
-    // rcRender.takeoverSceneSprites()
+    // myRender.takeoverSceneSprites()
     tiles.placeOnTile(spr, tiles.getTileLocation(x, y))
     spr.setVelocity(vx, vy)
     // setCharacterAnimationForSprite(spr, textures)
@@ -170,14 +170,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
     music.pewPew.play()
-    let s = sprites.createProjectileFromSprite(sprites.projectile.bubble1, rcRender.sprSelf, 66, 0)
+    let s = sprites.createProjectileFromSprite(sprites.projectile.bubble1, myRender.sprSelf, 66, 0)
     s.setScale(0.5)
 })
 
 controller.B.onEvent(ControllerButtonEvent.Pressed, () => {
-    if(tiles.tileAtLocationIsWall(rcRender.sprSelf.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom)))
-        rcRender.sprSelf.vy= -250
-    // rcRender.jumpWithHeightAndDuration(rcRender.sprSelf, tilemapScale * 2.5, 1000)
+    if(tiles.tileAtLocationIsWall(myRender.sprSelf.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom)))
+        myRender.sprSelf.vy= -250
+    // myRender.jumpWithHeightAndDuration(myRender.sprSelf, tilemapScale * 2.5, 1000)
 })
 
 let isAdjusting = false
@@ -185,13 +185,13 @@ let adjusted=false
 controller.menu.onEvent(ControllerButtonEvent.Pressed, () => {
     isAdjusting = true
     adjusted=false
-    controller.moveSprite(rcRender.sprSelf, 0, 0)
+    controller.moveSprite(myRender.sprSelf, 0, 0)
 })
 controller.menu.onEvent(ControllerButtonEvent.Released, () => {
     isAdjusting = false
     if (!adjusted)
         Render.toggleViewMode()
-    controller.moveSprite(rcRender.sprSelf, (rcRender.viewAngle < Math.PI ? 55 : -55), 0)
+    controller.moveSprite(myRender.sprSelf, (myRender.viewAngle < Math.PI ? 55 : -55), 0)
 })
 
 controller.up.onEvent(ControllerButtonEvent.Pressed, () => {
@@ -261,7 +261,7 @@ info.setLife(3)
 
 
 // 0<= dir <1, then may be added by 2 for avoid negative
-// rcRender.registerOnSpriteDirectionUpdate((spr, dir) => {
+// myRender.registerOnSpriteDirectionUpdate((spr, dir) => {
 //     // character.setCharacterState(spr, character.rule(characterAniDirs[Math.floor(dir * 4 + .5) % 4]))
 // })
 
