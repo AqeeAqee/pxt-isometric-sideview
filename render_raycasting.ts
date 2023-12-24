@@ -477,7 +477,7 @@ namespace Render {
             game.addScenePopHandler((oldScene) => {
                 const layers = ((game.currentScene().background as any)._layers as scene.BackgroundLayer[])
                 layers.removeElement(this.tempBackground)
-                info.player3.setScore(layers.length)
+                // info.player3.setScore(layers.length)
                 this.tempBackground=undefined
                 this.tempScreen=screen;
                 control.__screen.setupUpdate(() => {
@@ -712,7 +712,7 @@ namespace Render {
 
             while (this._angle < 0) this._angle += Math.PI * 2
             while (this._angle >Math.PI*2) this._angle -= Math.PI * 2
-            info.player2.setScore(this._angle*180/Math.PI)
+            // info.player2.setScore(this._angle*180/Math.PI)
             const angle = this._angle - Math.PI / 2
 
             if (!this.wholeWalls) {
@@ -753,7 +753,8 @@ namespace Render {
 
                     this.shearAndCache_AllTiles(this.map.getTileset(), this.shearedTiles, A_Fpx * B_Fpx >= 0 ? 0 : 1)
                     
-                }); info.setLife(ms/this.map.getTileset().length) // this.tempScreen.print(ms.toString(), 0, 110)
+                }); 
+                // info.setLife(ms/this.map.getTileset().length) // this.tempScreen.print(ms.toString(), 0, 110)
 
                 this.lastRenderAngle=this._angle
             }
@@ -862,7 +863,8 @@ namespace Render {
                     if(this.spriteParticles.indexOf(p)<0)p.__draw(game.currentScene().camera)
                 })
 
-        });info.setScore(ms) // this.tempScreen.print(ms.toString(), 0, 20)
+        });
+        // info.setScore(ms) // this.tempScreen.print(ms.toString(), 0, 20)
         }
         
         registerOnSpriteDirectionUpdate(handler: (spr: Sprite, dir: number) => void) {
