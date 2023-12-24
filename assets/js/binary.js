@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.46/---simulator","cdnUrl":"https://makecode.trafficmanager.cn","version":"0.0.1","target":"arcade","targetVersion":"1.12.46","repo":"aqeeaqee/pxt-raycasting-sideview"}
-// total=2244956 new=16.39% cached=78.79% other=4.82%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.46/---simulator","cdnUrl":"https://makecode.trafficmanager.cn","version":"0.0.2","target":"arcade","targetVersion":"1.12.46","repo":"aqeeaqee/pxt-raycasting-sideview"}
+// total=2246972 new=16.46% cached=78.72% other=4.82%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -654,7 +654,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P93353(s) {
+function _main___P111861(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1253,35 +1253,35 @@ switch (step) {
   case 46:
     r0 = s.retval;
     r0 = pxsim_ImageMethods.height(globals.screen___65021);
-    globals.SH___70140 = (r0);
-    r0 = (globals.SH___70140 / 2);
-    globals.SHHalf___70144 = (r0);
+    globals.SH___94905 = (r0);
+    r0 = (globals.SH___94905 / 2);
+    globals.SHHalf___94909 = (r0);
     r0 = pxsim_ImageMethods.width(globals.screen___65021);
-    globals.SW___70146 = (r0);
-    r0 = (globals.SW___70146 / 2);
-    globals.SWHalf___70150 = (r0);
+    globals.SW___94911 = (r0);
+    r0 = (globals.SW___94911 / 2);
+    globals.SWHalf___94915 = (r0);
     r0 = (1 << 16);
-    globals.one2___70177 = (r0);
+    globals.one2___94944 = (r0);
     r0 = (256 - 1);
-    globals.FPX_MAX___70183 = (r0);
+    globals.FPX_MAX___94950 = (r0);
     r0 = pxsim_ImageMethods.width(globals.screen___65021);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 1);
-    globals.ScreenCenterX___70189 = (r0);
+    globals.ScreenCenterX___94956 = (r0);
     r0 = pxsim_ImageMethods.height(globals.screen___65021);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 * 3);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 >> 2);
-    globals.ScreenCenterY___70194 = (r0);
+    globals.ScreenCenterY___94961 = (r0);
     s.tmp_1 = control_ramSize__P63335_mk(s);
     s.callLocIdx = 72; s.pc = 47; return s.tmp_1;
   case 47:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = (s.tmp_0 < 1048576);
-    globals.IsConsole___70208 = (r0);
-    r0 = pxsim_numops_toBoolDecr(globals.IsConsole___70208);
+    globals.IsConsole___94975 = (r0);
+    r0 = pxsim_numops_toBoolDecr(globals.IsConsole___94975);
     if (!r0) { step = 1; continue; }
     r0 = 2;
     { step = 2; continue; }
@@ -1290,8 +1290,8 @@ switch (step) {
   case 2:
     // jmp value (already in r0)
     s.tmp_0 = r0;
-    globals.Max_TileImgScaleX___70214 = (s.tmp_0);
-    r0 = pxsim_numops_toBoolDecr(globals.IsConsole___70208);
+    globals.Max_TileImgScaleX___94981 = (s.tmp_0);
+    r0 = pxsim_numops_toBoolDecr(globals.IsConsole___94975);
     if (!r0) { step = 3; continue; }
     r0 = 2;
     { step = 4; continue; }
@@ -1300,50 +1300,50 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_0 = r0;
-    globals.Max_TileImgScaleY___70217 = (s.tmp_0);
-    globals.TileImgScale___70220 = (globals.Max_TileImgScaleX___70214);
-    r0 = (globals.TileImgScale___70220 / 2);
-    globals.HalfTileImgScale___70223 = (r0);
-    globals.TileImgScaleX___70225 = (globals.TileImgScale___70220);
-    r0 = (globals.Max_TileImgScaleY___70217 / 2);
-    globals.TileImgScaleY___70228 = (r0);
-    r0 = (globals.TileImgScale___70220 / 1.4142135623730951);
-    globals.Scale___70231 = (r0);
-    r0 = pxsim.Math_.pow(globals.TileImgScale___70220, 2);
+    globals.Max_TileImgScaleY___94984 = (s.tmp_0);
+    globals.TileImgScale___94987 = (globals.Max_TileImgScaleX___94981);
+    r0 = (globals.TileImgScale___94987 / 2);
+    globals.HalfTileImgScale___94990 = (r0);
+    globals.TileImgScaleX___94992 = (globals.TileImgScale___94987);
+    r0 = (globals.Max_TileImgScaleY___94984 / 2);
+    globals.TileImgScaleY___94995 = (r0);
+    r0 = (globals.TileImgScale___94987 / 1.4142135623730951);
+    globals.Scale___94998 = (r0);
+    r0 = pxsim.Math_.pow(globals.TileImgScale___94987, 2);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 / 2);
-    globals.Scale_Square___70236 = (r0);
-    globals.WallScale___70238 = (globals.HalfTileImgScale___70223);
-    r0 = (16 * globals.WallScale___70238);
-    globals.WallHeight___70242 = (r0);
-    r0 = (16 * globals.HalfTileImgScale___70223);
+    globals.Scale_Square___95003 = (r0);
+    globals.WallScale___95005 = (globals.HalfTileImgScale___94990);
+    r0 = (16 * globals.WallScale___95005);
+    globals.WallHeight___95009 = (r0);
+    r0 = (16 * globals.HalfTileImgScale___94990);
     s.tmp_0 = r0;
     r0 = (8 - s.tmp_0);
-    globals.H___70254 = (r0);
-    r0 = (16 * globals.HalfTileImgScale___70223);
+    globals.H___95021 = (r0);
+    r0 = (16 * globals.HalfTileImgScale___94990);
     s.tmp_0 = r0;
     r0 = (8 - s.tmp_0);
-    globals.V___70260 = (r0);
-    r0 = (globals.one2___70177 / globals.Scale_Square___70236);
+    globals.V___95027 = (r0);
+    r0 = (globals.one2___94944 / globals.Scale_Square___95003);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    globals.AD_BC_Fpx2___70263 = (r0);
-    globals.A_Fpx___70268 = (0);
-    globals.B_Fpx___70270 = (0);
-    globals.D_Fpx___70272 = (0);
-    globals.C_Fpx___70274 = (0);
-    r0 = (globals.SW___70146 / globals.SH___70140);
+    globals.AD_BC_Fpx2___95030 = (r0);
+    globals.A_Fpx___95035 = (0);
+    globals.B_Fpx___95037 = (0);
+    globals.D_Fpx___95039 = (0);
+    globals.C_Fpx___95041 = (0);
+    r0 = (globals.SW___94911 / globals.SH___94905);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 / 2);
-    globals.defaultFov___67334 = (r0);
-    r0 = pxsim_pxtcore_mkClassInstance(Render_RayCastingRender__C67335_VT);
+    globals.defaultFov___95247 = (r0);
+    r0 = pxsim_pxtcore_mkClassInstance(Render_IsometricRender_Sideview__C95112_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = Render_RayCastingRender_constructor__P67379_mk(s);
+    s.tmp_1 = Render_IsometricRender_Sideview_constructor__P95915_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 259; s.pc = 48; return s.tmp_1;
   case 48:
     r0 = s.retval;
-    globals.raycastingRender___67400 = (s.tmp_0);
+    globals.myRender___95152 = (s.tmp_0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, globals.coin0___66697);
@@ -1597,47 +1597,47 @@ switch (step) {
     s.callLocIdx = 281; s.pc = 58; return s.tmp_0;
   case 58:
     r0 = s.retval;
-    globals.spawnTile___67447 = (globals.tileGrass1___66660);
+    globals.spawnTile___110987 = (globals.tileGrass1___66660);
     s.tmp_0 = scene_setBackgroundColor__P65872_mk(s);
     s.tmp_0.arg0 = 0;
     s.callLocIdx = 282; s.pc = 60; return s.tmp_0;
   case 60:
     r0 = s.retval;
-    globals.rcRender___67448 = (globals.raycastingRender___67400);
-    globals.angle___67449 = (45);
-    s.tmp_0 = Render_setViewAngleInDegree__P67429_mk(s);
-    s.tmp_0.arg0 = globals.angle___67449;
+    globals.myRender___110990 = (globals.myRender___95152);
+    globals.angle___110992 = (45);
+    s.tmp_0 = Render_setViewAngleInDegree__P108242_mk(s);
+    s.tmp_0.arg0 = globals.angle___110992;
     s.callLocIdx = 283; s.pc = 61; return s.tmp_0;
   case 61:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_setWallSideTexture__P67389_mk(s);
-    s.tmp_0.arg0 = globals.rcRender___67448;
-    r0 = pxsim.image.ofBuffer(_hex73554);
+    s.tmp_0 = Render_IsometricRender_Sideview_setWallSideTexture__P95146_mk(s);
+    s.tmp_0.arg0 = globals.myRender___110990;
+    r0 = pxsim.image.ofBuffer(_hex110998);
     s.tmp_0.arg1 = r0;
-    r0 = pxsim.image.ofBuffer(_hex73556);
+    r0 = pxsim.image.ofBuffer(_hex111000);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 284; s.pc = 62; return s.tmp_0;
   case 62:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_setWallSideTexture__P67389_mk(s);
-    s.tmp_0.arg0 = globals.rcRender___67448;
-    r0 = pxsim.image.ofBuffer(_hex73560);
+    s.tmp_0 = Render_IsometricRender_Sideview_setWallSideTexture__P95146_mk(s);
+    s.tmp_0.arg0 = globals.myRender___110990;
+    r0 = pxsim.image.ofBuffer(_hex111004);
     s.tmp_0.arg1 = r0;
-    r0 = pxsim.image.ofBuffer(_hex73562);
+    r0 = pxsim.image.ofBuffer(_hex111006);
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 285; s.pc = 63; return s.tmp_0;
   case 63:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_setWallSideTexture__P67389_mk(s);
-    s.tmp_0.arg0 = globals.rcRender___67448;
-    r0 = pxsim.image.ofBuffer(_hex73567);
+    s.tmp_0 = Render_IsometricRender_Sideview_setWallSideTexture__P95146_mk(s);
+    s.tmp_0.arg0 = globals.myRender___110990;
+    r0 = pxsim.image.ofBuffer(_hex111011);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 286; s.pc = 64; return s.tmp_0;
   case 64:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P65156_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 55;
     s.tmp_0.arg2 = 0;
@@ -1645,7 +1645,7 @@ switch (step) {
   case 65:
     r0 = s.retval;
     s.tmp_0 = Sprite_setScale__P65421_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 1;
     s.tmp_0.arg2 = NaN;
@@ -1653,14 +1653,14 @@ switch (step) {
   case 66:
     r0 = s.retval;
     s.tmp_0 = Sprite_ay__P65354_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 500;
     s.callLocIdx = 289; s.pc = 67; return s.tmp_0;
   case 67:
     r0 = s.retval;
     s.tmp_0 = tiles_placeOnTile__P65762_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     s.tmp_1 = tiles_getTileLocation__P65756_mk(s);
     s.tmp_1.arg0 = 2;
@@ -1672,10 +1672,10 @@ switch (step) {
     s.callLocIdx = 291; s.pc = 68; return s.tmp_0;
   case 68:
     r0 = s.retval;
-    s.tmp_0 = Render_setSpriteAnimations__P67419_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    s.tmp_0 = Render_setSpriteAnimations__P108140_mk(s);
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
-    s.tmp_1 = Render_createAnimations__P67420_mk(s);
+    s.tmp_1 = Render_createAnimations__P108149_mk(s);
     s.tmp_1.arg0 = 150;
     r0 = pxsim_Array__getAt(globals.texturesHero___67439, 0);
     s.tmp_1.arg1 = r0;
@@ -1692,7 +1692,7 @@ switch (step) {
     s.callLocIdx = 293; s.pc = 70; return s.tmp_0;
   case 70:
     r0 = s.retval;
-    s.tmp_0 = createSprite__P67451_mk(s);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 11;
     s.tmp_0.arg1 = 8;
     s.tmp_0.arg2 = 6;
@@ -1702,8 +1702,8 @@ switch (step) {
     s.callLocIdx = 304; s.pc = 72; return s.tmp_0;
   case 72:
     r0 = s.retval;
-    globals.sprPriness2___67453 = (r0);
-    s.tmp_0 = createSprite__P67451_mk(s);
+    globals.sprPriness2___111084 = (r0);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 9;
     s.tmp_0.arg1 = 9;
     s.tmp_0.arg2 = 6;
@@ -1713,8 +1713,8 @@ switch (step) {
     s.callLocIdx = 305; s.pc = 73; return s.tmp_0;
   case 73:
     r0 = s.retval;
-    globals.sprSkelly___67454 = (r0);
-    s.tmp_0 = createSprite__P67451_mk(s);
+    globals.sprSkelly___111089 = (r0);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 10;
     s.tmp_0.arg1 = 7;
     s.tmp_0.arg2 = 6;
@@ -1724,8 +1724,8 @@ switch (step) {
     s.callLocIdx = 306; s.pc = 74; return s.tmp_0;
   case 74:
     r0 = s.retval;
-    globals.sprPriness___67455 = (r0);
-    s.tmp_0 = createSprite__P67451_mk(s);
+    globals.sprPriness___111094 = (r0);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 9;
     s.tmp_0.arg1 = 7;
     s.tmp_0.arg2 = 6;
@@ -1735,8 +1735,8 @@ switch (step) {
     s.callLocIdx = 307; s.pc = 75; return s.tmp_0;
   case 75:
     r0 = s.retval;
-    globals.sprPlane___67456 = (r0);
-    s.tmp_0 = createSprite__P67451_mk(s);
+    globals.sprPlane___111099 = (r0);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 7;
     s.tmp_0.arg1 = 9;
     s.tmp_0.arg2 = 0;
@@ -1746,80 +1746,80 @@ switch (step) {
     s.callLocIdx = 308; s.pc = 76; return s.tmp_0;
   case 76:
     r0 = s.retval;
-    globals.fish___67457 = (r0);
+    globals.fish___111104 = (r0);
     s.tmp_0 = sprites_onOverlap__P65447_mk(s);
     s.tmp_0.arg0 = globals.Enemy___65472;
     s.tmp_0.arg1 = 1;
-    s.tmp_0.arg2 = inline__P73659;
+    s.tmp_0.arg2 = inline__P111111;
     s.callLocIdx = 315; s.pc = 77; return s.tmp_0;
   case 77:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P65447_mk(s);
     s.tmp_0.arg0 = globals.Enemy___65472;
     s.tmp_0.arg1 = globals.Enemy___65472;
-    s.tmp_0.arg2 = inline__P73680;
+    s.tmp_0.arg2 = inline__P111132;
     s.callLocIdx = 326; s.pc = 78; return s.tmp_0;
   case 78:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P65447_mk(s);
     s.tmp_0.arg0 = globals.Player___65469;
     s.tmp_0.arg1 = globals.Food___65471;
-    s.tmp_0.arg2 = inline__P73714;
+    s.tmp_0.arg2 = inline__P111166;
     s.callLocIdx = 330; s.pc = 79; return s.tmp_0;
   case 79:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.A___65102;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P73728;
+    s.tmp_0.arg2 = inline__P111179;
     s.callLocIdx = 334; s.pc = 80; return s.tmp_0;
   case 80:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.B___65103;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P73742;
+    s.tmp_0.arg2 = inline__P111193;
     s.callLocIdx = 339; s.pc = 81; return s.tmp_0;
   case 81:
     r0 = s.retval;
-    globals.isAdjusting___67458 = (false);
-    globals.adjusted___67459 = (false);
+    globals.isAdjusting___111206 = (false);
+    globals.adjusted___111208 = (false);
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.menu___65108;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P73759;
+    s.tmp_0.arg2 = inline__P111212;
     s.callLocIdx = 341; s.pc = 82; return s.tmp_0;
   case 82:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.menu___65108;
     s.tmp_0.arg1 = 2048;
-    s.tmp_0.arg2 = inline__P73769;
+    s.tmp_0.arg2 = inline__P111221;
     s.callLocIdx = 345; s.pc = 83; return s.tmp_0;
   case 83:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.up___65105;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P73786;
+    s.tmp_0.arg2 = inline__P111238;
     s.callLocIdx = 347; s.pc = 84; return s.tmp_0;
   case 84:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P65185_mk(s);
     s.tmp_0.arg0 = globals.down___65107;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P73793;
+    s.tmp_0.arg2 = inline__P111245;
     s.callLocIdx = 349; s.pc = 85; return s.tmp_0;
   case 85:
     r0 = s.retval;
     s.tmp_0 = scene_onHitWall__P65450_mk(s);
     s.tmp_0.arg0 = globals.Player___65469;
-    s.tmp_0.arg1 = inline__P73801;
+    s.tmp_0.arg1 = inline__P111253;
     s.callLocIdx = 356; s.pc = 86; return s.tmp_0;
   case 86:
     r0 = s.retval;
     s.tmp_0 = game_onUpdate__P66012_mk(s);
-    s.tmp_0.arg0 = inline__P73829;
+    s.tmp_0.arg0 = inline__P111281;
     s.callLocIdx = 361; s.pc = 87; return s.tmp_0;
   case 87:
     r0 = s.retval;
@@ -1837,13 +1837,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P93353.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P93353.continuations = [  ]
+_main___P111861.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P111861.continuations = [  ]
 
-function _main___P93353_mk(s) {
+function _main___P111861_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P93353, depth: s.depth + 1,
+        parent: s, fn: _main___P111861, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1947,11 +1947,11 @@ const _hex73424 = pxsim.BufferMethods.createBufferFromHex("870418001800000000000
 const _hex73475 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex73479 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554554454555555f5544544f4555555f55445ffff555555f554455f55444554f554455f45444ff4f554454444ff5ffff5545544445f5555f55455f5ff5f5555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
 const _hex73483 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
-const _hex73554 = pxsim.BufferMethods.createBufferFromHex("8704100010000000777717dd1d0d0000577617dd1d110100777717dd1ddd1d0077771ddd1ddd1d0077771ddd1ddd0d0077d71d1111dd0d0077d71ddd1ddd000065771ddd1ddd000077771ddd1ddd0000777711dd1d11000077d71ddd1ddd000067771ddd1ddd000056771ddd1ddd0d0075771d1111dd0d00777717dd1ddd0d00777717dd1d0d0000")
-const _hex73556 = pxsim.BufferMethods.createBufferFromHex("870410001000000075777777777777777777d176771776777537116377717157771176d177177677771176d17777777777371163777777777777d176177677777777777771717777777777771776777777576577777777777777775775176d777777775576133176776177671761177d171777771761177d77617777771331767777777777176d77")
-const _hex73560 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554554454555555f5544544f4555555f55445ffff555555f554455f55444554f554455f45444ff4f554454444ff5ffff5545544445f5555f55455f5ff5f5555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
-const _hex73562 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
-const _hex73567 = pxsim.BufferMethods.createBufferFromHex("8704100010000000dd1ddd7d770700001111dd7d57070000dd1ddd1d77070000dd1ddd1d7d070000dd1ddd1d7d070000dd1d111111770000dd1ddd1ddd770000dd1ddd1d7d770000dd1ddd1d7d7700001111dd1d7d770000dd1ddd1d77070000dd1ddd1d47070000dd1ddd1d77070000dd1d111177010000dd1ddd7d77070000dd1ddd7d77070000")
+const _hex110998 = pxsim.BufferMethods.createBufferFromHex("8704100010000000777717dd1d0d0000577617dd1d110100777717dd1ddd1d0077771ddd1ddd1d0077771ddd1ddd0d0077d71d1111dd0d0077d71ddd1ddd000065771ddd1ddd000077771ddd1ddd0000777711dd1d11000077d71ddd1ddd000067771ddd1ddd000056771ddd1ddd0d0075771d1111dd0d00777717dd1ddd0d00777717dd1d0d0000")
+const _hex111000 = pxsim.BufferMethods.createBufferFromHex("870410001000000075777777777777777777d176771776777537116377717157771176d177177677771176d17777777777371163777777777777d176177677777777777771717777777777771776777777576577777777777777775775176d777777775576133176776177671761177d171777771761177d77617777771331767777777777176d77")
+const _hex111004 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554554454555555f5544544f4555555f55445ffff555555f554455f55444554f554455f45444ff4f554454444ff5ffff5545544445f5555f55455f5ff5f5555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
+const _hex111006 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
+const _hex111011 = pxsim.BufferMethods.createBufferFromHex("8704100010000000dd1ddd7d770700001111dd7d57070000dd1ddd1d77070000dd1ddd1d7d070000dd1ddd1d7d070000dd1d111111770000dd1ddd1ddd770000dd1ddd1d7d770000dd1ddd1d7d7700001111dd1d7d770000dd1ddd1d77070000dd1ddd1d47070000dd1ddd1d77070000dd1d111177010000dd1ddd7d77070000dd1ddd7d77070000")
 
 
 
@@ -2762,7 +2762,7 @@ function myImages_inline__P73533_mk(s) {
 
 
 
-function inline__P73659(s) {
+function inline__P111111(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2792,7 +2792,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = tiles_placeOnRandomTile__P65763_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = globals.spawnTile___67447;
+    s.tmp_0.arg1 = globals.spawnTile___110987;
     s.callLocIdx = 311; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -2813,7 +2813,7 @@ switch (step) {
     s.callLocIdx = 313; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = createCoin__P67452_mk(s);
+    s.tmp_0 = createCoin__P111071_mk(s);
     s.callLocIdx = 314; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
@@ -2821,12 +2821,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73659.info = {"start":5367,"length":299,"line":149,"column":59,"endLine":157,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P111111.info = {"start":5343,"length":299,"line":149,"column":59,"endLine":157,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P73659_mk(s) {
+function inline__P111111_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73659, depth: s.depth + 1,
+        parent: s, fn: inline__P111111, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2837,7 +2837,7 @@ function inline__P73659_mk(s) {
 
 
 
-function inline__P73680(s) {
+function inline__P111132(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2926,12 +2926,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73680.info = {"start":5723,"length":195,"line":159,"column":54,"endLine":162,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P111132.info = {"start":5699,"length":195,"line":159,"column":54,"endLine":162,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P73680_mk(s) {
+function inline__P111132_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73680, depth: s.depth + 1,
+        parent: s, fn: inline__P111132, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2952,7 +2952,7 @@ function inline__P73680_mk(s) {
 
 
 
-function inline__P73714(s) {
+function inline__P111166(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2989,12 +2989,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73714.info = {"start":5975,"length":110,"line":164,"column":54,"endLine":168,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P111166.info = {"start":5951,"length":110,"line":164,"column":54,"endLine":168,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P73714_mk(s) {
+function inline__P111166_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73714, depth: s.depth + 1,
+        parent: s, fn: inline__P111166, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -3005,7 +3005,7 @@ function inline__P73714_mk(s) {
 
 
 
-function inline__P73728(s) {
+function inline__P111179(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3015,7 +3015,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.s___73731 = undefined;
+    s.s___111182 = undefined;
     s.tmp_0 = music_Melody_play__P64622_mk(s);
     s.tmp_0.arg0 = globals.pewPew___64643;
     s.tmp_0.arg1 = 255;
@@ -3024,16 +3024,16 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = sprites_createProjectileFromSprite__P65270_mk(s);
     s.tmp_0.arg0 = globals.bubble1___67134;
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 66;
     s.tmp_0.arg3 = 0;
     s.callLocIdx = 332; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.s___73731 = (r0);
+    s.s___111182 = (r0);
     s.tmp_0 = Sprite_setScale__P65421_mk(s);
-    s.tmp_0.arg0 = s.s___73731;
+    s.tmp_0.arg0 = s.s___111182;
     s.tmp_0.arg1 = 0.5;
     s.tmp_0.arg2 = NaN;
     s.callLocIdx = 333; s.pc = 3; return s.tmp_0;
@@ -3043,22 +3043,22 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73728.info = {"start":6140,"length":153,"line":170,"column":52,"endLine":174,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111179.info = {"start":6116,"length":153,"line":170,"column":52,"endLine":174,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73728_mk(s) {
+function inline__P111179_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73728, depth: s.depth + 1,
+        parent: s, fn: inline__P111179, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  s___73731: undefined,
+  s___111182: undefined,
 } }
 
 
 
 
 
-function inline__P73742(s) {
+function inline__P111193(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3071,7 +3071,7 @@ switch (step) {
     s.tmp_1 = tiles_tileAtLocationIsWall__P65760_mk(s);
     s.tmp_2 = tiles_Location_getNeighboringLocation__P65697_mk(s);
     s.tmp_3 = Sprite_tilemapLocation__P65413_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_3.arg0 = r0;
     s.callLocIdx = 335; s.pc = 5; return s.tmp_3;
   case 5:
@@ -3089,7 +3089,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     s.tmp_4 = Sprite_vy__P65350_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_4.arg0 = r0;
     s.tmp_4.arg1 = -250;
     s.callLocIdx = 338; s.pc = 6; return s.tmp_4;
@@ -3101,12 +3101,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73742.info = {"start":6348,"length":250,"line":176,"column":52,"endLine":180,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111193.info = {"start":6324,"length":250,"line":176,"column":52,"endLine":180,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73742_mk(s) {
+function inline__P111193_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73742, depth: s.depth + 1,
+        parent: s, fn: inline__P111193, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3119,7 +3119,7 @@ function inline__P73742_mk(s) {
 
 
 
-function inline__P73759(s) {
+function inline__P111212(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3129,10 +3129,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.isAdjusting___67458 = (true);
-    globals.adjusted___67459 = (false);
+    globals.isAdjusting___111206 = (true);
+    globals.adjusted___111208 = (false);
     s.tmp_0 = controller_moveSprite__P65156_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 0;
@@ -3143,12 +3143,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73759.info = {"start":6699,"length":101,"line":184,"column":55,"endLine":188,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111212.info = {"start":6675,"length":101,"line":184,"column":55,"endLine":188,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73759_mk(s) {
+function inline__P111212_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73759, depth: s.depth + 1,
+        parent: s, fn: inline__P111212, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -3157,7 +3157,7 @@ function inline__P73759_mk(s) {
 
 
 
-function inline__P73769(s) {
+function inline__P111221(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3167,20 +3167,20 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.isAdjusting___67458 = (false);
-    r0 = pxsim_numops_toBoolDecr(globals.adjusted___67459);
+    globals.isAdjusting___111206 = (false);
+    r0 = pxsim_numops_toBoolDecr(globals.adjusted___111208);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = Render_toggleViewMode__P67424_mk(s);
+    s.tmp_2 = Render_toggleViewMode__P108185_mk(s);
     s.callLocIdx = 342; s.pc = 5; return s.tmp_2;
   case 5:
     r0 = s.retval;
   case 1:
   case 2:
-    r0 = globals.rcRender___67448.fields["_angle"];
+    r0 = globals.myRender___110990.fields["_angle"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 3.141592653589793);
     s.tmp_0 = r0;
@@ -3194,7 +3194,7 @@ switch (step) {
     // jmp value (already in r0)
     s.tmp_2 = r0;
     s.tmp_3 = controller_moveSprite__P65156_mk(s);
-    r0 = globals.rcRender___67448.fields["sprSelf"];
+    r0 = globals.myRender___110990.fields["sprSelf"];
     s.tmp_3.arg0 = r0;
     s.tmp_3.arg1 = s.tmp_2;
     s.tmp_3.arg2 = 0;
@@ -3205,12 +3205,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73769.info = {"start":6858,"length":174,"line":189,"column":56,"endLine":194,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111221.info = {"start":6834,"length":174,"line":189,"column":56,"endLine":194,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73769_mk(s) {
+function inline__P111221_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73769, depth: s.depth + 1,
+        parent: s, fn: inline__P111221, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3222,7 +3222,7 @@ function inline__P73769_mk(s) {
 
 
 
-function inline__P73786(s) {
+function inline__P111238(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3232,13 +3232,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___67458);
+    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___111206);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = Render_changeScale__P67329_mk(s);
+    s.tmp_2 = Render_changeScale__P95044_mk(s);
     s.tmp_2.arg0 = 1;
     s.callLocIdx = 346; s.pc = 3; return s.tmp_2;
   case 3:
@@ -3249,12 +3249,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73786.info = {"start":7088,"length":61,"line":196,"column":53,"endLine":199,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111238.info = {"start":7064,"length":61,"line":196,"column":53,"endLine":199,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73786_mk(s) {
+function inline__P111238_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73786, depth: s.depth + 1,
+        parent: s, fn: inline__P111238, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3265,7 +3265,7 @@ function inline__P73786_mk(s) {
 
 
 
-function inline__P73793(s) {
+function inline__P111245(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3275,13 +3275,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___67458);
+    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___111206);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = Render_changeScale__P67329_mk(s);
+    s.tmp_2 = Render_changeScale__P95044_mk(s);
     s.tmp_2.arg0 = -1;
     s.callLocIdx = 348; s.pc = 3; return s.tmp_2;
   case 3:
@@ -3292,12 +3292,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73793.info = {"start":7206,"length":62,"line":200,"column":55,"endLine":203,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111245.info = {"start":7182,"length":62,"line":200,"column":55,"endLine":203,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73793_mk(s) {
+function inline__P111245_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73793, depth: s.depth + 1,
+        parent: s, fn: inline__P111245, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3308,7 +3308,7 @@ function inline__P73793_mk(s) {
 
 
 
-function inline__P73801(s) {
+function inline__P111253(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3318,7 +3318,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.spr___73815 = undefined;
+    s.spr___111267 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -3338,7 +3338,7 @@ switch (step) {
   case 1:
     s.tmp_2 = tiles_tileAtLocationEquals__P65759_mk(s);
     s.tmp_2.arg0 = s.arg1;
-    r0 = pxsim.image.ofBuffer(_hex73812);
+    r0 = pxsim.image.ofBuffer(_hex111264);
     s.tmp_2.arg1 = r0;
     s.callLocIdx = 351; s.pc = 6; return s.tmp_2;
   case 6:
@@ -3354,7 +3354,7 @@ switch (step) {
     s.callLocIdx = 352; s.pc = 7; return s.tmp_4;
   case 7:
     r0 = s.retval;
-    s.tmp_0 = createSprite__P67451_mk(s);
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_1 = tiles_Location_col__P65694_mk(s);
     s.tmp_1.arg0 = s.arg1;
     s.callLocIdx = 353; s.pc = 9; return s.tmp_1;
@@ -3372,37 +3372,37 @@ switch (step) {
     s.callLocIdx = 355; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.spr___73815 = (r0);
-    r0 = (s.spr___73815).fields["lifespan"] = (500);
+    s.spr___111267 = (r0);
+    r0 = (s.spr___111267).fields["lifespan"] = (500);
   case 3:
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73801.info = {"start":7306,"length":838,"line":205,"column":35,"endLine":229,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","location"]}
+inline__P111253.info = {"start":7282,"length":838,"line":205,"column":35,"endLine":229,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","location"]}
 
-function inline__P73801_mk(s) {
+function inline__P111253_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73801, depth: s.depth + 1,
+        parent: s, fn: inline__P111253, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  spr___73815: undefined,
+  spr___111267: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
 
-const _hex73812 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
+const _hex111264 = pxsim.BufferMethods.createBufferFromHex("870410001000000040444444444444f454555555555555f5545f55555555f5f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f554555555555555f5545f55555555f5f554555555555555f5f0ffffffffffffff")
 
 
 
 
-function inline__P73829(s) {
+function inline__P111281(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3412,7 +3412,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___67458);
+    r0 = pxsim_numops_toBoolDecr(globals.isAdjusting___111206);
     if (!r0) { step = 11; continue; }
     s.tmp_1 = controller_Button__C65178_v0_1_mk(s);
     s.tmp_1.arg0 = globals.up___65105;
@@ -3424,12 +3424,12 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = Render_changeScaleY__P67332_mk(s);
+    s.tmp_2 = Render_changeScaleY__P95158_mk(s);
     s.tmp_2.arg0 = 1;
     s.callLocIdx = 357; s.pc = 14; return s.tmp_2;
   case 14:
     r0 = s.retval;
-    globals.adjusted___67459 = (true);
+    globals.adjusted___111208 = (true);
   case 1:
   case 2:
     s.tmp_1 = controller_Button__C65178_v0_1_mk(s);
@@ -3442,12 +3442,12 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_2 = Render_changeScaleY__P67332_mk(s);
+    s.tmp_2 = Render_changeScaleY__P95158_mk(s);
     s.tmp_2.arg0 = -1;
     s.callLocIdx = 358; s.pc = 16; return s.tmp_2;
   case 16:
     r0 = s.retval;
-    globals.adjusted___67459 = (true);
+    globals.adjusted___111208 = (true);
   case 3:
   case 4:
     s.tmp_1 = controller_Button__C65178_v0_1_mk(s);
@@ -3460,19 +3460,19 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 7; continue; }
-    globals.adjusted___67459 = (true);
-    r0 = (globals.angle___67449 - 5);
-    globals.angle___67449 = (r0);
-    r0 = (globals.angle___67449 < 0);
+    globals.adjusted___111208 = (true);
+    r0 = (globals.angle___110992 - 5);
+    globals.angle___110992 = (r0);
+    r0 = (globals.angle___110992 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
-    r0 = (globals.angle___67449 + 360);
-    globals.angle___67449 = (r0);
+    r0 = (globals.angle___110992 + 360);
+    globals.angle___110992 = (r0);
   case 5:
   case 6:
-    s.tmp_0 = Render_setViewAngleInDegree__P67429_mk(s);
-    s.tmp_0.arg0 = globals.angle___67449;
+    s.tmp_0 = Render_setViewAngleInDegree__P108242_mk(s);
+    s.tmp_0.arg0 = globals.angle___110992;
     s.callLocIdx = 359; s.pc = 18; return s.tmp_0;
   case 18:
     r0 = s.retval;
@@ -3488,13 +3488,13 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 9; continue; }
-    globals.adjusted___67459 = (true);
-    r0 = (globals.angle___67449 + 5);
-    globals.angle___67449 = (r0);
-    r0 = (globals.angle___67449 % 360);
-    globals.angle___67449 = (r0);
-    s.tmp_0 = Render_setViewAngleInDegree__P67429_mk(s);
-    s.tmp_0.arg0 = globals.angle___67449;
+    globals.adjusted___111208 = (true);
+    r0 = (globals.angle___110992 + 5);
+    globals.angle___110992 = (r0);
+    r0 = (globals.angle___110992 % 360);
+    globals.angle___110992 = (r0);
+    s.tmp_0 = Render_setViewAngleInDegree__P108242_mk(s);
+    s.tmp_0.arg0 = globals.angle___110992;
     s.callLocIdx = 360; s.pc = 20; return s.tmp_0;
   case 20:
     r0 = s.retval;
@@ -3506,12 +3506,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P73829.info = {"start":8161,"length":625,"line":231,"column":14,"endLine":254,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P111281.info = {"start":8137,"length":625,"line":231,"column":14,"endLine":254,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P73829_mk(s) {
+function inline__P111281_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P73829, depth: s.depth + 1,
+        parent: s, fn: inline__P111281, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -25148,7 +25148,7 @@ function info_PlayerInfoImpl_setScore_inline__P80004_mk(s) {
 
 
 
-function Render_changeScaleY__P67332(s) {
+function Render_changeScaleY__P95158(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -25162,8 +25162,8 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Render_setScaleY__P67333_mk(s);
-    s.tmp_1 = r0 = globals.TileImgScaleY___70228;
+    s.tmp_0 = Render_setScaleY__P95062_mk(s);
+    s.tmp_1 = r0 = globals.TileImgScaleY___94995;
     r0 = (s.arg0 / 8);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
@@ -25175,12 +25175,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_changeScaleY__P67332.info = {"start":2911,"length":93,"line":77,"column":4,"endLine":79,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"changeScaleY","argumentNames":["delta"]}
+Render_changeScaleY__P95158.info = {"start":2903,"length":93,"line":77,"column":4,"endLine":79,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"changeScaleY","argumentNames":["delta"]}
 
-function Render_changeScaleY__P67332_mk(s) {
+function Render_changeScaleY__P95158_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_changeScaleY__P67332, depth: s.depth + 1,
+        parent: s, fn: Render_changeScaleY__P95158, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -25192,7 +25192,7 @@ function Render_changeScaleY__P67332_mk(s) {
 
 
 
-function Render_setScaleY__P67333(s) {
+function Render_setScaleY__P95062(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -25209,8 +25209,8 @@ switch (step) {
     s.tmp_0 = Math_clamp__P63116_mk(s);
     s.tmp_0.arg0 = 0.125;
     s.tmp_1 = Math_min__P63120_mk(s);
-    s.tmp_1.arg0 = globals.TileImgScaleX___70225;
-    s.tmp_1.arg1 = globals.Max_TileImgScaleY___70217;
+    s.tmp_1.arg0 = globals.TileImgScaleX___94992;
+    s.tmp_1.arg1 = globals.Max_TileImgScaleY___94984;
     s.callLocIdx = 77; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -25219,18 +25219,18 @@ switch (step) {
     s.callLocIdx = 78; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.TileImgScaleY___70228 = (r0);
-    r0 = (globals.raycastingRender___67400).fields["lastRenderAngle"] = (-1);
+    globals.TileImgScaleY___94995 = (r0);
+    r0 = (globals.myRender___95152).fields["lastRenderAngle"] = (-1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Render_setScaleY__P67333.info = {"start":3009,"length":255,"line":80,"column":4,"endLine":84,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"setScaleY","argumentNames":["value"]}
+Render_setScaleY__P95062.info = {"start":3001,"length":247,"line":80,"column":4,"endLine":84,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"setScaleY","argumentNames":["value"]}
 
-function Render_setScaleY__P67333_mk(s) {
+function Render_setScaleY__P95062_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_setScaleY__P67333, depth: s.depth + 1,
+        parent: s, fn: Render_setScaleY__P95062, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -26223,7 +26223,7 @@ function scene_TileWallHandler_constructor__P65806_mk(s) {
 
 
 
-function Render_changeScale__P67329(s) {
+function Render_changeScale__P95044(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26237,8 +26237,8 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Render_setScale__P67330_mk(s);
-    s.tmp_1 = r0 = globals.TileImgScale___70220;
+    s.tmp_0 = Render_setScale__P95047_mk(s);
+    s.tmp_1 = r0 = globals.TileImgScale___94987;
     r0 = (s.arg0 * 0.5);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 + s.tmp_2);
@@ -26250,12 +26250,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_changeScale__P67329.info = {"start":2054,"length":94,"line":56,"column":4,"endLine":58,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"changeScale","argumentNames":["delta"]}
+Render_changeScale__P95044.info = {"start":2054,"length":94,"line":56,"column":4,"endLine":58,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"changeScale","argumentNames":["delta"]}
 
-function Render_changeScale__P67329_mk(s) {
+function Render_changeScale__P95044_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_changeScale__P67329, depth: s.depth + 1,
+        parent: s, fn: Render_changeScale__P95044, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -26267,7 +26267,7 @@ function Render_changeScale__P67329_mk(s) {
 
 
 
-function Render_setScale__P67330(s) {
+function Render_setScale__P95047(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26277,73 +26277,73 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.ratio___70283 = undefined;
+    s.ratio___95053 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = (globals.TileImgScale___70220 / globals.TileImgScaleY___70228);
-    s.ratio___70283 = (r0);
+    r0 = (globals.TileImgScale___94987 / globals.TileImgScaleY___94995);
+    s.ratio___95053 = (r0);
     s.tmp_0 = Math_clamp__P63116_mk(s);
     s.tmp_0.arg0 = 1;
-    s.tmp_0.arg1 = globals.Max_TileImgScaleX___70214;
+    s.tmp_0.arg1 = globals.Max_TileImgScaleX___94981;
     s.tmp_0.arg2 = s.arg0;
     s.callLocIdx = 74; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.TileImgScale___70220 = (r0);
-    s.tmp_0 = Render_setScaleY__P67333_mk(s);
-    r0 = (globals.TileImgScale___70220 / s.ratio___70283);
+    globals.TileImgScale___94987 = (r0);
+    s.tmp_0 = Render_setScaleY__P95062_mk(s);
+    r0 = (globals.TileImgScale___94987 / s.ratio___95053);
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 75; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    r0 = (globals.TileImgScale___70220 / 2);
-    globals.HalfTileImgScale___70223 = (r0);
-    globals.TileImgScaleX___70225 = (globals.TileImgScale___70220);
-    r0 = (globals.TileImgScale___70220 / 1.4142135623730951);
-    globals.Scale___70231 = (r0);
-    r0 = pxsim.Math_.pow(globals.TileImgScale___70220, 2);
+    r0 = (globals.TileImgScale___94987 / 2);
+    globals.HalfTileImgScale___94990 = (r0);
+    globals.TileImgScaleX___94992 = (globals.TileImgScale___94987);
+    r0 = (globals.TileImgScale___94987 / 1.4142135623730951);
+    globals.Scale___94998 = (r0);
+    r0 = pxsim.Math_.pow(globals.TileImgScale___94987, 2);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 2);
     s.tmp_0 = r0;
-    globals.Scale_Square___70236 = (r0);
+    globals.Scale_Square___95003 = (r0);
     r0 = s.tmp_0;
-    globals.WallScale___70238 = (globals.HalfTileImgScale___70223);
-    r0 = (16 * globals.WallScale___70238);
+    globals.WallScale___95005 = (globals.HalfTileImgScale___94990);
+    r0 = (16 * globals.WallScale___95005);
     s.tmp_0 = r0;
-    globals.WallHeight___70242 = (r0);
+    globals.WallHeight___95009 = (r0);
     r0 = s.tmp_0;
-    r0 = (16 * globals.HalfTileImgScale___70223);
+    r0 = (16 * globals.HalfTileImgScale___94990);
     s.tmp_0 = r0;
     r0 = (8 - s.tmp_0);
-    globals.H___70254 = (r0);
-    r0 = (16 * globals.HalfTileImgScale___70223);
+    globals.H___95021 = (r0);
+    r0 = (16 * globals.HalfTileImgScale___94990);
     s.tmp_2 = r0;
     r0 = (8 - s.tmp_2);
     s.tmp_1 = r0;
-    globals.V___70260 = (r0);
+    globals.V___95027 = (r0);
     r0 = s.tmp_1;
-    r0 = (globals.one2___70177 / globals.Scale_Square___70236);
+    r0 = (globals.one2___94944 / globals.Scale_Square___95003);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    globals.AD_BC_Fpx2___70263 = (r0);
-    r0 = (globals.raycastingRender___67400).fields["lastRenderAngle"] = (-1);
+    globals.AD_BC_Fpx2___95030 = (r0);
+    r0 = (globals.myRender___95152).fields["lastRenderAngle"] = (-1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Render_setScale__P67330.info = {"start":2153,"length":684,"line":59,"column":4,"endLine":72,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"setScale","argumentNames":["value"]}
+Render_setScale__P95047.info = {"start":2153,"length":676,"line":59,"column":4,"endLine":72,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"setScale","argumentNames":["value"]}
 
-function Render_setScale__P67330_mk(s) {
+function Render_setScale__P95047_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_setScale__P67330, depth: s.depth + 1,
+        parent: s, fn: Render_setScale__P95047, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  ratio___70283: undefined,
+  ratio___95053: undefined,
   arg0: undefined,
 } }
 
@@ -26351,7 +26351,7 @@ function Render_setScale__P67330_mk(s) {
 
 
 
-function Render_RayCastingRender_viewAngle__P67363(s) {
+function Render_IsometricRender_Sideview_viewAngle__P95121(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26366,18 +26366,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["_angle"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_viewAngle__P67363.info = {"start":7037,"length":66,"line":201,"column":8,"endLine":203,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewAngle","argumentNames":["this"]}
-Render_RayCastingRender_viewAngle__P67363.isGetter = true;
+Render_IsometricRender_Sideview_viewAngle__P95121.info = {"start":7029,"length":66,"line":201,"column":8,"endLine":203,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewAngle","argumentNames":["this"]}
+Render_IsometricRender_Sideview_viewAngle__P95121.isGetter = true;
 
-function Render_RayCastingRender_viewAngle__P67363_mk(s) {
+function Render_IsometricRender_Sideview_viewAngle__P95121_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_viewAngle__P67363, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_viewAngle__P95121, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -26386,7 +26386,7 @@ function Render_RayCastingRender_viewAngle__P67363_mk(s) {
 
 
 
-function Render_toggleViewMode__P67424(s) {
+function Render_toggleViewMode__P108185(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26396,7 +26396,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = globals.raycastingRender___67400.fields["_viewMode"];
+    r0 = globals.myRender___95152.fields["_viewMode"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == 0);
     s.tmp_0 = r0;
@@ -26409,8 +26409,8 @@ switch (step) {
   case 2:
     // jmp value (already in r0)
     s.tmp_2 = r0;
-    s.tmp_3 = Render_RayCastingRender_viewMode__P67374_mk(s);
-    s.tmp_3.arg0 = globals.raycastingRender___67400;
+    s.tmp_3 = Render_IsometricRender_Sideview_viewMode__P95132_mk(s);
+    s.tmp_3.arg0 = globals.myRender___95152;
     s.tmp_3.arg1 = s.tmp_2;
     s.callLocIdx = 262; s.pc = 3; return s.tmp_3;
   case 3:
@@ -26419,12 +26419,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_toggleViewMode__P67424.info = {"start":5724,"length":174,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"render_blocks.ts","functionName":"toggleViewMode","argumentNames":[]}
+Render_toggleViewMode__P108185.info = {"start":5685,"length":158,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"render_blocks.ts","functionName":"toggleViewMode","argumentNames":[]}
 
-function Render_toggleViewMode__P67424_mk(s) {
+function Render_toggleViewMode__P108185_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_toggleViewMode__P67424, depth: s.depth + 1,
+        parent: s, fn: Render_toggleViewMode__P108185, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -26436,7 +26436,7 @@ function Render_toggleViewMode__P67424_mk(s) {
 
 
 
-function Render_RayCastingRender_viewMode__P67374(s) {
+function Render_IsometricRender_Sideview_viewMode__P95132(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26452,18 +26452,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_viewMode"] = (s.arg1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_viewMode__P67374.info = {"start":10336,"length":68,"line":309,"column":8,"endLine":311,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewMode","argumentNames":["this","v"]}
+Render_IsometricRender_Sideview_viewMode__P95132.info = {"start":10328,"length":68,"line":309,"column":8,"endLine":311,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewMode","argumentNames":["this","v"]}
 
-function Render_RayCastingRender_viewMode__P67374_mk(s) {
+function Render_IsometricRender_Sideview_viewMode__P95132_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_viewMode__P67374, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_viewMode__P95132, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -26473,7 +26473,7 @@ function Render_RayCastingRender_viewMode__P67374_mk(s) {
 
 
 
-function Render_RayCastingRender_viewMode__P67373(s) {
+function Render_IsometricRender_Sideview_viewMode__P95131(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -26488,18 +26488,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["_viewMode"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_viewMode__P67373.info = {"start":10256,"length":70,"line":305,"column":8,"endLine":307,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewMode","argumentNames":["this"]}
-Render_RayCastingRender_viewMode__P67373.isGetter = true;
+Render_IsometricRender_Sideview_viewMode__P95131.info = {"start":10248,"length":70,"line":305,"column":8,"endLine":307,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewMode","argumentNames":["this"]}
+Render_IsometricRender_Sideview_viewMode__P95131.isGetter = true;
 
-function Render_RayCastingRender_viewMode__P67373_mk(s) {
+function Render_IsometricRender_Sideview_viewMode__P95131_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_viewMode__P67373, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_viewMode__P95131, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -30852,7 +30852,7 @@ function Sprite_setVelocity__P65399_mk(s) {
 
 
 
-function createCoin__P67452(s) {
+function createCoin__P111071(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -30862,8 +30862,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.spr___73625 = undefined;
-    s.tmp_0 = createSprite__P67451_mk(s);
+    s.spr___111072 = undefined;
+    s.tmp_0 = createSprite__P111036_mk(s);
     s.tmp_0.arg0 = 4;
     s.tmp_0.arg1 = 7;
     r0 = pxsim.Math_.randomRange(5, 10);
@@ -30875,10 +30875,10 @@ switch (step) {
     s.callLocIdx = 302; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.spr___73625 = (r0);
+    s.spr___111072 = (r0);
     s.tmp_0 = tiles_placeOnRandomTile__P65763_mk(s);
-    s.tmp_0.arg0 = s.spr___73625;
-    s.tmp_0.arg1 = globals.spawnTile___67447;
+    s.tmp_0.arg0 = s.spr___111072;
+    s.tmp_0.arg1 = globals.spawnTile___110987;
     s.callLocIdx = 303; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -30886,15 +30886,15 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-createCoin__P67452.info = {"start":4408,"length":183,"line":132,"column":0,"endLine":135,"endColumn":1,"fileName":"main.ts","functionName":"createCoin","argumentNames":[]}
+createCoin__P111071.info = {"start":4384,"length":183,"line":132,"column":0,"endLine":135,"endColumn":1,"fileName":"main.ts","functionName":"createCoin","argumentNames":[]}
 
-function createCoin__P67452_mk(s) {
+function createCoin__P111071_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: createCoin__P67452, depth: s.depth + 1,
+        parent: s, fn: createCoin__P111071, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  spr___73625: undefined,
+  spr___111072: undefined,
 } }
 
 
@@ -39530,7 +39530,7 @@ function scene_OverlapHandler_constructor__P65804_mk(s) {
 
 
 
-function createSprite__P67451(s) {
+function createSprite__P111036(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -39540,7 +39540,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.spr___73597 = undefined;
+    s.spr___111043 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -39559,9 +39559,9 @@ switch (step) {
     s.callLocIdx = 294; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.spr___73597 = (r0);
+    s.spr___111043 = (r0);
     s.tmp_0 = tiles_placeOnTile__P65762_mk(s);
-    s.tmp_0.arg0 = s.spr___73597;
+    s.tmp_0.arg0 = s.spr___111043;
     s.tmp_1 = tiles_getTileLocation__P65756_mk(s);
     s.tmp_1.arg0 = s.arg0;
     s.tmp_1.arg1 = s.arg1;
@@ -39573,15 +39573,15 @@ switch (step) {
   case 2:
     r0 = s.retval;
     s.tmp_0 = Sprite_setVelocity__P65399_mk(s);
-    s.tmp_0.arg0 = s.spr___73597;
+    s.tmp_0.arg0 = s.spr___111043;
     s.tmp_0.arg1 = s.arg2;
     s.tmp_0.arg2 = s.arg3;
     s.callLocIdx = 297; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = Render_setSpriteAnimations__P67419_mk(s);
-    s.tmp_0.arg0 = s.spr___73597;
-    s.tmp_1 = Render_createAnimations__P67420_mk(s);
+    s.tmp_0 = Render_setSpriteAnimations__P108140_mk(s);
+    s.tmp_0.arg0 = s.spr___111043;
+    s.tmp_1 = Render_createAnimations__P108149_mk(s);
     s.tmp_1.arg0 = 150;
     r0 = pxsim_Array__getAt(s.arg4, 0);
     s.tmp_1.arg1 = r0;
@@ -39599,31 +39599,31 @@ switch (step) {
   case 5:
     r0 = s.retval;
     s.tmp_0 = tiles_placeOnRandomTile__P65763_mk(s);
-    s.tmp_0.arg0 = s.spr___73597;
-    s.tmp_0.arg1 = globals.spawnTile___67447;
+    s.tmp_0.arg0 = s.spr___111043;
+    s.tmp_0.arg1 = globals.spawnTile___110987;
     s.callLocIdx = 300; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.tmp_0 = Sprite_ay__P65354_mk(s);
-    s.tmp_0.arg0 = s.spr___73597;
+    s.tmp_0.arg0 = s.spr___111043;
     s.tmp_0.arg1 = 500;
     s.callLocIdx = 301; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = s.spr___73597;
+    r0 = s.spr___111043;
     return leave(s, r0)
   default: oops()
 } } }
-createSprite__P67451.info = {"start":3779,"length":627,"line":116,"column":0,"endLine":130,"endColumn":1,"fileName":"main.ts","functionName":"createSprite","argumentNames":["x","y","vx","vy","textures","kind"]}
+createSprite__P111036.info = {"start":3755,"length":627,"line":116,"column":0,"endLine":130,"endColumn":1,"fileName":"main.ts","functionName":"createSprite","argumentNames":["x","y","vx","vy","textures","kind"]}
 
-function createSprite__P67451_mk(s) {
+function createSprite__P111036_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: createSprite__P67451, depth: s.depth + 1,
+        parent: s, fn: createSprite__P111036, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  spr___73597: undefined,
+  spr___111043: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -39636,7 +39636,7 @@ function createSprite__P67451_mk(s) {
 
 
 
-function Render_createAnimations__P67420(s) {
+function Render_createAnimations__P108149(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -39646,7 +39646,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.animationList___73215 = undefined;
+    s.animationList___108155 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -39658,28 +39658,28 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.arg1);
-    s.animationList___73215 = (s.tmp_0);
+    s.animationList___108155 = (s.tmp_0);
     r0 = pxsim_numops_toBoolDecr(s.arg2);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_Array__push(s.animationList___73215, s.arg2);
+    r0 = pxsim_Array__push(s.animationList___108155, s.arg2);
   case 1:
   case 2:
     r0 = pxsim_numops_toBoolDecr(s.arg3);
     if (!r0) { step = 3; continue; }
-    r0 = pxsim_Array__push(s.animationList___73215, s.arg3);
+    r0 = pxsim_Array__push(s.animationList___108155, s.arg3);
   case 3:
   case 4:
     r0 = pxsim_numops_toBoolDecr(s.arg4);
     if (!r0) { step = 5; continue; }
-    r0 = pxsim_Array__push(s.animationList___73215, s.arg4);
+    r0 = pxsim_Array__push(s.animationList___108155, s.arg4);
   case 5:
   case 6:
-    r0 = pxsim_pxtcore_mkClassInstance(Render_Animations__C67413_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(Render_Animations__C108077_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = Render_Animations_constructor__P67414_mk(s);
+    s.tmp_1 = Render_Animations_constructor__P108078_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
-    s.tmp_1.arg2 = s.animationList___73215;
+    s.tmp_1.arg2 = s.animationList___108155;
     s.callLocIdx = 260; s.pc = 7; return s.tmp_1;
   case 7:
     r0 = s.retval;
@@ -39687,16 +39687,16 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_createAnimations__P67420.info = {"start":3384,"length":397,"line":90,"column":4,"endLine":96,"endColumn":5,"fileName":"render_blocks.ts","functionName":"createAnimations","argumentNames":["frameInterval","frames1","frames2","frames3","frames4"]}
+Render_createAnimations__P108149.info = {"start":3361,"length":397,"line":90,"column":4,"endLine":96,"endColumn":5,"fileName":"render_blocks.ts","functionName":"createAnimations","argumentNames":["frameInterval","frames1","frames2","frames3","frames4"]}
 
-function Render_createAnimations__P67420_mk(s) {
+function Render_createAnimations__P108149_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_createAnimations__P67420, depth: s.depth + 1,
+        parent: s, fn: Render_createAnimations__P108149, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  animationList___73215: undefined,
+  animationList___108155: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -39708,7 +39708,7 @@ function Render_createAnimations__P67420_mk(s) {
 
 
 
-function Render_Animations_constructor__P67414(s) {
+function Render_Animations_constructor__P108078(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -39725,7 +39725,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_Animations__C67413_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_Animations__C108077_VT)) failedCast(r0);
     r0 = (s.arg0).fields["frameInterval"] = (s.arg1);
     r0 = (s.arg0).fields["animations"] = (s.arg2);
     r0 = (s.arg0).fields["msLast"] = (0);
@@ -39735,12 +39735,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_Animations_constructor__P67414.info = {"start":1154,"length":83,"line":41,"column":8,"endLine":42,"endColumn":9,"fileName":"render_blocks.ts","functionName":"inline","argumentNames":["this","frameInterval","animations"]}
+Render_Animations_constructor__P108078.info = {"start":1139,"length":83,"line":41,"column":8,"endLine":42,"endColumn":9,"fileName":"render_blocks.ts","functionName":"inline","argumentNames":["this","frameInterval","animations"]}
 
-function Render_Animations_constructor__P67414_mk(s) {
+function Render_Animations_constructor__P108078_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_Animations_constructor__P67414, depth: s.depth + 1,
+        parent: s, fn: Render_Animations_constructor__P108078, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -39751,7 +39751,7 @@ function Render_Animations_constructor__P67414_mk(s) {
 
 
 
-function Render_setSpriteAnimations__P67419(s) {
+function Render_setSpriteAnimations__P108140(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -39766,7 +39766,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = globals.raycastingRender___67400.fields["spriteAnimations"];
+    r0 = globals.myRender___95152.fields["spriteAnimations"];
     s.tmp_0 = r0;
     r0 = s.arg0.fields["id"];
     s.tmp_1 = r0;
@@ -39775,12 +39775,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_setSpriteAnimations__P67419.info = {"start":2264,"length":149,"line":71,"column":4,"endLine":73,"endColumn":5,"fileName":"render_blocks.ts","functionName":"setSpriteAnimations","argumentNames":["sprite","animations"]}
+Render_setSpriteAnimations__P108140.info = {"start":2249,"length":141,"line":71,"column":4,"endLine":73,"endColumn":5,"fileName":"render_blocks.ts","functionName":"setSpriteAnimations","argumentNames":["sprite","animations"]}
 
-function Render_setSpriteAnimations__P67419_mk(s) {
+function Render_setSpriteAnimations__P108140_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_setSpriteAnimations__P67419, depth: s.depth + 1,
+        parent: s, fn: Render_setSpriteAnimations__P108140, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -41222,7 +41222,7 @@ function controller_ControlledSprite_constructor__P65121_mk(s) {
 
 
 
-function Render_RayCastingRender_setWallSideTexture__P67389(s) {
+function Render_IsometricRender_Sideview_setWallSideTexture__P95146(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -41239,7 +41239,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["map"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
@@ -41271,7 +41271,7 @@ switch (step) {
     r0 = pxsim_Array_.setAt(s.tmp_7, 0, s.arg1);
     { step = 6; continue; }
   case 5:
-    r0 = pxsim_pxtcore_mkAction(3, Render_RayCastingRender_setWallSideTexture_inline__P72062);
+    r0 = pxsim_pxtcore_mkAction(3, Render_IsometricRender_Sideview_setWallSideTexture_inline__P96897);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg2);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.arg0);
@@ -41291,12 +41291,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_setWallSideTexture__P67389.info = {"start":27286,"length":463,"line":674,"column":8,"endLine":687,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"setWallSideTexture","argumentNames":["this","tex","forTile"]}
+Render_IsometricRender_Sideview_setWallSideTexture__P95146.info = {"start":27278,"length":463,"line":674,"column":8,"endLine":687,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"setWallSideTexture","argumentNames":["this","tex","forTile"]}
 
-function Render_RayCastingRender_setWallSideTexture__P67389_mk(s) {
+function Render_IsometricRender_Sideview_setWallSideTexture__P95146_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_setWallSideTexture__P67389, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_setWallSideTexture__P95146, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -41315,7 +41315,7 @@ function Render_RayCastingRender_setWallSideTexture__P67389_mk(s) {
 
 
 
-function Render_RayCastingRender_setWallSideTexture_inline__P72062(s) {
+function Render_IsometricRender_Sideview_setWallSideTexture_inline__P96897(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -41345,12 +41345,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_setWallSideTexture_inline__P72062.info = {"start":27545,"length":179,"line":680,"column":46,"endLine":685,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["t","i"]}
+Render_IsometricRender_Sideview_setWallSideTexture_inline__P96897.info = {"start":27537,"length":179,"line":680,"column":46,"endLine":685,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["t","i"]}
 
-function Render_RayCastingRender_setWallSideTexture_inline__P72062_mk(s) {
+function Render_IsometricRender_Sideview_setWallSideTexture_inline__P96897_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_setWallSideTexture_inline__P72062, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_setWallSideTexture_inline__P96897, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -41362,7 +41362,7 @@ function Render_RayCastingRender_setWallSideTexture_inline__P72062_mk(s) {
 
 
 
-function Render_setViewAngleInDegree__P67429(s) {
+function Render_setViewAngleInDegree__P108242(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -41376,8 +41376,8 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Render_RayCastingRender_viewAngle__P67364_mk(s);
-    s.tmp_0.arg0 = globals.raycastingRender___67400;
+    s.tmp_0 = Render_IsometricRender_Sideview_viewAngle__P95122_mk(s);
+    s.tmp_0.arg0 = globals.myRender___95152;
     r0 = (s.arg0 * 3.141592653589793);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 180);
@@ -41389,12 +41389,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_setViewAngleInDegree__P67429.info = {"start":9168,"length":118,"line":265,"column":4,"endLine":267,"endColumn":5,"fileName":"render_blocks.ts","functionName":"setViewAngleInDegree","argumentNames":["angle"]}
+Render_setViewAngleInDegree__P108242.info = {"start":9033,"length":110,"line":265,"column":4,"endLine":267,"endColumn":5,"fileName":"render_blocks.ts","functionName":"setViewAngleInDegree","argumentNames":["angle"]}
 
-function Render_setViewAngleInDegree__P67429_mk(s) {
+function Render_setViewAngleInDegree__P108242_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_setViewAngleInDegree__P67429, depth: s.depth + 1,
+        parent: s, fn: Render_setViewAngleInDegree__P108242, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -41405,7 +41405,7 @@ function Render_setViewAngleInDegree__P67429_mk(s) {
 
 
 
-function Render_RayCastingRender_viewAngle__P67364(s) {
+function Render_IsometricRender_Sideview_viewAngle__P95122(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -41421,18 +41421,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_angle"] = (s.arg1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_viewAngle__P67364.info = {"start":7112,"length":143,"line":204,"column":8,"endLine":208,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewAngle","argumentNames":["this","angle"]}
+Render_IsometricRender_Sideview_viewAngle__P95122.info = {"start":7104,"length":143,"line":204,"column":8,"endLine":208,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"viewAngle","argumentNames":["this","angle"]}
 
-function Render_RayCastingRender_viewAngle__P67364_mk(s) {
+function Render_IsometricRender_Sideview_viewAngle__P95122_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_viewAngle__P67364, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_viewAngle__P95122, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -43040,7 +43040,7 @@ function imagesFlipX_inline__P73461_mk(s) {
 
 
 
-function Render_RayCastingRender_constructor__P67379(s) {
+function Render_IsometricRender_Sideview_constructor__P95915(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43050,13 +43050,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sc___71134 = undefined;
+    s.sc___95968 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = (s.arg0).fields["tempScreen"] = (globals.screen___65021);
     r0 = (s.arg0).fields["velocityAngle"] = (2);
     r0 = (s.arg0).fields["velocity"] = (3);
@@ -43102,7 +43102,7 @@ switch (step) {
     r0 = (s.arg0).fields["tilemapScaleSize"] = (16);
     s.tmp_16 = r0 = s.arg0;
     s.tmp_18 = sprites_create__P65264_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex71113);
+    r0 = pxsim.image.ofBuffer(_hex95945);
     s.tmp_18.arg0 = r0;
     s.tmp_18.arg1 = undefined;
     s.callLocIdx = 117; s.pc = 3; return s.tmp_18;
@@ -43144,8 +43144,8 @@ switch (step) {
     s.callLocIdx = 119; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.sc___71134 = (r0);
-    r0 = s.sc___71134.fields["tileMap"];
+    s.sc___95968 = (r0);
+    r0 = s.sc___95968.fields["tileMap"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     s.tmp_1 = r0;
@@ -43161,16 +43161,16 @@ switch (step) {
     s.callLocIdx = 120; s.pc = 6; return s.tmp_4;
   case 6:
     r0 = s.retval;
-    r0 = (s.sc___71134).fields["tileMap"] = (s.tmp_3);
+    r0 = (s.sc___95968).fields["tileMap"] = (s.tmp_3);
     { step = 2; continue; }
   case 1:
-    s.tmp_0 = Render_RayCastingRender_tilemapLoaded__P67378_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_tilemapLoaded__P95136_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 121; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
   case 2:
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71151);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P95984);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = tiles_TileMap_addEventListener__P65749_mk(s);
@@ -43217,12 +43217,12 @@ switch (step) {
     s.callLocIdx = 127; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_takeoverSceneSprites__P67376_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_takeoverSceneSprites__P95134_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 128; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_updateViewZPos__P67375_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_updateViewZPos__P95133_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 129; s.pc = 14; return s.tmp_0;
   case 14:
@@ -43233,7 +43233,7 @@ switch (step) {
     s.callLocIdx = 130; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71179);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P96012);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = game_onUpdate__P66012_mk(s);
@@ -43241,7 +43241,7 @@ switch (step) {
     s.callLocIdx = 132; s.pc = 16; return s.tmp_1;
   case 16:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71183);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P96016);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = game_onUpdateInterval__P66013_mk(s);
@@ -43250,7 +43250,7 @@ switch (step) {
     s.callLocIdx = 134; s.pc = 17; return s.tmp_1;
   case 17:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71244);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P96077);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = game_addScenePushHandler__P66007_mk(s);
@@ -43258,7 +43258,7 @@ switch (step) {
     s.callLocIdx = 137; s.pc = 18; return s.tmp_1;
   case 18:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71265);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P96098);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = game_addScenePopHandler__P66009_mk(s);
@@ -43270,12 +43270,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_constructor__P67379.info = {"start":15214,"length":3473,"line":410,"column":8,"endLine":489,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["this"]}
+Render_IsometricRender_Sideview_constructor__P95915.info = {"start":15206,"length":3473,"line":410,"column":8,"endLine":489,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["this"]}
 
-function Render_RayCastingRender_constructor__P67379_mk(s) {
+function Render_IsometricRender_Sideview_constructor__P95915_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_constructor__P67379, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_constructor__P95915, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43306,16 +43306,16 @@ function Render_RayCastingRender_constructor__P67379_mk(s) {
   tmp_26: undefined,
   tmp_27: undefined,
   tmp_28: undefined,
-  sc___71134: undefined,
+  sc___95968: undefined,
   arg0: undefined,
 } }
 
-const _hex71113 = pxsim.BufferMethods.createBufferFromHex("870401000100000000000000")
+const _hex95945 = pxsim.BufferMethods.createBufferFromHex("870401000100000000000000")
 
 
 
 
-function Render_RayCastingRender_inline__P71151(s) {
+function Render_IsometricRender_Sideview_inline__P95984(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43329,7 +43329,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Render_RayCastingRender_tilemapLoaded__P67378_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_tilemapLoaded__P95136_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.callLocIdx = 123; s.pc = 1; return s.tmp_0;
   case 1:
@@ -43338,12 +43338,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71151.info = {"start":15629,"length":28,"line":421,"column":84,"endLine":421,"endColumn":112,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["data"]}
+Render_IsometricRender_Sideview_inline__P95984.info = {"start":15621,"length":28,"line":421,"column":84,"endLine":421,"endColumn":112,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["data"]}
 
-function Render_RayCastingRender_inline__P71151_mk(s) {
+function Render_IsometricRender_Sideview_inline__P95984_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71151, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P95984, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -43353,7 +43353,7 @@ function Render_RayCastingRender_inline__P71151_mk(s) {
 
 
 
-function Render_RayCastingRender_inline__P71179(s) {
+function Render_IsometricRender_Sideview_inline__P96012(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43380,12 +43380,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71179.info = {"start":16203,"length":132,"line":433,"column":26,"endLine":436,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_inline__P96012.info = {"start":16195,"length":132,"line":433,"column":26,"endLine":436,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_inline__P71179_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96012_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71179, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96012, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -43394,7 +43394,7 @@ function Render_RayCastingRender_inline__P71179_mk(s) {
 
 
 
-function Render_RayCastingRender_inline__P71183(s) {
+function Render_IsometricRender_Sideview_inline__P96016(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43404,13 +43404,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___71184 = undefined;
-    s.spr___71191 = undefined;
-    s.i___71212 = undefined;
-    s.spr___71219 = undefined;
-    s.i___71184 = (0);
+    s.i___96017 = undefined;
+    s.spr___96024 = undefined;
+    s.i___96045 = undefined;
+    s.spr___96052 = undefined;
+    s.i___96017 = (0);
   case 1:
-    s.tmp_1 = r0 = s.i___71184;
+    s.tmp_1 = r0 = s.i___96017;
     r0 = s.caps[0].fields["sprites"];
     s.tmp_3 = r0;
     r0 = pxsim_Array__length(s.tmp_3);
@@ -43421,9 +43421,9 @@ switch (step) {
     if (!r0) { step = 4; continue; }
     r0 = s.caps[0].fields["sprites"];
     s.tmp_4 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_4, s.i___71184);
-    s.spr___71191 = (r0);
-    r0 = s.spr___71191.fields["flags"];
+    r0 = pxsim_Array__getAt(s.tmp_4, s.i___96017);
+    s.spr___96024 = (r0);
+    r0 = s.spr___96024.fields["flags"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 & 512);
     s.tmp_0 = r0;
@@ -43431,20 +43431,20 @@ switch (step) {
     if (!r0) { step = 2; continue; }
     r0 = s.caps[0].fields["sprites"];
     s.tmp_2 = r0;
-    r0 = pxsim_Array_.removeElement(s.tmp_2, s.spr___71191);
+    r0 = pxsim_Array_.removeElement(s.tmp_2, s.spr___96024);
     r0 = s.caps[0].fields["sprites2D"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.spr___71191);
+    r0 = pxsim_Array__push(s.tmp_0, s.spr___96024);
     { step = 3; continue; }
   case 2:
-    r0 = (s.i___71184 + 1);
-    s.i___71184 = (r0);
+    r0 = (s.i___96017 + 1);
+    s.i___96017 = (r0);
   case 3:
     { step = 1; continue; }
   case 4:
-    s.i___71212 = (0);
+    s.i___96045 = (0);
   case 5:
-    s.tmp_1 = r0 = s.i___71212;
+    s.tmp_1 = r0 = s.i___96045;
     r0 = s.caps[0].fields["sprites2D"];
     s.tmp_3 = r0;
     r0 = pxsim_Array__length(s.tmp_3);
@@ -43455,9 +43455,9 @@ switch (step) {
     if (!r0) { step = 8; continue; }
     r0 = s.caps[0].fields["sprites2D"];
     s.tmp_4 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_4, s.i___71212);
-    s.spr___71219 = (r0);
-    r0 = s.spr___71219.fields["flags"];
+    r0 = pxsim_Array__getAt(s.tmp_4, s.i___96045);
+    s.spr___96052 = (r0);
+    r0 = s.spr___96052.fields["flags"];
     s.tmp_3 = r0;
     r0 = (s.tmp_3 & 512);
     s.tmp_2 = r0;
@@ -43469,18 +43469,18 @@ switch (step) {
     if (!r0) { step = 6; continue; }
     r0 = s.caps[0].fields["sprites2D"];
     s.tmp_4 = r0;
-    r0 = pxsim_Array_.removeElement(s.tmp_4, s.spr___71219);
+    r0 = pxsim_Array_.removeElement(s.tmp_4, s.spr___96052);
     r0 = s.caps[0].fields["sprites"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.spr___71219);
+    r0 = pxsim_Array__push(s.tmp_0, s.spr___96052);
     { step = 7; continue; }
   case 6:
-    r0 = (s.i___71212 + 1);
-    s.i___71212 = (r0);
+    r0 = (s.i___96045 + 1);
+    s.i___96045 = (r0);
   case 7:
     { step = 5; continue; }
   case 8:
-    s.tmp_0 = Render_RayCastingRender_takeoverSceneSprites__P67376_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_takeoverSceneSprites__P95134_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.callLocIdx = 133; s.pc = 9; return s.tmp_0;
   case 9:
@@ -43489,29 +43489,29 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71183.info = {"start":16377,"length":760,"line":438,"column":39,"endLine":454,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_inline__P96016.info = {"start":16369,"length":760,"line":438,"column":39,"endLine":454,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_inline__P71183_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96016_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71183, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96016, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  i___71184: undefined,
-  spr___71191: undefined,
-  i___71212: undefined,
-  spr___71219: undefined,
+  i___96017: undefined,
+  spr___96024: undefined,
+  i___96045: undefined,
+  spr___96052: undefined,
 } }
 
 
 
 
 
-function Render_RayCastingRender_inline__P71244(s) {
+function Render_IsometricRender_Sideview_inline__P96077(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43543,7 +43543,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["tempBackground"] = (s.tmp_1);
     s.tmp_0 = control___screen_setupUpdate__P64983_mk(s);
-    s.tmp_0.arg0 = Render_RayCastingRender_inline__P71260;
+    s.tmp_0.arg0 = Render_IsometricRender_Sideview_inline__P96093;
     s.callLocIdx = 136; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -43551,12 +43551,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71244.info = {"start":17775,"length":268,"line":471,"column":37,"endLine":475,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["oldScene"]}
+Render_IsometricRender_Sideview_inline__P96077.info = {"start":17767,"length":268,"line":471,"column":37,"endLine":475,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["oldScene"]}
 
-function Render_RayCastingRender_inline__P71244_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96077_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71244, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96077, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43568,7 +43568,7 @@ function Render_RayCastingRender_inline__P71244_mk(s) {
 
 
 
-function Render_RayCastingRender_inline__P71260(s) {
+function Render_IsometricRender_Sideview_inline__P96093(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43583,12 +43583,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71260.info = {"start":17998,"length":30,"line":474,"column":45,"endLine":474,"endColumn":75,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_inline__P96093.info = {"start":17990,"length":30,"line":474,"column":45,"endLine":474,"endColumn":75,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_inline__P71260_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96093_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71260, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96093, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -43596,7 +43596,7 @@ function Render_RayCastingRender_inline__P71260_mk(s) {
 
 
 
-function Render_RayCastingRender_inline__P71265(s) {
+function Render_IsometricRender_Sideview_inline__P96098(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43606,7 +43606,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.layers___71267 = undefined;
+    s.layers___96100 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -43628,20 +43628,20 @@ switch (step) {
     }
   case 1:
     r0 = s.retval;
-    s.layers___71267 = (r0);
+    s.layers___96100 = (r0);
     r0 = s.caps[0].fields["tempBackground"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array_.removeElement(s.layers___71267, s.tmp_0);
+    r0 = pxsim_Array_.removeElement(s.layers___96100, s.tmp_0);
     s.tmp_0 = info_PlayerInfo_setScore__P65635_mk(s);
     s.tmp_0.arg0 = globals.player3___65648;
-    r0 = pxsim_Array__length(s.layers___71267);
+    r0 = pxsim_Array__length(s.layers___96100);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 140; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     r0 = (s.caps[0]).fields["tempBackground"] = (undefined);
     r0 = (s.caps[0]).fields["tempScreen"] = (globals.screen___65021);
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_inline__P71290);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_inline__P96123);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[0]);
     s.tmp_1 = control___screen_setupUpdate__P64983_mk(s);
@@ -43653,16 +43653,16 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71265.info = {"start":18081,"length":595,"line":476,"column":36,"endLine":488,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["oldScene"]}
+Render_IsometricRender_Sideview_inline__P96098.info = {"start":18073,"length":595,"line":476,"column":36,"endLine":488,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["oldScene"]}
 
-function Render_RayCastingRender_inline__P71265_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96098_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71265, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96098, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  layers___71267: undefined,
+  layers___96100: undefined,
   arg0: undefined,
 } }
 
@@ -43670,7 +43670,7 @@ function Render_RayCastingRender_inline__P71265_mk(s) {
 
 
 
-function Render_RayCastingRender_inline__P71290(s) {
+function Render_IsometricRender_Sideview_inline__P96123(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43697,12 +43697,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_inline__P71290.info = {"start":18447,"length":214,"line":482,"column":45,"endLine":487,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_inline__P96123.info = {"start":18439,"length":214,"line":482,"column":45,"endLine":487,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_inline__P71290_mk(s) {
+function Render_IsometricRender_Sideview_inline__P96123_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_inline__P71290, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_inline__P96123, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43997,7 +43997,7 @@ function scene_cameraFollowSprite__P65879_mk(s) {
 
 
 
-function Render_RayCastingRender_updateViewZPos__P67375(s) {
+function Render_IsometricRender_Sideview_updateViewZPos__P95133(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44012,7 +44012,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.arg0.fields["spriteMotionZ"];
     s.tmp_4 = r0;
@@ -44034,12 +44034,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_updateViewZPos__P67375.info = {"start":10414,"length":149,"line":313,"column":8,"endLine":315,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateViewZPos","argumentNames":["this"]}
+Render_IsometricRender_Sideview_updateViewZPos__P95133.info = {"start":10406,"length":149,"line":313,"column":8,"endLine":315,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateViewZPos","argumentNames":["this"]}
 
-function Render_RayCastingRender_updateViewZPos__P67375_mk(s) {
+function Render_IsometricRender_Sideview_updateViewZPos__P95133_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_updateViewZPos__P67375, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_updateViewZPos__P95133, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44055,7 +44055,7 @@ function Render_RayCastingRender_updateViewZPos__P67375_mk(s) {
 
 
 
-function Render_RayCastingRender_takeoverSceneSprites__P67376(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites__P95134(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44065,41 +44065,41 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sc_allSprites___70756 = undefined;
-    s.i___70760 = undefined;
-    s.spr___70766 = undefined;
-    s.sprList___70773 = undefined;
-    s.particle___70826 = undefined;
-    s.spr___70841 = undefined;
+    s.sc_allSprites___95574 = undefined;
+    s.i___95578 = undefined;
+    s.spr___95584 = undefined;
+    s.sprList___95591 = undefined;
+    s.particle___95646 = undefined;
+    s.spr___95662 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = game_currentScene__P65988_mk(s);
     s.callLocIdx = 81; s.pc = 19; return s.tmp_0;
   case 19:
     r0 = s.retval;
     r0 = r0.fields["allSprites"];
-    s.sc_allSprites___70756 = (r0);
-    s.i___70760 = (0);
+    s.sc_allSprites___95574 = (r0);
+    s.i___95578 = (0);
   case 1:
-    s.tmp_1 = r0 = s.i___70760;
-    r0 = pxsim_Array__length(s.sc_allSprites___70756);
+    s.tmp_1 = r0 = s.i___95578;
+    r0 = pxsim_Array__length(s.sc_allSprites___95574);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 18; continue; }
-    r0 = pxsim_Array__getAt(s.sc_allSprites___70756, s.i___70760);
-    s.spr___70766 = (r0);
-    r0 = s.spr___70766;
+    r0 = pxsim_Array__getAt(s.sc_allSprites___95574, s.i___95578);
+    s.spr___95584 = (r0);
+    r0 = s.spr___95584;
     r0 = checkSubtype(r0, Sprite__C65330_VT);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
-    r0 = s.spr___70766.fields["flags"];
+    r0 = s.spr___95584.fields["flags"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 & 512);
     s.tmp_1 = r0;
@@ -44112,27 +44112,27 @@ switch (step) {
   case 3:
     // jmp value (already in r0)
     s.tmp_3 = r0;
-    s.sprList___70773 = (s.tmp_3);
-    r0 = pxsim_Array_.indexOf(s.sprList___70773, s.spr___70766, undefined);
+    s.sprList___95591 = (s.tmp_3);
+    r0 = pxsim_Array_.indexOf(s.sprList___95591, s.spr___95584, undefined);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__push(s.sprList___70773, s.spr___70766);
-    s.tmp_0 = Render_RayCastingRender_getMotionZ__P67365_mk(s);
+    r0 = pxsim_Array__push(s.sprList___95591, s.spr___95584);
+    s.tmp_0 = Render_IsometricRender_Sideview_getMotionZ__P95123_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.spr___70766;
+    s.tmp_0.arg1 = s.spr___95584;
     s.tmp_0.arg2 = 0;
     s.callLocIdx = 82; s.pc = 20; return s.tmp_0;
   case 20:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(2, Render_RayCastingRender_takeoverSceneSprites_inline__P70797);
+    r0 = pxsim_pxtcore_mkAction(2, Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95617);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.spr___70766);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.spr___95584);
     s.tmp_1 = Sprite_onDestroyed__P65416_mk(s);
-    s.tmp_1.arg0 = s.spr___70766;
+    s.tmp_1.arg0 = s.spr___95584;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 83; s.pc = 21; return s.tmp_1;
   case 21:
@@ -44141,15 +44141,15 @@ switch (step) {
   case 5:
     { step = 17; continue; }
   case 6:
-    r0 = s.spr___70766;
+    r0 = s.spr___95584;
     r0 = checkSubtype(r0, particles_ParticleSource__C66140_VT);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
-    s.particle___70826 = (s.spr___70766);
+    s.particle___95646 = (s.spr___95584);
     r0 = s.arg0.fields["spriteParticles"];
     s.tmp_2 = r0;
-    r0 = pxsim_Array_.indexOf(s.tmp_2, s.particle___70826, undefined);
+    r0 = pxsim_Array_.indexOf(s.tmp_2, s.particle___95646, undefined);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
@@ -44158,18 +44158,18 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 8; continue; }
   case 7:
-    r0 = s.particle___70826.fields["anchor"];
+    r0 = s.particle___95646.fields["anchor"];
     r0 = checkSubtype(r0, Sprite__C65330_VT);
   case 8:
     // jmp value (already in r0)
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 11; continue; }
-    r0 = s.particle___70826.fields["anchor"];
-    s.spr___70841 = (r0);
+    r0 = s.particle___95646.fields["anchor"];
+    s.spr___95662 = (r0);
     r0 = s.arg0.fields["sprites"];
     s.tmp_2 = r0;
-    r0 = pxsim_Array_.indexOf(s.tmp_2, s.spr___70841, undefined);
+    r0 = pxsim_Array_.indexOf(s.tmp_2, s.spr___95662, undefined);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 >= 0);
     s.tmp_0 = r0;
@@ -44177,14 +44177,14 @@ switch (step) {
     if (!r0) { step = 9; continue; }
     r0 = s.arg0.fields["spriteParticles"];
     s.tmp_3 = r0;
-    r0 = s.spr___70841.fields["id"];
+    r0 = s.spr___95662.fields["id"];
     s.tmp_4 = r0;
-    r0 = pxsim_Array_.setAt(s.tmp_3, s.tmp_4, s.particle___70826);
+    r0 = pxsim_Array_.setAt(s.tmp_3, s.tmp_4, s.particle___95646);
     r0 = pxsim_pxtrt.mkMap();
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.mapSetByString(s.tmp_0, "x", 0);
     r0 = pxsim_pxtrt.mapSetByString(s.tmp_0, "y", 0);
-    r0 = (s.particle___70826).fields["anchor"] = (s.tmp_0);
+    r0 = (s.particle___95646).fields["anchor"] = (s.tmp_0);
   case 9:
   case 10:
   case 11:
@@ -44193,7 +44193,7 @@ switch (step) {
   case 13:
     r0 = s.arg0.fields["spriteLikes"];
     s.tmp_2 = r0;
-    r0 = pxsim_Array_.indexOf(s.tmp_2, s.spr___70766, undefined);
+    r0 = pxsim_Array_.indexOf(s.tmp_2, s.spr___95584, undefined);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 < 0);
     s.tmp_0 = r0;
@@ -44201,15 +44201,15 @@ switch (step) {
     if (!r0) { step = 14; continue; }
     r0 = s.arg0.fields["spriteLikes"];
     s.tmp_3 = r0;
-    r0 = pxsim_Array__push(s.tmp_3, s.spr___70766);
+    r0 = pxsim_Array__push(s.tmp_3, s.spr___95584);
   case 14:
   case 15:
   case 16:
   case 17:
-    r0 = pxsim_Array_.removeElement(s.sc_allSprites___70756, s.spr___70766);
+    r0 = pxsim_Array_.removeElement(s.sc_allSprites___95574, s.spr___95584);
     { step = 1; continue; }
   case 18:
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_takeoverSceneSprites_inline__P70879);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95701);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -44223,24 +44223,24 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_takeoverSceneSprites__P67376.info = {"start":10573,"length":1969,"line":317,"column":8,"endLine":355,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"takeoverSceneSprites","argumentNames":["this"]}
+Render_IsometricRender_Sideview_takeoverSceneSprites__P95134.info = {"start":10565,"length":1969,"line":317,"column":8,"endLine":355,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"takeoverSceneSprites","argumentNames":["this"]}
 
-function Render_RayCastingRender_takeoverSceneSprites__P67376_mk(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites__P95134_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_takeoverSceneSprites__P67376, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_takeoverSceneSprites__P95134, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  sc_allSprites___70756: undefined,
-  i___70760: undefined,
-  spr___70766: undefined,
-  sprList___70773: undefined,
-  particle___70826: undefined,
-  spr___70841: undefined,
+  sc_allSprites___95574: undefined,
+  i___95578: undefined,
+  spr___95584: undefined,
+  sprList___95591: undefined,
+  particle___95646: undefined,
+  spr___95662: undefined,
   arg0: undefined,
 } }
 
@@ -44248,7 +44248,7 @@ function Render_RayCastingRender_takeoverSceneSprites__P67376_mk(s) {
 
 
 
-function Render_RayCastingRender_takeoverSceneSprites_inline__P70797(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95617(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44258,7 +44258,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sayRenderer___70808 = undefined;
+    s.sayRenderer___95628 = undefined;
     r0 = s.caps[0].fields["sprites"];
     s.tmp_0 = r0;
     r0 = pxsim_Array_.removeElement(s.tmp_0, s.caps[1]);
@@ -44270,14 +44270,14 @@ switch (step) {
     r0 = s.caps[1].fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.tmp_1);
-    s.sayRenderer___70808 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.sayRenderer___70808);
+    s.sayRenderer___95628 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.sayRenderer___95628);
     if (!r0) { step = 1; continue; }
     r0 = s.caps[0].fields["sayRederers"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array_.removeElement(s.tmp_0, s.sayRenderer___70808);
+    r0 = pxsim_Array_.removeElement(s.tmp_0, s.sayRenderer___95628);
     s.tmp_0 = sprites_BaseSpriteSayRenderer__C65248_v2_1_mk(s);
-    s.tmp_0.arg0 = s.sayRenderer___70808;
+    s.tmp_0.arg0 = s.sayRenderer___95628;
     if (!checkSubtype(s.tmp_0.arg0, sprites_BaseSpriteSayRenderer__C65248_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.destroy;
     s.pc = 3; return s.tmp_0;
@@ -44289,23 +44289,23 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_takeoverSceneSprites_inline__P70797.info = {"start":11105,"length":511,"line":326,"column":40,"endLine":334,"endColumn":25,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95617.info = {"start":11097,"length":511,"line":326,"column":40,"endLine":334,"endColumn":25,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_takeoverSceneSprites_inline__P70797_mk(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95617_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_takeoverSceneSprites_inline__P70797, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95617, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  sayRenderer___70808: undefined,
+  sayRenderer___95628: undefined,
 } }
 
 
 
 
 
-function Render_RayCastingRender_takeoverSceneSprites_inline__P70879(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95701(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44321,7 +44321,7 @@ switch (step) {
     }
     r0 = pxsim_numops_toBoolDecr(s.arg0);
     if (!r0) { step = 1; continue; }
-    s.tmp_0 = Render_RayCastingRender_takeoverSayRenderOfSprite__P67377_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.tmp_0.arg1 = s.arg0;
     s.callLocIdx = 84; s.pc = 3; return s.tmp_0;
@@ -44333,12 +44333,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_takeoverSceneSprites_inline__P70879.info = {"start":12426,"length":105,"line":351,"column":33,"endLine":354,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95701.info = {"start":12418,"length":105,"line":351,"column":33,"endLine":354,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function Render_RayCastingRender_takeoverSceneSprites_inline__P70879_mk(s) {
+function Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95701_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_takeoverSceneSprites_inline__P70879, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_takeoverSceneSprites_inline__P95701, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -44348,7 +44348,7 @@ function Render_RayCastingRender_takeoverSceneSprites_inline__P70879_mk(s) {
 
 
 
-function Render_RayCastingRender_takeoverSayRenderOfSprite__P67377(s) {
+function Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44358,17 +44358,17 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sprite_as_any___70886 = undefined;
+    s.sprite_as_any___95708 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
-    s.sprite_as_any___70886 = (s.arg1);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
+    s.sprite_as_any___95708 = (s.arg1);
     s.tmp_1 = if_sayRenderer_1_mk(s);
-    s.tmp_1.arg0 = s.sprite_as_any___70886;
+    s.tmp_1.arg0 = s.sprite_as_any___95708;
     if (!s.tmp_1.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_1.arg0, "sayRenderer");
     } else {
@@ -44387,7 +44387,7 @@ switch (step) {
     r0 = s.arg1.fields["id"];
     s.tmp_3 = r0;
     s.tmp_5 = if_sayRenderer_1_mk(s);
-    s.tmp_5.arg0 = s.sprite_as_any___70886;
+    s.tmp_5.arg0 = s.sprite_as_any___95708;
     if (!s.tmp_5.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_5.arg0, "sayRenderer");
     } else {
@@ -44405,7 +44405,7 @@ switch (step) {
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     s.tmp_3 = if_sayEndTime_1_mk(s);
-    s.tmp_3.arg0 = s.sprite_as_any___70886;
+    s.tmp_3.arg0 = s.sprite_as_any___95708;
     if (!s.tmp_3.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_3.arg0, "sayEndTime");
     } else {
@@ -44419,7 +44419,7 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = pxsim_Array_.setAt(s.tmp_0, s.tmp_1, s.tmp_2);
     s.tmp_0 = if_sayRenderer_2_mk(s);
-    s.tmp_0.arg0 = s.sprite_as_any___70886;
+    s.tmp_0.arg0 = s.sprite_as_any___95708;
     s.tmp_0.arg1 = undefined;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "sayRenderer", s.tmp_0.arg1);
@@ -44432,7 +44432,7 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_0 = if_sayEndTime_2_mk(s);
-    s.tmp_0.arg0 = s.sprite_as_any___70886;
+    s.tmp_0.arg0 = s.sprite_as_any___95708;
     s.tmp_0.arg1 = undefined;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "sayEndTime", s.tmp_0.arg1);
@@ -44450,12 +44450,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_takeoverSayRenderOfSprite__P67377.info = {"start":12551,"length":413,"line":356,"column":8,"endLine":364,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"takeoverSayRenderOfSprite","argumentNames":["this","sprite"]}
+Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135.info = {"start":12543,"length":413,"line":356,"column":8,"endLine":364,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"takeoverSayRenderOfSprite","argumentNames":["this","sprite"]}
 
-function Render_RayCastingRender_takeoverSayRenderOfSprite__P67377_mk(s) {
+function Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_takeoverSayRenderOfSprite__P67377, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44463,7 +44463,7 @@ function Render_RayCastingRender_takeoverSayRenderOfSprite__P67377_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  sprite_as_any___70886: undefined,
+  sprite_as_any___95708: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -44509,7 +44509,7 @@ function Sprite_onDestroyed__P65416_mk(s) {
 
 
 
-function Render_RayCastingRender_getMotionZ__P67365(s) {
+function Render_IsometricRender_Sideview_getMotionZ__P95123(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44519,7 +44519,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.motionZ___70534 = undefined;
+    s.motionZ___95351 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -44527,22 +44527,22 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["spriteMotionZ"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.tmp_1);
-    s.motionZ___70534 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.motionZ___70534);
+    s.motionZ___95351 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.motionZ___95351);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(Render_MotionSet1D__C70419_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(Render_MotionSet1D__C95234_VT);
     s.tmp_2 = r0;
-    s.tmp_3 = Render_MotionSet1D_constructor__P70420_mk(s);
+    s.tmp_3 = Render_MotionSet1D_constructor__P95235_mk(s);
     s.tmp_3.arg0 = s.tmp_2;
     r0 = (s.arg2 * 256);
     s.tmp_4 = r0;
@@ -44551,31 +44551,31 @@ switch (step) {
     s.callLocIdx = 80; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
-    s.motionZ___70534 = (s.tmp_2);
+    s.motionZ___95351 = (s.tmp_2);
     r0 = s.arg0.fields["spriteMotionZ"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
-    r0 = pxsim_Array_.setAt(s.tmp_0, s.tmp_1, s.motionZ___70534);
+    r0 = pxsim_Array_.setAt(s.tmp_0, s.tmp_1, s.motionZ___95351);
   case 1:
   case 2:
-    r0 = s.motionZ___70534;
+    r0 = s.motionZ___95351;
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_getMotionZ__P67365.info = {"start":7599,"length":289,"line":227,"column":8,"endLine":234,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"getMotionZ","argumentNames":["this","spr","offsetZ"]}
+Render_IsometricRender_Sideview_getMotionZ__P95123.info = {"start":7591,"length":289,"line":227,"column":8,"endLine":234,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"getMotionZ","argumentNames":["this","spr","offsetZ"]}
 
-function Render_RayCastingRender_getMotionZ__P67365_mk(s) {
+function Render_IsometricRender_Sideview_getMotionZ__P95123_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_getMotionZ__P67365, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_getMotionZ__P95123, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  motionZ___70534: undefined,
+  motionZ___95351: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -44585,7 +44585,7 @@ function Render_RayCastingRender_getMotionZ__P67365_mk(s) {
 
 
 
-function Render_tofpx__P67327(s) {
+function Render_tofpx__P94930(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44605,12 +44605,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_tofpx__P67327.info = {"start":831,"length":63,"line":32,"column":4,"endLine":32,"endColumn":67,"fileName":"render_raycasting.ts","functionName":"tofpx","argumentNames":["n"]}
+Render_tofpx__P94930.info = {"start":831,"length":63,"line":32,"column":4,"endLine":32,"endColumn":67,"fileName":"render_raycasting.ts","functionName":"tofpx","argumentNames":["n"]}
 
-function Render_tofpx__P67327_mk(s) {
+function Render_tofpx__P94930_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_tofpx__P67327, depth: s.depth + 1,
+        parent: s, fn: Render_tofpx__P94930, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -44620,7 +44620,7 @@ function Render_tofpx__P67327_mk(s) {
 
 
 
-function Render_MotionSet1D_constructor__P70420(s) {
+function Render_MotionSet1D_constructor__P95235(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44636,7 +44636,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_MotionSet1D__C70419_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_MotionSet1D__C95234_VT)) failedCast(r0);
     r0 = (s.arg0).fields["offset"] = (s.arg1);
     r0 = (s.arg0).fields["v"] = (0);
     r0 = (s.arg0).fields["a"] = (0);
@@ -44645,12 +44645,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_MotionSet1D_constructor__P70420.info = {"start":3685,"length":74,"line":96,"column":8,"endLine":98,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["this","offset"]}
+Render_MotionSet1D_constructor__P95235.info = {"start":3669,"length":74,"line":96,"column":8,"endLine":98,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["this","offset"]}
 
-function Render_MotionSet1D_constructor__P70420_mk(s) {
+function Render_MotionSet1D_constructor__P95235_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_MotionSet1D_constructor__P70420, depth: s.depth + 1,
+        parent: s, fn: Render_MotionSet1D_constructor__P95235, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -44922,7 +44922,7 @@ function tiles_TileMapEventHandler_constructor__P65723_mk(s) {
 
 
 
-function Render_RayCastingRender_tilemapLoaded__P67378(s) {
+function Render_IsometricRender_Sideview_tilemapLoaded__P95136(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44932,22 +44932,22 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sc___70920 = undefined;
-    s.frameCallback_update___70968 = undefined;
-    s.frameCallback_draw___70995 = undefined;
+    s.sc___95742 = undefined;
+    s.frameCallback_update___95793 = undefined;
+    s.frameCallback_draw___95820 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = game_currentScene__P65988_mk(s);
     s.callLocIdx = 91; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.sc___70920 = (r0);
+    s.sc___95742 = (r0);
     s.tmp_0 = r0 = s.arg0;
-    r0 = s.sc___70920.fields["tileMap"];
+    r0 = s.sc___95742.fields["tileMap"];
     s.tmp_2 = r0;
     r0 = s.tmp_2.fields["_map"];
     s.tmp_1 = r0;
@@ -44975,7 +44975,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["mapData"] = (s.tmp_1);
     s.tmp_0 = r0 = s.arg0;
-    r0 = s.sc___70920.fields["tileMap"];
+    r0 = s.sc___95742.fields["tileMap"];
     s.tmp_4 = r0;
     r0 = s.tmp_4.fields["_map"];
     s.tmp_3 = r0;
@@ -44985,14 +44985,14 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["tilemapScaleSize"] = (s.tmp_1);
     s.tmp_0 = r0 = s.arg0;
-    r0 = s.sc___70920.fields["tileMap"];
+    r0 = s.sc___95742.fields["tileMap"];
     s.tmp_3 = r0;
     r0 = s.tmp_3.fields["_map"];
     s.tmp_2 = r0;
     r0 = s.tmp_2.fields["tileset"];
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["textures"] = (s.tmp_1);
-    r0 = s.sc___70920.fields["tileMap"];
+    r0 = s.sc___95742.fields["tileMap"];
     r0 = r0.fields["renderable"];
     s.tmp_0 = r0;
     r0 = (s.arg0).fields["oldRender"] = (s.tmp_0);
@@ -45001,44 +45001,44 @@ switch (step) {
     r0 = s.arg0.fields["oldRender"];
     s.tmp_1 = r0;
     r0 = pxsim_Array_.removeElement(s.tmp_0, s.tmp_1);
-    r0 = s.sc___70920.fields["allSprites"];
+    r0 = s.sc___95742.fields["allSprites"];
     s.tmp_0 = r0;
     r0 = s.arg0.fields["oldRender"];
     s.tmp_1 = r0;
     r0 = pxsim_Array_.removeElement(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtcore_mkAction(2, frameCallback_update_inline__P70975);
+    r0 = pxsim_pxtcore_mkAction(2, frameCallback_update_inline__P95800);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.sc___70920);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.sc___95742);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.arg0);
     s.tmp_1 = control_EventContext_registerFrameHandler__P63392_mk(s);
-    r0 = s.sc___70920.fields["eventContext"];
+    r0 = s.sc___95742.fields["eventContext"];
     s.tmp_1.arg0 = r0;
     s.tmp_1.arg1 = 56;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 100; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
-    s.frameCallback_update___70968 = (r0);
-    r0 = pxsim_pxtcore_mkAction(2, frameCallback_draw_inline__P71002);
+    s.frameCallback_update___95793 = (r0);
+    r0 = pxsim_pxtcore_mkAction(2, frameCallback_draw_inline__P95827);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.sc___70920);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.sc___95742);
     s.tmp_1 = control_EventContext_registerFrameHandler__P63392_mk(s);
-    r0 = s.sc___70920.fields["eventContext"];
+    r0 = s.sc___95742.fields["eventContext"];
     s.tmp_1.arg0 = r0;
     s.tmp_1.arg1 = 91;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 113; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    s.frameCallback_draw___70995 = (r0);
-    r0 = pxsim_pxtcore_mkAction(3, Render_RayCastingRender_tilemapLoaded_inline__P71079);
+    s.frameCallback_draw___95820 = (r0);
+    r0 = pxsim_pxtcore_mkAction(3, Render_IsometricRender_Sideview_tilemapLoaded_inline__P95905);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.sc___70920);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.frameCallback_update___70968);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.frameCallback_draw___70995);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.sc___95742);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.frameCallback_update___95793);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.frameCallback_draw___95820);
     s.tmp_1 = tiles_TileMap_addEventListener__P65749_mk(s);
-    r0 = s.sc___70920.fields["tileMap"];
+    r0 = s.sc___95742.fields["tileMap"];
     s.tmp_1.arg0 = r0;
     s.tmp_1.arg1 = 1;
     s.tmp_1.arg2 = s.tmp_0;
@@ -45049,21 +45049,21 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_tilemapLoaded__P67378.info = {"start":12974,"length":2230,"line":366,"column":8,"endLine":408,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"tilemapLoaded","argumentNames":["this"]}
+Render_IsometricRender_Sideview_tilemapLoaded__P95136.info = {"start":12966,"length":2230,"line":366,"column":8,"endLine":408,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"tilemapLoaded","argumentNames":["this"]}
 
-function Render_RayCastingRender_tilemapLoaded__P67378_mk(s) {
+function Render_IsometricRender_Sideview_tilemapLoaded__P95136_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_tilemapLoaded__P67378, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_tilemapLoaded__P95136, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  sc___70920: undefined,
-  frameCallback_update___70968: undefined,
-  frameCallback_draw___70995: undefined,
+  sc___95742: undefined,
+  frameCallback_update___95793: undefined,
+  frameCallback_draw___95820: undefined,
   arg0: undefined,
 } }
 
@@ -45071,7 +45071,7 @@ function Render_RayCastingRender_tilemapLoaded__P67378_mk(s) {
 
 
 
-function frameCallback_update_inline__P70975(s) {
+function frameCallback_update_inline__P95800(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45081,49 +45081,49 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.dt___70976 = undefined;
-    s.s___70981 = undefined;
-    s.unnamed484___U2 = undefined;
-    s.unnamed485___U3 = undefined;
+    s.dt___95801 = undefined;
+    s.s___95806 = undefined;
+    s.unnamed836___U2 = undefined;
+    s.unnamed837___U3 = undefined;
     r0 = s.caps[0].fields["eventContext"];
     s.tmp_0 = r0;
     r0 = s.tmp_0.fields["deltaTimeMillis"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 1000);
-    s.dt___70976 = (r0);
-    s.s___70981 = (undefined);
+    s.dt___95801 = (r0);
+    s.s___95806 = (undefined);
     r0 = s.caps[1].fields["sprites"];
-    s.unnamed484___U2 = (r0);
-    s.unnamed485___U3 = (0);
+    s.unnamed836___U2 = (r0);
+    s.unnamed837___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed485___U3;
-    r0 = pxsim_Array__length(s.unnamed484___U2);
+    s.tmp_0 = r0 = s.unnamed837___U3;
+    r0 = pxsim_Array__length(s.unnamed836___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed484___U2, s.unnamed485___U3);
-    s.s___70981 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed836___U2, s.unnamed837___U3);
+    s.s___95806 = (r0);
     s.tmp_2 = Sprite__C65330_v3_3_mk(s);
-    s.tmp_2.arg0 = s.s___70981;
+    s.tmp_2.arg0 = s.s___95806;
     r0 = s.caps[0].fields["camera"];
     s.tmp_2.arg1 = r0;
-    s.tmp_2.arg2 = s.dt___70976;
+    s.tmp_2.arg2 = s.dt___95801;
     if (!checkSubtype(s.tmp_2.arg0, Sprite__C65330_VT)) failedCast(s.tmp_2.arg0);
     s.tmp_2.fn = s.tmp_2.arg0.vtable.methods.__update;
     s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    r0 = (s.unnamed485___U3 + 1);
-    s.unnamed485___U3 = (r0);
+    r0 = (s.unnamed837___U3 + 1);
+    s.unnamed837___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed484___U2 = (undefined);
+    s.unnamed836___U2 = (undefined);
     s.tmp_0 = Sprite__C65330_v3_3_mk(s);
     r0 = s.caps[1].fields["sprSelf"];
     s.tmp_0.arg0 = r0;
     r0 = s.caps[0].fields["camera"];
     s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = s.dt___70976;
+    s.tmp_0.arg2 = s.dt___95801;
     if (!checkSubtype(s.tmp_0.arg0, Sprite__C65330_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.__update;
     s.pc = 4; return s.tmp_0;
@@ -45133,27 +45133,27 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_update_inline__P70975.info = {"start":13566,"length":285,"line":376,"column":114,"endLine":382,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+frameCallback_update_inline__P95800.info = {"start":13558,"length":285,"line":376,"column":114,"endLine":382,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function frameCallback_update_inline__P70975_mk(s) {
+function frameCallback_update_inline__P95800_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_update_inline__P70975, depth: s.depth + 1,
+        parent: s, fn: frameCallback_update_inline__P95800, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  dt___70976: undefined,
-  s___70981: undefined,
-  unnamed484___U2: undefined,
-  unnamed485___U3: undefined,
+  dt___95801: undefined,
+  s___95806: undefined,
+  unnamed836___U2: undefined,
+  unnamed837___U3: undefined,
 } }
 
 
 
 
 
-function frameCallback_draw_inline__P71002(s) {
+function frameCallback_draw_inline__P95827(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45187,12 +45187,12 @@ switch (step) {
     s.callLocIdx = 102; s.pc = 5; return s.tmp_5;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_render__P67396_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_render__P95148_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.callLocIdx = 103; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P71019);
+    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P95845);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[1]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -45202,7 +45202,7 @@ switch (step) {
     s.callLocIdx = 104; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P71028);
+    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P95854);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[1]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -45236,7 +45236,7 @@ switch (step) {
     s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P71046);
+    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P95872);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[1]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -45256,7 +45256,7 @@ switch (step) {
     s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P71060);
+    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P95886);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[1]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -45266,7 +45266,7 @@ switch (step) {
     s.callLocIdx = 110; s.pc = 15; return s.tmp_1;
   case 15:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P71069);
+    r0 = pxsim_pxtcore_mkAction(1, frameCallback_draw_inline__P95895);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[1]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -45281,12 +45281,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71002.info = {"start":13963,"length":983,"line":384,"column":109,"endLine":402,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+frameCallback_draw_inline__P95827.info = {"start":13955,"length":983,"line":384,"column":109,"endLine":402,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function frameCallback_draw_inline__P71002_mk(s) {
+function frameCallback_draw_inline__P95827_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71002, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95827, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -45301,7 +45301,7 @@ function frameCallback_draw_inline__P71002_mk(s) {
 
 
 
-function frameCallback_draw_inline__P71019(s) {
+function frameCallback_draw_inline__P95845(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45328,12 +45328,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71019.info = {"start":14284,"length":28,"line":390,"column":47,"endLine":390,"endColumn":75,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+frameCallback_draw_inline__P95845.info = {"start":14276,"length":28,"line":390,"column":47,"endLine":390,"endColumn":75,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function frameCallback_draw_inline__P71019_mk(s) {
+function frameCallback_draw_inline__P95845_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71019, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95845, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45343,7 +45343,7 @@ function frameCallback_draw_inline__P71019_mk(s) {
 
 
 
-function frameCallback_draw_inline__P71028(s) {
+function frameCallback_draw_inline__P95854(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45376,12 +45376,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71028.info = {"start":14363,"length":28,"line":391,"column":49,"endLine":391,"endColumn":77,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+frameCallback_draw_inline__P95854.info = {"start":14355,"length":28,"line":391,"column":49,"endLine":391,"endColumn":77,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function frameCallback_draw_inline__P71028_mk(s) {
+function frameCallback_draw_inline__P95854_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71028, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95854, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45391,7 +45391,7 @@ function frameCallback_draw_inline__P71028_mk(s) {
 
 
 
-function frameCallback_draw_inline__P71046(s) {
+function frameCallback_draw_inline__P95872(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45418,12 +45418,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71046.info = {"start":14686,"length":28,"line":397,"column":41,"endLine":397,"endColumn":69,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+frameCallback_draw_inline__P95872.info = {"start":14678,"length":28,"line":397,"column":41,"endLine":397,"endColumn":69,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function frameCallback_draw_inline__P71046_mk(s) {
+function frameCallback_draw_inline__P95872_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71046, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95872, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45433,7 +45433,7 @@ function frameCallback_draw_inline__P71046_mk(s) {
 
 
 
-function frameCallback_draw_inline__P71060(s) {
+function frameCallback_draw_inline__P95886(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45460,12 +45460,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71060.info = {"start":14810,"length":28,"line":399,"column":43,"endLine":399,"endColumn":71,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+frameCallback_draw_inline__P95886.info = {"start":14802,"length":28,"line":399,"column":43,"endLine":399,"endColumn":71,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function frameCallback_draw_inline__P71060_mk(s) {
+function frameCallback_draw_inline__P95886_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71060, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95886, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45475,7 +45475,7 @@ function frameCallback_draw_inline__P71060_mk(s) {
 
 
 
-function frameCallback_draw_inline__P71069(s) {
+function frameCallback_draw_inline__P95895(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45508,12 +45508,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-frameCallback_draw_inline__P71069.info = {"start":14885,"length":28,"line":400,"column":45,"endLine":400,"endColumn":73,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
+frameCallback_draw_inline__P95895.info = {"start":14877,"length":28,"line":400,"column":45,"endLine":400,"endColumn":73,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr"]}
 
-function frameCallback_draw_inline__P71069_mk(s) {
+function frameCallback_draw_inline__P95895_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: frameCallback_draw_inline__P71069, depth: s.depth + 1,
+        parent: s, fn: frameCallback_draw_inline__P95895, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45523,7 +45523,7 @@ function frameCallback_draw_inline__P71069_mk(s) {
 
 
 
-function Render_RayCastingRender_tilemapLoaded_inline__P71079(s) {
+function Render_IsometricRender_Sideview_tilemapLoaded_inline__P95905(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45555,12 +45555,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_tilemapLoaded_inline__P71079.info = {"start":15018,"length":175,"line":404,"column":69,"endLine":407,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["data"]}
+Render_IsometricRender_Sideview_tilemapLoaded_inline__P95905.info = {"start":15010,"length":175,"line":404,"column":69,"endLine":407,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["data"]}
 
-function Render_RayCastingRender_tilemapLoaded_inline__P71079_mk(s) {
+function Render_IsometricRender_Sideview_tilemapLoaded_inline__P95905_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_tilemapLoaded_inline__P71079, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_tilemapLoaded_inline__P95905, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45836,7 +45836,7 @@ function sprites_BaseSprite___visible__P65086_mk(s) {
 
 
 
-function Render_RayCastingRender_render__P67396(s) {
+function Render_IsometricRender_Sideview_render__P95148(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45846,33 +45846,33 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.angle___72156 = undefined;
-    s.i___72172 = undefined;
-    s.i___72206 = undefined;
-    s.ms___72235 = undefined;
-    s.A_px_Fpx___72309 = undefined;
-    s.B_px_Fpx___72317 = undefined;
-    s.C_px_Fpx___72325 = undefined;
-    s.D_px_Fpx___72328 = undefined;
-    s.A___72334 = undefined;
-    s.B___72338 = undefined;
-    s.C___72342 = undefined;
-    s.D___72345 = undefined;
-    s.centerX___72351 = undefined;
-    s.centerY___72359 = undefined;
-    s.tileOffsetX___72495 = undefined;
-    s.tileOffsetY___72508 = undefined;
-    s.tileCorner___72529 = undefined;
-    s.left_CenterTile___72535 = undefined;
-    s.top_CenterTile___72541 = undefined;
-    s.rowYStep___72549 = undefined;
-    s.ms___72558 = undefined;
+    s.angle___96991 = undefined;
+    s.i___97007 = undefined;
+    s.i___97041 = undefined;
+    s.ms___97070 = undefined;
+    s.A_px_Fpx___97144 = undefined;
+    s.B_px_Fpx___97152 = undefined;
+    s.C_px_Fpx___97160 = undefined;
+    s.D_px_Fpx___97163 = undefined;
+    s.A___97169 = undefined;
+    s.B___97173 = undefined;
+    s.C___97177 = undefined;
+    s.D___97180 = undefined;
+    s.centerX___97186 = undefined;
+    s.centerY___97194 = undefined;
+    s.tileOffsetX___97330 = undefined;
+    s.tileOffsetY___97343 = undefined;
+    s.tileCorner___97364 = undefined;
+    s.left_CenterTile___97370 = undefined;
+    s.top_CenterTile___97376 = undefined;
+    s.rowYStep___97384 = undefined;
+    s.ms___97393 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
   case 1:
     r0 = s.arg0.fields["_angle"];
     s.tmp_1 = r0;
@@ -45917,7 +45917,7 @@ switch (step) {
     r0 = s.arg0.fields["_angle"];
     s.tmp_0 = r0;
     r0 = (s.tmp_0 - 1.5707963267948966);
-    s.angle___72156 = (r0);
+    s.angle___96991 = (r0);
     r0 = s.arg0.fields["wholeWalls"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
@@ -45934,9 +45934,9 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["wallCached"] = (s.tmp_1);
-    s.i___72172 = (1);
+    s.i___97007 = (1);
   case 5:
-    s.tmp_1 = r0 = s.i___72172;
+    s.tmp_1 = r0 = s.i___97007;
     r0 = s.arg0.fields["map"];
     s.tmp_4 = r0;
     r0 = s.tmp_4.fields["tileset"];
@@ -45949,12 +45949,12 @@ switch (step) {
     if (!r0) { step = 6; continue; }
     r0 = s.arg0.fields["wholeWalls"];
     s.tmp_5 = r0;
-    s.tmp_6 = r0 = s.i___72172;
-    r0 = (16 * globals.Max_TileImgScaleX___70214);
+    s.tmp_6 = r0 = s.i___97007;
+    r0 = (16 * globals.Max_TileImgScaleX___94981);
     s.tmp_8 = r0;
-    r0 = (16 * globals.Max_TileImgScaleY___70217);
+    r0 = (16 * globals.Max_TileImgScaleY___94984);
     s.tmp_10 = r0;
-    r0 = (s.tmp_10 + globals.WallHeight___70242);
+    r0 = (s.tmp_10 + globals.WallHeight___95009);
     s.tmp_9 = r0;
     r0 = pxsim.image.create(s.tmp_8, s.tmp_9);
     s.tmp_7 = r0;
@@ -45962,8 +45962,8 @@ switch (step) {
     r0 = s.arg0.fields["wallCached"];
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, false);
-    r0 = (s.i___72172 + 1);
-    s.i___72172 = (r0);
+    r0 = (s.i___97007 + 1);
+    s.i___97007 = (r0);
     { step = 5; continue; }
   case 6:
   case 7:
@@ -45980,9 +45980,9 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_4 = r0;
     r0 = (s.tmp_3).fields["shearedTiles"] = (s.tmp_4);
-    s.i___72206 = (1);
+    s.i___97041 = (1);
   case 9:
-    s.tmp_1 = r0 = s.i___72206;
+    s.tmp_1 = r0 = s.i___97041;
     r0 = s.arg0.fields["map"];
     s.tmp_4 = r0;
     r0 = s.tmp_4.fields["tileset"];
@@ -45995,18 +45995,18 @@ switch (step) {
     if (!r0) { step = 10; continue; }
     r0 = s.arg0.fields["shearedTiles"];
     s.tmp_5 = r0;
-    s.tmp_6 = r0 = s.i___72206;
-    r0 = (16 * globals.Max_TileImgScaleX___70214);
+    s.tmp_6 = r0 = s.i___97041;
+    r0 = (16 * globals.Max_TileImgScaleX___94981);
     s.tmp_8 = r0;
-    r0 = (16 * globals.Max_TileImgScaleY___70217);
+    r0 = (16 * globals.Max_TileImgScaleY___94984);
     s.tmp_10 = r0;
-    r0 = (s.tmp_10 + globals.WallHeight___70242);
+    r0 = (s.tmp_10 + globals.WallHeight___95009);
     s.tmp_9 = r0;
     r0 = pxsim.image.create(s.tmp_8, s.tmp_9);
     s.tmp_7 = r0;
     r0 = pxsim_Array_.setAt(s.tmp_5, s.tmp_6, s.tmp_7);
-    r0 = (s.i___72206 + 1);
-    s.i___72206 = (r0);
+    r0 = (s.i___97041 + 1);
+    s.i___97041 = (r0);
     { step = 9; continue; }
   case 10:
   case 11:
@@ -46019,18 +46019,18 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
-    r0 = pxsim_pxtcore_mkAction(2, Render_RayCastingRender_render_inline__P72238);
+    r0 = pxsim_pxtcore_mkAction(2, Render_IsometricRender_Sideview_render_inline__P97073);
     s.tmp_3 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_3, 0, s.angle___72156);
+    r0 = pxsim_pxtrt_stclo(s.tmp_3, 0, s.angle___96991);
     r0 = pxsim_pxtrt_stclo(s.tmp_3, 1, s.arg0);
     s.tmp_4 = control_benchmark__P63336_mk(s);
     s.tmp_4.arg0 = s.tmp_3;
     s.callLocIdx = 187; s.pc = 25; return s.tmp_4;
   case 25:
     r0 = s.retval;
-    s.ms___72235 = (r0);
+    s.ms___97070 = (r0);
     s.tmp_0 = info_setLife__P65565_mk(s);
-    s.tmp_1 = r0 = s.ms___72235;
+    s.tmp_1 = r0 = s.ms___97070;
     r0 = s.arg0.fields["map"];
     s.tmp_4 = r0;
     r0 = s.tmp_4.fields["tileset"];
@@ -46047,51 +46047,51 @@ switch (step) {
     r0 = (s.arg0).fields["lastRenderAngle"] = (s.tmp_0);
   case 13:
   case 14:
-    r0 = (16 * globals.Scale_Square___70236);
+    r0 = (16 * globals.Scale_Square___95003);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 1);
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * globals.A_Fpx___70268);
-    s.A_px_Fpx___72309 = (r0);
-    r0 = (16 * globals.Scale_Square___70236);
+    r0 = (s.tmp_0 * globals.A_Fpx___95035);
+    s.A_px_Fpx___97144 = (r0);
+    r0 = (16 * globals.Scale_Square___95003);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 1);
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * globals.B_Fpx___70270);
-    s.B_px_Fpx___72317 = (r0);
-    r0 = (0 - s.B_px_Fpx___72317);
-    s.C_px_Fpx___72325 = (r0);
-    s.D_px_Fpx___72328 = (s.A_px_Fpx___72309);
+    r0 = (s.tmp_0 * globals.B_Fpx___95037);
+    s.B_px_Fpx___97152 = (r0);
+    r0 = (0 - s.B_px_Fpx___97152);
+    s.C_px_Fpx___97160 = (r0);
+    s.D_px_Fpx___97163 = (s.A_px_Fpx___97144);
     r0 = pxsim_numops_toBoolDecr(0);
     if (!r0) { step = 15; continue; }
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0 = r0;
     r0 = pxsim_ImageMethods.fill(s.tmp_0, 8);
-    r0 = (s.A_px_Fpx___72309 / 256);
-    s.A___72334 = (r0);
-    r0 = (s.B_px_Fpx___72317 / 256);
-    s.B___72338 = (r0);
-    r0 = (0 - s.B___72338);
-    s.C___72342 = (r0);
-    s.D___72345 = (s.A___72334);
-    r0 = (16 * globals.TileImgScaleX___70225);
+    r0 = (s.A_px_Fpx___97144 / 256);
+    s.A___97169 = (r0);
+    r0 = (s.B_px_Fpx___97152 / 256);
+    s.B___97173 = (r0);
+    r0 = (0 - s.B___97173);
+    s.C___97177 = (r0);
+    s.D___97180 = (s.A___97169);
+    r0 = (16 * globals.TileImgScaleX___94992);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 >> 1);
     s.tmp_0 = r0;
     r0 = (0 + s.tmp_0);
-    s.centerX___72351 = (r0);
-    r0 = (16 * globals.TileImgScaleY___70228);
+    s.centerX___97186 = (r0);
+    r0 = (16 * globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 / 2);
     s.tmp_0 = r0;
     r0 = (64 + s.tmp_0);
-    s.centerY___72359 = (r0);
-    s.tmp_0 = Render_RayCastingRender_pasteWall__P67388_mk(s);
+    s.centerY___97194 = (r0);
+    s.tmp_0 = Render_IsometricRender_Sideview_pasteWall__P95145_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    r0 = (0 - s.A___72334);
+    r0 = (0 - s.A___97169);
     s.tmp_0.arg1 = r0;
-    s.tmp_2 = r0 = s.B___72338;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.tmp_2 = r0 = s.B___97173;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 / s.tmp_3);
     s.tmp_1 = r0;
@@ -46101,7 +46101,7 @@ switch (step) {
     s.callLocIdx = 190; s.pc = 27; return s.tmp_0;
   case 27:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_pasteWall__P67388_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_pasteWall__P95145_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 64;
@@ -46112,15 +46112,15 @@ switch (step) {
     s.tmp_0 = helpers_imageDrawLine__P64947_mk(s);
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.centerX___72351;
-    r0 = (s.centerY___72359 - globals.WallHeight___70242);
+    s.tmp_0.arg1 = s.centerX___97186;
+    r0 = (s.centerY___97194 - globals.WallHeight___95009);
     s.tmp_0.arg2 = r0;
-    r0 = (s.centerX___72351 + s.A___72334);
+    r0 = (s.centerX___97186 + s.A___97169);
     s.tmp_0.arg3 = r0;
-    r0 = (s.centerY___72359 - globals.WallHeight___70242);
+    r0 = (s.centerY___97194 - globals.WallHeight___95009);
     s.tmp_1 = r0;
-    s.tmp_3 = r0 = s.B___72338;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.tmp_3 = r0 = s.B___97173;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 / s.tmp_4);
     s.tmp_2 = r0;
@@ -46133,15 +46133,15 @@ switch (step) {
     s.tmp_0 = helpers_imageDrawLine__P64947_mk(s);
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = s.centerX___72351;
-    r0 = (s.centerY___72359 - globals.WallHeight___70242);
+    s.tmp_0.arg1 = s.centerX___97186;
+    r0 = (s.centerY___97194 - globals.WallHeight___95009);
     s.tmp_0.arg2 = r0;
-    r0 = (s.centerX___72351 + s.C___72342);
+    r0 = (s.centerX___97186 + s.C___97177);
     s.tmp_0.arg3 = r0;
-    r0 = (s.centerY___72359 - globals.WallHeight___70242);
+    r0 = (s.centerY___97194 - globals.WallHeight___95009);
     s.tmp_1 = r0;
-    s.tmp_3 = r0 = s.D___72345;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.tmp_3 = r0 = s.D___97180;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 / s.tmp_4);
     s.tmp_2 = r0;
@@ -46151,7 +46151,7 @@ switch (step) {
     s.callLocIdx = 193; s.pc = 30; return s.tmp_0;
   case 30:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_render_inline__P72421);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_render_inline__P97256);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -46161,7 +46161,7 @@ switch (step) {
     s.callLocIdx = 197; s.pc = 31; return s.tmp_1;
   case 31:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, Render_RayCastingRender_render_inline__P72448);
+    r0 = pxsim_pxtcore_mkAction(1, Render_IsometricRender_Sideview_render_inline__P97283);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
@@ -46175,7 +46175,7 @@ switch (step) {
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
     s.tmp_3 = Math_roundWithPrecision__P63121_mk(s);
-    s.tmp_3.arg0 = s.A___72334;
+    s.tmp_3.arg0 = s.A___97169;
     s.tmp_3.arg1 = 3;
     s.callLocIdx = 201; s.pc = 34; return s.tmp_3;
   case 34:
@@ -46206,7 +46206,7 @@ switch (step) {
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
     s.tmp_3 = Math_roundWithPrecision__P63121_mk(s);
-    r0 = (s.B___72338 / 2);
+    r0 = (s.B___97173 / 2);
     s.tmp_3.arg0 = r0;
     s.tmp_3.arg1 = 3;
     s.callLocIdx = 203; s.pc = 37; return s.tmp_3;
@@ -46237,7 +46237,7 @@ switch (step) {
     { step = 23; continue; }
   case 15:
   case 16:
-    r0 = (s.A_px_Fpx___72309 > 0);
+    r0 = (s.A_px_Fpx___97144 > 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
@@ -46248,15 +46248,15 @@ switch (step) {
   case 18:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    r0 = (s.C_px_Fpx___72325 >> 8);
+    r0 = (s.C_px_Fpx___97160 >> 8);
     s.tmp_4 = r0;
     r0 = (0 - s.tmp_4);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 * s.tmp_1);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 | 0);
-    s.tileOffsetX___72495 = (r0);
-    r0 = (s.A_px_Fpx___72309 > 0);
+    s.tileOffsetX___97330 = (r0);
+    r0 = (s.A_px_Fpx___97144 > 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 19; continue; }
@@ -46267,13 +46267,13 @@ switch (step) {
   case 20:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    r0 = (0 - globals.WallHeight___70242);
+    r0 = (0 - globals.WallHeight___95009);
     s.tmp_4 = r0;
-    r0 = (s.D_px_Fpx___72328 >> 8);
+    r0 = (s.D_px_Fpx___97163 >> 8);
     s.tmp_7 = r0;
     r0 = (s.tmp_7 * s.tmp_1);
     s.tmp_6 = r0;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_8 = r0;
     r0 = (s.tmp_6 / s.tmp_8);
     s.tmp_5 = r0;
@@ -46282,8 +46282,8 @@ switch (step) {
     r0 = (s.tmp_3 + 1);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 | 0);
-    s.tileOffsetY___72508 = (r0);
-    r0 = (s.C_px_Fpx___72325 * s.D_px_Fpx___72328);
+    s.tileOffsetY___97343 = (r0);
+    r0 = (s.C_px_Fpx___97160 * s.D_px_Fpx___97163);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 0);
     s.tmp_0 = r0;
@@ -46296,42 +46296,42 @@ switch (step) {
   case 22:
     // jmp value (already in r0)
     s.tmp_2 = r0;
-    s.tileCorner___72529 = (s.tmp_2);
-    s.tmp_0 = r0 = globals.ScreenCenterX___70189;
-    r0 = (8 * globals.TileImgScaleX___70225);
+    s.tileCorner___97364 = (s.tmp_2);
+    s.tmp_0 = r0 = globals.ScreenCenterX___94956;
+    r0 = (8 * globals.TileImgScaleX___94992);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 - s.tmp_1);
-    s.left_CenterTile___72535 = (r0);
-    s.tmp_0 = r0 = globals.ScreenCenterY___70194;
-    r0 = (8 * globals.TileImgScaleY___70228);
+    s.left_CenterTile___97370 = (r0);
+    s.tmp_0 = r0 = globals.ScreenCenterY___94961;
+    r0 = (8 * globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 - s.tmp_1);
-    s.top_CenterTile___72541 = (r0);
-    r0 = (globals.WallHeight___70242 << 8);
+    s.top_CenterTile___97376 = (r0);
+    r0 = (globals.WallHeight___95009 << 8);
     s.tmp_0 = r0;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.rowYStep___72549 = (r0);
-    r0 = pxsim_pxtcore_mkAction(9, ms_inline__P72560);
+    s.rowYStep___97384 = (r0);
+    r0 = pxsim_pxtcore_mkAction(9, ms_inline__P97395);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.A_px_Fpx___72309);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.left_CenterTile___72535);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.rowYStep___72549);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.B_px_Fpx___72317);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.top_CenterTile___72541);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.tileOffsetX___72495);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.tileOffsetY___72508);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.tileCorner___72529);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.A_px_Fpx___97144);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.left_CenterTile___97370);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.rowYStep___97384);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 4, s.B_px_Fpx___97152);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 5, s.top_CenterTile___97376);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 6, s.tileOffsetX___97330);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 7, s.tileOffsetY___97343);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 8, s.tileCorner___97364);
     s.tmp_1 = control_benchmark__P63336_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 246; s.pc = 39; return s.tmp_1;
   case 39:
     r0 = s.retval;
-    s.ms___72558 = (r0);
+    s.ms___97393 = (r0);
     s.tmp_0 = info_setScore__P65561_mk(s);
-    s.tmp_0.arg0 = s.ms___72558;
+    s.tmp_0.arg0 = s.ms___97393;
     s.callLocIdx = 247; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
@@ -46340,12 +46340,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_render__P67396.info = {"start":28676,"length":8281,"line":709,"column":8,"endLine":865,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"render","argumentNames":["this"]}
+Render_IsometricRender_Sideview_render__P95148.info = {"start":28668,"length":8281,"line":709,"column":8,"endLine":865,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"render","argumentNames":["this"]}
 
-function Render_RayCastingRender_render__P67396_mk(s) {
+function Render_IsometricRender_Sideview_render__P95148_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_render__P67396, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_render__P95148, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46358,27 +46358,27 @@ function Render_RayCastingRender_render__P67396_mk(s) {
   tmp_8: undefined,
   tmp_9: undefined,
   tmp_10: undefined,
-  angle___72156: undefined,
-  i___72172: undefined,
-  i___72206: undefined,
-  ms___72235: undefined,
-  A_px_Fpx___72309: undefined,
-  B_px_Fpx___72317: undefined,
-  C_px_Fpx___72325: undefined,
-  D_px_Fpx___72328: undefined,
-  A___72334: undefined,
-  B___72338: undefined,
-  C___72342: undefined,
-  D___72345: undefined,
-  centerX___72351: undefined,
-  centerY___72359: undefined,
-  tileOffsetX___72495: undefined,
-  tileOffsetY___72508: undefined,
-  tileCorner___72529: undefined,
-  left_CenterTile___72535: undefined,
-  top_CenterTile___72541: undefined,
-  rowYStep___72549: undefined,
-  ms___72558: undefined,
+  angle___96991: undefined,
+  i___97007: undefined,
+  i___97041: undefined,
+  ms___97070: undefined,
+  A_px_Fpx___97144: undefined,
+  B_px_Fpx___97152: undefined,
+  C_px_Fpx___97160: undefined,
+  D_px_Fpx___97163: undefined,
+  A___97169: undefined,
+  B___97173: undefined,
+  C___97177: undefined,
+  D___97180: undefined,
+  centerX___97186: undefined,
+  centerY___97194: undefined,
+  tileOffsetX___97330: undefined,
+  tileOffsetY___97343: undefined,
+  tileCorner___97364: undefined,
+  left_CenterTile___97370: undefined,
+  top_CenterTile___97376: undefined,
+  rowYStep___97384: undefined,
+  ms___97393: undefined,
   arg0: undefined,
 } }
 
@@ -46386,7 +46386,7 @@ function Render_RayCastingRender_render__P67396_mk(s) {
 
 
 
-function Render_RayCastingRender_render_inline__P72238(s) {
+function Render_IsometricRender_Sideview_render_inline__P97073(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46396,29 +46396,29 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___72264 = undefined;
+    s.i___97099 = undefined;
     r0 = pxsim.Math_.cos(s.caps[0]);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * 256);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 / globals.Scale___70231);
+    r0 = (s.tmp_1 / globals.Scale___94998);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    globals.A_Fpx___70268 = (r0);
+    globals.A_Fpx___95035 = (r0);
     r0 = pxsim.Math_.sin(s.caps[0]);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 * 256);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 / globals.Scale___70231);
+    r0 = (s.tmp_1 / globals.Scale___94998);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    globals.B_Fpx___70270 = (r0);
-    globals.D_Fpx___70272 = (globals.A_Fpx___70268);
-    r0 = (0 - globals.B_Fpx___70270);
-    globals.C_Fpx___70274 = (r0);
-    s.i___72264 = (1);
+    globals.B_Fpx___95037 = (r0);
+    globals.D_Fpx___95039 = (globals.A_Fpx___95035);
+    r0 = (0 - globals.B_Fpx___95037);
+    globals.C_Fpx___95041 = (r0);
+    s.i___97099 = (1);
   case 1:
-    s.tmp_1 = r0 = s.i___72264;
+    s.tmp_1 = r0 = s.i___97099;
     r0 = s.caps[1].fields["wholeWalls"];
     s.tmp_3 = r0;
     r0 = pxsim_Array__length(s.tmp_3);
@@ -46429,27 +46429,27 @@ switch (step) {
     if (!r0) { step = 2; continue; }
     r0 = s.caps[1].fields["shearedTiles"];
     s.tmp_5 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_5, s.i___72264);
+    r0 = pxsim_Array__getAt(s.tmp_5, s.i___97099);
     s.tmp_4 = r0;
     r0 = pxsim_ImageMethods.fill(s.tmp_4, 0);
     r0 = s.caps[1].fields["wholeWalls"];
     s.tmp_1 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_1, s.i___72264);
+    r0 = pxsim_Array__getAt(s.tmp_1, s.i___97099);
     s.tmp_0 = r0;
     r0 = pxsim_ImageMethods.fill(s.tmp_0, 0);
     r0 = s.caps[1].fields["wallCached"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array_.setAt(s.tmp_0, s.i___72264, false);
-    r0 = (s.i___72264 + 1);
-    s.i___72264 = (r0);
+    r0 = pxsim_Array_.setAt(s.tmp_0, s.i___97099, false);
+    r0 = (s.i___97099 + 1);
+    s.i___97099 = (r0);
     { step = 1; continue; }
   case 2:
-    s.tmp_0 = Render_RayCastingRender_updateCorners__P67390_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_updateCorners__P95147_mk(s);
     s.tmp_0.arg0 = s.caps[1];
     s.callLocIdx = 184; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    r0 = (globals.A_Fpx___70268 * globals.B_Fpx___70270);
+    r0 = (globals.A_Fpx___95035 * globals.B_Fpx___95037);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 >= 0);
     s.tmp_0 = r0;
@@ -46462,7 +46462,7 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_2 = r0;
-    s.tmp_3 = Render_RayCastingRender_shearAndCache_AllTiles__P67386_mk(s);
+    s.tmp_3 = Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143_mk(s);
     s.tmp_3.arg0 = s.caps[1];
     r0 = s.caps[1].fields["map"];
     s.tmp_4 = r0;
@@ -46478,12 +46478,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_render_inline__P72238.info = {"start":29930,"length":739,"line":737,"column":39,"endLine":755,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+Render_IsometricRender_Sideview_render_inline__P97073.info = {"start":29922,"length":739,"line":737,"column":39,"endLine":755,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function Render_RayCastingRender_render_inline__P72238_mk(s) {
+function Render_IsometricRender_Sideview_render_inline__P97073_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_render_inline__P72238, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_render_inline__P97073, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46491,14 +46491,14 @@ function Render_RayCastingRender_render_inline__P72238_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  i___72264: undefined,
+  i___97099: undefined,
 } }
 
 
 
 
 
-function Render_RayCastingRender_render_inline__P72421(s) {
+function Render_IsometricRender_Sideview_render_inline__P97256(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46588,12 +46588,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_render_inline__P72421.info = {"start":32051,"length":65,"line":782,"column":37,"endLine":782,"endColumn":102,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p","i"]}
+Render_IsometricRender_Sideview_render_inline__P97256.info = {"start":32043,"length":65,"line":782,"column":37,"endLine":782,"endColumn":102,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p","i"]}
 
-function Render_RayCastingRender_render_inline__P72421_mk(s) {
+function Render_IsometricRender_Sideview_render_inline__P97256_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_render_inline__P72421, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_render_inline__P97256, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46613,7 +46613,7 @@ function Render_RayCastingRender_render_inline__P72421_mk(s) {
 
 
 
-function Render_RayCastingRender_render_inline__P72448(s) {
+function Render_IsometricRender_Sideview_render_inline__P97283(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46645,7 +46645,7 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = (0 + s.tmp_2);
     s.tmp_1 = r0;
-    r0 = (64 - globals.WallHeight___70242);
+    r0 = (64 - globals.WallHeight___95009);
     s.tmp_5 = r0;
     s.tmp_7 = if_y_1_mk(s);
     s.tmp_7.arg0 = s.arg0;
@@ -46669,12 +46669,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_render_inline__P72448.info = {"start":32232,"length":82,"line":785,"column":37,"endLine":785,"endColumn":119,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p","i"]}
+Render_IsometricRender_Sideview_render_inline__P97283.info = {"start":32224,"length":82,"line":785,"column":37,"endLine":785,"endColumn":119,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p","i"]}
 
-function Render_RayCastingRender_render_inline__P72448_mk(s) {
+function Render_IsometricRender_Sideview_render_inline__P97283_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_render_inline__P72448, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_render_inline__P97283, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46693,7 +46693,7 @@ function Render_RayCastingRender_render_inline__P72448_mk(s) {
 
 
 
-function ms_inline__P72560(s) {
+function ms_inline__P97395(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46703,19 +46703,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.Walls___72561 = undefined;
-    s.offsetX0_Fpx___72563 = undefined;
-    s.offsetY0_Fpx___72589 = undefined;
-    s.i___72619 = undefined;
-    s.offsetX_Fpx___72626 = undefined;
-    s.offsetY_Fpx___72628 = undefined;
-    s.j___72630 = undefined;
-    s.offsetX___72637 = undefined;
-    s.offsetY___72641 = undefined;
-    s.t___72679 = undefined;
-    s.drawingSprites___72754 = undefined;
+    s.Walls___97396 = undefined;
+    s.offsetX0_Fpx___97398 = undefined;
+    s.offsetY0_Fpx___97424 = undefined;
+    s.i___97454 = undefined;
+    s.offsetX_Fpx___97461 = undefined;
+    s.offsetY_Fpx___97463 = undefined;
+    s.j___97465 = undefined;
+    s.offsetX___97472 = undefined;
+    s.offsetY___97476 = undefined;
+    s.t___97514 = undefined;
+    s.drawingSprites___97589 = undefined;
     r0 = pxsim_Array__mk();
-    s.Walls___72561 = (r0);
+    s.Walls___97396 = (r0);
     s.tmp_5 = Sprite_y__P65345_mk(s);
     r0 = s.caps[0].fields["sprSelf"];
     s.tmp_5.arg0 = r0;
@@ -46746,7 +46746,7 @@ switch (step) {
     r0 = (s.caps[2] << 8);
     s.tmp_11 = r0;
     r0 = (s.tmp_0 + s.tmp_11);
-    s.offsetX0_Fpx___72563 = (r0);
+    s.offsetX0_Fpx___97398 = (r0);
     s.tmp_5 = Sprite_y__P65345_mk(s);
     r0 = s.caps[0].fields["sprSelf"];
     s.tmp_5.arg0 = r0;
@@ -46776,15 +46776,15 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = (s.caps[5] << 8);
     s.tmp_12 = r0;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_13 = r0;
     r0 = (s.tmp_12 * s.tmp_13);
     s.tmp_11 = r0;
     r0 = (s.tmp_0 + s.tmp_11);
-    s.offsetY0_Fpx___72589 = (r0);
-    s.i___72619 = (0);
+    s.offsetY0_Fpx___97424 = (r0);
+    s.i___97454 = (0);
   case 1:
-    s.tmp_1 = r0 = s.i___72619;
+    s.tmp_1 = r0 = s.i___97454;
     r0 = s.caps[0].fields["map"];
     s.tmp_3 = r0;
     r0 = s.tmp_3.fields["_height"];
@@ -46793,11 +46793,11 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 18; continue; }
-    s.offsetX_Fpx___72626 = (s.offsetX0_Fpx___72563);
-    s.offsetY_Fpx___72628 = (s.offsetY0_Fpx___72589);
-    s.j___72630 = (0);
+    s.offsetX_Fpx___97461 = (s.offsetX0_Fpx___97398);
+    s.offsetY_Fpx___97463 = (s.offsetY0_Fpx___97424);
+    s.j___97465 = (0);
   case 2:
-    s.tmp_1 = r0 = s.j___72630;
+    s.tmp_1 = r0 = s.j___97465;
     r0 = s.caps[0].fields["map"];
     s.tmp_3 = r0;
     r0 = s.tmp_3.fields["_width"];
@@ -46806,16 +46806,16 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    r0 = (s.offsetX_Fpx___72626 >> 8);
-    s.offsetX___72637 = (r0);
-    r0 = (s.offsetY_Fpx___72628 >> 8);
+    r0 = (s.offsetX_Fpx___97461 >> 8);
+    s.offsetX___97472 = (r0);
+    r0 = (s.offsetY_Fpx___97463 >> 8);
     s.tmp_0 = r0;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 / s.tmp_1);
-    s.offsetY___72641 = (r0);
-    s.tmp_1 = r0 = s.offsetX___72637;
-    r0 = (-16 * globals.TileImgScaleX___70225);
+    s.offsetY___97476 = (r0);
+    s.tmp_1 = r0 = s.offsetX___97472;
+    r0 = (-16 * globals.TileImgScaleX___94992);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 > s.tmp_2);
     s.tmp_0 = r0;
@@ -46824,7 +46824,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 4; continue; }
   case 3:
-    s.tmp_3 = r0 = s.offsetX___72637;
+    s.tmp_3 = r0 = s.offsetX___97472;
     r0 = pxsim_ImageMethods.width(globals.screen___65021);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 < s.tmp_4);
@@ -46836,8 +46836,8 @@ switch (step) {
     r0 = s.tmp_5;
     { step = 6; continue; }
   case 5:
-    s.tmp_6 = r0 = s.offsetY___72641;
-    r0 = (-16 * globals.TileImgScaleY___70228);
+    s.tmp_6 = r0 = s.offsetY___97476;
+    r0 = (-16 * globals.TileImgScaleY___94995);
     s.tmp_7 = r0;
     r0 = (s.tmp_6 > s.tmp_7);
   case 6:
@@ -46848,14 +46848,14 @@ switch (step) {
     r0 = s.tmp_8;
     { step = 8; continue; }
   case 7:
-    s.tmp_9 = r0 = s.offsetY___72641;
+    s.tmp_9 = r0 = s.offsetY___97476;
     r0 = pxsim_ImageMethods.height(globals.screen___65021);
     s.tmp_12 = r0;
-    r0 = (16 * globals.TileImgScaleY___70228);
+    r0 = (16 * globals.TileImgScaleY___94995);
     s.tmp_13 = r0;
     r0 = (s.tmp_12 + s.tmp_13);
     s.tmp_11 = r0;
-    r0 = (s.tmp_11 + globals.WallHeight___70242);
+    r0 = (s.tmp_11 + globals.WallHeight___95009);
     s.tmp_10 = r0;
     r0 = (s.tmp_9 < s.tmp_10);
   case 8:
@@ -46866,19 +46866,19 @@ switch (step) {
     s.tmp_15 = tiles_TileMapData_getTile__P65712_mk(s);
     r0 = s.caps[0].fields["map"];
     s.tmp_15.arg0 = r0;
-    s.tmp_15.arg1 = s.j___72630;
-    s.tmp_15.arg2 = s.i___72619;
+    s.tmp_15.arg1 = s.j___97465;
+    s.tmp_15.arg2 = s.i___97454;
     s.callLocIdx = 211; s.pc = 25; return s.tmp_15;
   case 25:
     r0 = s.retval;
-    s.t___72679 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.t___72679);
+    s.t___97514 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.t___97514);
     if (!r0) { step = 13; continue; }
     r0 = s.caps[0].fields["map"];
     s.tmp_1 = r0;
     r0 = s.tmp_1.fields["layers"];
     s.tmp_3 = r0;
-    r0 = pxsim_ImageMethods.getPixel(s.tmp_3, s.j___72630, s.i___72619);
+    r0 = pxsim_ImageMethods.getPixel(s.tmp_3, s.j___97465, s.i___97454);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 === 2);
     s.tmp_0 = r0;
@@ -46887,16 +46887,16 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_4 = r0;
     r0 = pxsim_Array__push(s.tmp_4, 1);
-    r0 = pxsim_Array__push(s.tmp_4, s.offsetX___72637);
-    r0 = (s.offsetY___72641 - globals.WallHeight___70242);
+    r0 = pxsim_Array__push(s.tmp_4, s.offsetX___97472);
+    r0 = (s.offsetY___97476 - globals.WallHeight___95009);
     s.tmp_5 = r0;
     r0 = pxsim_Array__push(s.tmp_4, s.tmp_5);
-    r0 = pxsim_Array__push(s.tmp_4, s.t___72679);
+    r0 = pxsim_Array__push(s.tmp_4, s.t___97514);
     r0 = (s.caps[4] > 0);
     s.tmp_6 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_6);
     if (!r0) { step = 9; continue; }
-    r0 = s.j___72630;
+    r0 = s.j___97465;
     { step = 10; continue; }
   case 9:
     r0 = s.caps[0].fields["map"];
@@ -46905,7 +46905,7 @@ switch (step) {
     s.tmp_8 = r0;
     r0 = (s.tmp_8 - 1);
     s.tmp_7 = r0;
-    r0 = (s.tmp_7 - s.j___72630);
+    r0 = (s.tmp_7 - s.j___97465);
   case 10:
     // jmp value (already in r0)
     s.tmp_10 = r0;
@@ -46915,7 +46915,7 @@ switch (step) {
     s.tmp_15 = r0;
     r0 = (s.tmp_15 - 1);
     s.tmp_14 = r0;
-    r0 = (s.tmp_14 - s.i___72619);
+    r0 = (s.tmp_14 - s.i___97454);
     s.tmp_13 = r0;
     r0 = s.caps[0].fields["map"];
     s.tmp_18 = r0;
@@ -46926,18 +46926,18 @@ switch (step) {
     r0 = (s.tmp_12 + s.tmp_10);
     s.tmp_11 = r0;
     r0 = pxsim_Array__push(s.tmp_4, s.tmp_11);
-    r0 = pxsim_Array__push(s.Walls___72561, s.tmp_4);
+    r0 = pxsim_Array__push(s.Walls___97396, s.tmp_4);
     { step = 12; continue; }
   case 11:
-    s.tmp_0 = Render_RayCastingRender_pasteShearedTile__P67387_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_pasteShearedTile__P95144_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     r0 = s.caps[0].fields["tempScreen"];
     s.tmp_0.arg1 = r0;
-    r0 = (s.offsetX___72637 + s.caps[6]);
+    r0 = (s.offsetX___97472 + s.caps[6]);
     s.tmp_0.arg2 = r0;
-    r0 = (s.offsetY___72641 + s.caps[7]);
+    r0 = (s.offsetY___97476 + s.caps[7]);
     s.tmp_0.arg3 = r0;
-    s.tmp_0.arg4 = s.t___72679;
+    s.tmp_0.arg4 = s.t___97514;
     s.tmp_0.arg5 = s.caps[8];
     s.callLocIdx = 216; s.pc = 26; return s.tmp_0;
   case 26:
@@ -46947,29 +46947,29 @@ switch (step) {
   case 14:
   case 15:
   case 16:
-    r0 = (s.offsetX_Fpx___72626 + s.caps[1]);
-    s.offsetX_Fpx___72626 = (r0);
-    r0 = (s.offsetY_Fpx___72628 + s.caps[4]);
-    s.offsetY_Fpx___72628 = (r0);
-    r0 = (s.j___72630 + 1);
-    s.j___72630 = (r0);
+    r0 = (s.offsetX_Fpx___97461 + s.caps[1]);
+    s.offsetX_Fpx___97461 = (r0);
+    r0 = (s.offsetY_Fpx___97463 + s.caps[4]);
+    s.offsetY_Fpx___97463 = (r0);
+    r0 = (s.j___97465 + 1);
+    s.j___97465 = (r0);
     { step = 2; continue; }
   case 17:
-    r0 = (s.offsetX0_Fpx___72563 + 0);
-    s.offsetX0_Fpx___72563 = (r0);
-    r0 = (s.offsetY0_Fpx___72589 + s.caps[3]);
-    s.offsetY0_Fpx___72589 = (r0);
-    r0 = (s.i___72619 + 1);
-    s.i___72619 = (r0);
+    r0 = (s.offsetX0_Fpx___97398 + 0);
+    s.offsetX0_Fpx___97398 = (r0);
+    r0 = (s.offsetY0_Fpx___97424 + s.caps[3]);
+    s.offsetY0_Fpx___97424 = (r0);
+    r0 = (s.i___97454 + 1);
+    s.i___97454 = (r0);
     { step = 1; continue; }
   case 18:
-    r0 = pxsim_pxtcore_mkAction(4, filter_inline__P72761);
+    r0 = pxsim_pxtcore_mkAction(4, filter_inline__P97596);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[0]);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.caps[1]);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.caps[3]);
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 3, s.caps[4]);
-    r0 = pxsim_pxtcore_mkAction(1, drawingSprites_inline__P72756);
+    r0 = pxsim_pxtcore_mkAction(1, drawingSprites_inline__P97591);
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.caps[0]);
     s.tmp_2 = helpers_arrayFilter__P63099_mk(s);
@@ -46985,20 +46985,20 @@ switch (step) {
     s.callLocIdx = 234; s.pc = 27; return s.tmp_2;
   case 27:
     r0 = s.retval;
-    s.drawingSprites___72754 = (r0);
-    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P72918);
+    s.drawingSprites___97589 = (r0);
+    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P97753);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[0]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
     s.tmp_2 = helpers_arraySort__P63094_mk(s);
     s.tmp_3 = helpers_arrayConcat__P63102_mk(s);
-    s.tmp_3.arg0 = s.drawingSprites___72754;
-    s.tmp_3.arg1 = s.Walls___72561;
+    s.tmp_3.arg0 = s.drawingSprites___97589;
+    s.tmp_3.arg1 = s.Walls___97396;
     s.callLocIdx = 235; s.pc = 31; return s.tmp_3;
   case 31:
     r0 = s.retval;
     s.tmp_2.arg0 = r0;
-    s.tmp_2.arg1 = forEach_inline__P72911;
+    s.tmp_2.arg1 = forEach_inline__P97746;
     s.callLocIdx = 236; s.pc = 30; return s.tmp_2;
   case 30:
     r0 = s.retval;
@@ -47007,11 +47007,11 @@ switch (step) {
     s.callLocIdx = 239; s.pc = 29; return s.tmp_1;
   case 29:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P72939);
+    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P97774);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.caps[0]);
     s.tmp_1 = helpers_arrayForEach__P63098_mk(s);
-    s.tmp_1.arg0 = s.drawingSprites___72754;
+    s.tmp_1.arg0 = s.drawingSprites___97589;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 241; s.pc = 32; return s.tmp_1;
   case 32:
@@ -47024,7 +47024,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 19; continue; }
-    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P72955);
+    r0 = pxsim_pxtcore_mkAction(1, ms_inline__P97790);
     s.tmp_2 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_2, 0, s.caps[0]);
     s.tmp_3 = helpers_arrayForEach__P63098_mk(s);
@@ -47044,12 +47044,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-ms_inline__P72560.info = {"start":33142,"length":3739,"line":803,"column":35,"endLine":864,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
+ms_inline__P97395.info = {"start":33134,"length":3739,"line":803,"column":35,"endLine":864,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":[]}
 
-function ms_inline__P72560_mk(s) {
+function ms_inline__P97395_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: ms_inline__P72560, depth: s.depth + 1,
+        parent: s, fn: ms_inline__P97395, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47070,24 +47070,24 @@ function ms_inline__P72560_mk(s) {
   tmp_16: undefined,
   tmp_17: undefined,
   tmp_18: undefined,
-  Walls___72561: undefined,
-  offsetX0_Fpx___72563: undefined,
-  offsetY0_Fpx___72589: undefined,
-  i___72619: undefined,
-  offsetX_Fpx___72626: undefined,
-  offsetY_Fpx___72628: undefined,
-  j___72630: undefined,
-  offsetX___72637: undefined,
-  offsetY___72641: undefined,
-  t___72679: undefined,
-  drawingSprites___72754: undefined,
+  Walls___97396: undefined,
+  offsetX0_Fpx___97398: undefined,
+  offsetY0_Fpx___97424: undefined,
+  i___97454: undefined,
+  offsetX_Fpx___97461: undefined,
+  offsetY_Fpx___97463: undefined,
+  j___97465: undefined,
+  offsetX___97472: undefined,
+  offsetY___97476: undefined,
+  t___97514: undefined,
+  drawingSprites___97589: undefined,
 } }
 
 
 
 
 
-function filter_inline__P72761(s) {
+function filter_inline__P97596(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47097,16 +47097,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.offsetX___72764 = undefined;
-    s.offsetY___72791 = undefined;
-    s.j___72821 = undefined;
-    s.i___72828 = undefined;
+    s.offsetX___97599 = undefined;
+    s.offsetY___97626 = undefined;
+    s.j___97656 = undefined;
+    s.i___97663 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = r0 = globals.ScreenCenterX___70189;
+    s.tmp_0 = r0 = globals.ScreenCenterX___94956;
     s.tmp_6 = Sprite_y__P65345_mk(s);
     s.tmp_6.arg0 = s.arg0;
     s.callLocIdx = 217; s.pc = 3; return s.tmp_6;
@@ -47147,8 +47147,8 @@ switch (step) {
     r0 = (s.tmp_2 >> 12);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    s.offsetX___72764 = (r0);
-    s.tmp_0 = r0 = globals.ScreenCenterY___70194;
+    s.offsetX___97599 = (r0);
+    s.tmp_0 = r0 = globals.ScreenCenterY___94961;
     s.tmp_5 = r0 = s.caps[2];
     s.tmp_8 = Sprite_y__P65345_mk(s);
     s.tmp_8.arg0 = s.arg0;
@@ -47189,12 +47189,12 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 >> 12);
     s.tmp_2 = r0;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_18 = r0;
     r0 = (s.tmp_2 / s.tmp_18);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    s.offsetY___72791 = (r0);
+    s.offsetY___97626 = (r0);
     s.tmp_2 = Sprite_x__P65343_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 225; s.pc = 11; return s.tmp_2;
@@ -47204,7 +47204,7 @@ switch (step) {
     r0 = (s.tmp_1 / 16);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    s.j___72821 = (r0);
+    s.j___97656 = (r0);
     s.tmp_2 = Sprite_y__P65345_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 226; s.pc = 12; return s.tmp_2;
@@ -47214,18 +47214,18 @@ switch (step) {
     r0 = (s.tmp_1 / 16);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 | 0);
-    s.i___72828 = (r0);
+    s.i___97663 = (r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
     r0 = pxsim_Array__push(s.tmp_0, 0);
-    r0 = pxsim_Array__push(s.tmp_0, s.offsetX___72764);
-    r0 = pxsim_Array__push(s.tmp_0, s.offsetY___72791);
+    r0 = pxsim_Array__push(s.tmp_0, s.offsetX___97599);
+    r0 = pxsim_Array__push(s.tmp_0, s.offsetY___97626);
     r0 = pxsim_Array__push(s.tmp_0, s.arg1);
     r0 = (s.caps[3] > 0);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 1; continue; }
-    r0 = s.j___72821;
+    r0 = s.j___97656;
     { step = 2; continue; }
   case 1:
     r0 = s.caps[0].fields["map"];
@@ -47234,7 +47234,7 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 - 1);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 - s.j___72821);
+    r0 = (s.tmp_2 - s.j___97656);
   case 2:
     // jmp value (already in r0)
     s.tmp_5 = r0;
@@ -47244,7 +47244,7 @@ switch (step) {
     s.tmp_10 = r0;
     r0 = (s.tmp_10 - 1);
     s.tmp_9 = r0;
-    r0 = (s.tmp_9 - s.i___72828);
+    r0 = (s.tmp_9 - s.i___97663);
     s.tmp_8 = r0;
     r0 = s.caps[0].fields["map"];
     s.tmp_13 = r0;
@@ -47259,12 +47259,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-filter_inline__P72761.info = {"start":35086,"length":643,"line":833,"column":17,"endLine":841,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr","index"]}
+filter_inline__P97596.info = {"start":35078,"length":643,"line":833,"column":17,"endLine":841,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["spr","index"]}
 
-function filter_inline__P72761_mk(s) {
+function filter_inline__P97596_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: filter_inline__P72761, depth: s.depth + 1,
+        parent: s, fn: filter_inline__P97596, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47285,10 +47285,10 @@ function filter_inline__P72761_mk(s) {
   tmp_16: undefined,
   tmp_17: undefined,
   tmp_18: undefined,
-  offsetX___72764: undefined,
-  offsetY___72791: undefined,
-  j___72821: undefined,
-  i___72828: undefined,
+  offsetX___97599: undefined,
+  offsetY___97626: undefined,
+  j___97656: undefined,
+  i___97663: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -47297,7 +47297,7 @@ function filter_inline__P72761_mk(s) {
 
 
 
-function drawingSprites_inline__P72756(s) {
+function drawingSprites_inline__P97591(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47307,7 +47307,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.spr___72863 = undefined;
+    s.spr___97698 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -47316,7 +47316,7 @@ switch (step) {
     r0 = s.caps[0].fields["sprites"];
     s.tmp_0 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.arg1);
-    s.spr___72863 = (r0);
+    s.spr___97698 = (r0);
     r0 = pxsim_Array__getAt(s.arg0, 2);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 0);
@@ -47329,12 +47329,12 @@ switch (step) {
     r0 = pxsim_Array__getAt(s.arg0, 1);
     s.tmp_2 = r0;
     s.tmp_7 = Sprite_width__P65386_mk(s);
-    s.tmp_7.arg0 = s.spr___72863;
+    s.tmp_7.arg0 = s.spr___97698;
     s.callLocIdx = 231; s.pc = 7; return s.tmp_7;
   case 7:
     r0 = s.retval;
     s.tmp_6 = r0;
-    r0 = (s.tmp_6 * globals.Scale___70231);
+    r0 = (s.tmp_6 * globals.Scale___94998);
     s.tmp_5 = r0;
     r0 = (s.tmp_5 >> 1);
     s.tmp_4 = r0;
@@ -47354,12 +47354,12 @@ switch (step) {
     r0 = pxsim_ImageMethods.width(globals.screen___65021);
     s.tmp_11 = r0;
     s.tmp_15 = Sprite_width__P65386_mk(s);
-    s.tmp_15.arg0 = s.spr___72863;
+    s.tmp_15.arg0 = s.spr___97698;
     s.callLocIdx = 232; s.pc = 8; return s.tmp_15;
   case 8:
     r0 = s.retval;
     s.tmp_14 = r0;
-    r0 = (s.tmp_14 * globals.Scale___70231);
+    r0 = (s.tmp_14 * globals.Scale___94998);
     s.tmp_13 = r0;
     r0 = (s.tmp_13 >> 1);
     s.tmp_12 = r0;
@@ -47379,12 +47379,12 @@ switch (step) {
     r0 = pxsim_ImageMethods.height(globals.screen___65021);
     s.tmp_19 = r0;
     s.tmp_22 = Sprite_height__P65387_mk(s);
-    s.tmp_22.arg0 = s.spr___72863;
+    s.tmp_22.arg0 = s.spr___97698;
     s.callLocIdx = 233; s.pc = 9; return s.tmp_22;
   case 9:
     r0 = s.retval;
     s.tmp_21 = r0;
-    r0 = (s.tmp_21 * globals.Scale___70231);
+    r0 = (s.tmp_21 * globals.Scale___94998);
     s.tmp_20 = r0;
     r0 = (s.tmp_19 + s.tmp_20);
     s.tmp_18 = r0;
@@ -47396,12 +47396,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-drawingSprites_inline__P72756.info = {"start":35751,"length":233,"line":842,"column":20,"endLine":845,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v","i"]}
+drawingSprites_inline__P97591.info = {"start":35743,"length":233,"line":842,"column":20,"endLine":845,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v","i"]}
 
-function drawingSprites_inline__P72756_mk(s) {
+function drawingSprites_inline__P97591_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: drawingSprites_inline__P72756, depth: s.depth + 1,
+        parent: s, fn: drawingSprites_inline__P97591, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47427,7 +47427,7 @@ function drawingSprites_inline__P72756_mk(s) {
   tmp_21: undefined,
   tmp_22: undefined,
   tmp_23: undefined,
-  spr___72863: undefined,
+  spr___97698: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -47436,7 +47436,7 @@ function drawingSprites_inline__P72756_mk(s) {
 
 
 
-function forEach_inline__P72911(s) {
+function forEach_inline__P97746(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47459,12 +47459,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-forEach_inline__P72911.info = {"start":36148,"length":25,"line":848,"column":22,"endLine":848,"endColumn":47,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v1","v2"]}
+forEach_inline__P97746.info = {"start":36140,"length":25,"line":848,"column":22,"endLine":848,"endColumn":47,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v1","v2"]}
 
-function forEach_inline__P72911_mk(s) {
+function forEach_inline__P97746_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: forEach_inline__P72911, depth: s.depth + 1,
+        parent: s, fn: forEach_inline__P97746, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47476,7 +47476,7 @@ function forEach_inline__P72911_mk(s) {
 
 
 
-function ms_inline__P72918(s) {
+function ms_inline__P97753(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47496,7 +47496,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = Render_RayCastingRender_drawSprite__P67398_mk(s);
+    s.tmp_2 = Render_IsometricRender_Sideview_drawSprite__P95150_mk(s);
     s.tmp_2.arg0 = s.caps[0];
     r0 = s.caps[0].fields["sprites"];
     s.tmp_3 = r0;
@@ -47519,7 +47519,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    s.tmp_2 = Render_RayCastingRender_pasteWall__P67388_mk(s);
+    s.tmp_2 = Render_IsometricRender_Sideview_pasteWall__P95145_mk(s);
     s.tmp_2.arg0 = s.caps[0];
     r0 = pxsim_Array__getAt(s.arg0, 1);
     s.tmp_2.arg1 = r0;
@@ -47537,12 +47537,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-ms_inline__P72918.info = {"start":36220,"length":315,"line":849,"column":25,"endLine":855,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v"]}
+ms_inline__P97753.info = {"start":36212,"length":315,"line":849,"column":25,"endLine":855,"endColumn":13,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v"]}
 
-function ms_inline__P72918_mk(s) {
+function ms_inline__P97753_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: ms_inline__P72918, depth: s.depth + 1,
+        parent: s, fn: ms_inline__P97753, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47556,7 +47556,7 @@ function ms_inline__P72918_mk(s) {
 
 
 
-function ms_inline__P72939(s) {
+function ms_inline__P97774(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47570,7 +47570,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Render_RayCastingRender_drawSprite_SayText__P67399_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_drawSprite_SayText__P95151_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     r0 = s.caps[0].fields["sprites"];
     s.tmp_1 = r0;
@@ -47589,12 +47589,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-ms_inline__P72939.info = {"start":36573,"length":62,"line":857,"column":35,"endLine":857,"endColumn":97,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v"]}
+ms_inline__P97774.info = {"start":36565,"length":62,"line":857,"column":35,"endLine":857,"endColumn":97,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["v"]}
 
-function ms_inline__P72939_mk(s) {
+function ms_inline__P97774_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: ms_inline__P72939, depth: s.depth + 1,
+        parent: s, fn: ms_inline__P97774, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47606,7 +47606,7 @@ function ms_inline__P72939_mk(s) {
 
 
 
-function ms_inline__P72955(s) {
+function ms_inline__P97790(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47647,12 +47647,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-ms_inline__P72955.info = {"start":36751,"length":118,"line":860,"column":60,"endLine":862,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p"]}
+ms_inline__P97790.info = {"start":36743,"length":118,"line":860,"column":60,"endLine":862,"endColumn":17,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["p"]}
 
-function ms_inline__P72955_mk(s) {
+function ms_inline__P97790_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: ms_inline__P72955, depth: s.depth + 1,
+        parent: s, fn: ms_inline__P97790, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -47889,7 +47889,7 @@ function particles_ParticleFactory_drawParticle__P66179_mk(s) {
 
 
 
-function Render_RayCastingRender_drawSprite_SayText__P67399(s) {
+function Render_IsometricRender_Sideview_drawSprite_SayText__P95151(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -47899,8 +47899,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.sayRender___73081 = undefined;
-    s.heightSpr___73088 = undefined;
+    s.sayRender___97918 = undefined;
+    s.heightSpr___97925 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -47909,14 +47909,14 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["sayRederers"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.tmp_1);
-    s.sayRender___73081 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.sayRender___73081);
+    s.sayRender___97918 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.sayRender___97918);
     if (!r0) { step = 5; continue; }
     s.tmp_1 = Sprite_height__P65387_mk(s);
     s.tmp_1.arg0 = s.arg1;
@@ -47924,8 +47924,8 @@ switch (step) {
   case 7:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * globals.Scale___70231);
-    s.heightSpr___73088 = (r0);
+    r0 = (s.tmp_0 * globals.Scale___94998);
+    s.heightSpr___97925 = (r0);
     r0 = s.arg0.fields["sayEndTimes"];
     s.tmp_1 = r0;
     r0 = s.arg1.fields["id"];
@@ -47968,7 +47968,7 @@ switch (step) {
     s.tmp_0 = Sprite_y__P65346_mk(s);
     r0 = s.arg0.fields["tempSprite"];
     s.tmp_0.arg0 = r0;
-    r0 = (s.arg3 - s.heightSpr___73088);
+    r0 = (s.arg3 - s.heightSpr___97925);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 2);
     s.tmp_0.arg1 = r0;
@@ -47982,7 +47982,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = (s.tmp_0).fields["drawOffsetY"] = (0);
     s.tmp_0 = sprites_BaseSpriteSayRenderer__C65248_v0_4_mk(s);
-    s.tmp_0.arg0 = s.sayRender___73081;
+    s.tmp_0.arg0 = s.sayRender___97918;
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg1 = r0;
     r0 = s.arg0.fields["camera"];
@@ -48001,12 +48001,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_drawSprite_SayText__P67399.info = {"start":38157,"length":688,"line":892,"column":8,"endLine":906,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"drawSprite_SayText","argumentNames":["this","spr","x","y"]}
+Render_IsometricRender_Sideview_drawSprite_SayText__P95151.info = {"start":38149,"length":688,"line":892,"column":8,"endLine":906,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"drawSprite_SayText","argumentNames":["this","spr","x","y"]}
 
-function Render_RayCastingRender_drawSprite_SayText__P67399_mk(s) {
+function Render_IsometricRender_Sideview_drawSprite_SayText__P95151_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_drawSprite_SayText__P67399, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_drawSprite_SayText__P95151, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -48018,8 +48018,8 @@ function Render_RayCastingRender_drawSprite_SayText__P67399_mk(s) {
   tmp_7: undefined,
   tmp_8: undefined,
   tmp_9: undefined,
-  sayRender___73081: undefined,
-  heightSpr___73088: undefined,
+  sayRender___97918: undefined,
+  heightSpr___97925: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -48070,7 +48070,7 @@ function sprites_BaseSpriteSayRenderer_draw__P65250_mk(s) {
 
 
 
-function Render_RayCastingRender_drawSprite__P67398(s) {
+function Render_IsometricRender_Sideview_drawSprite__P95150(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -48080,11 +48080,11 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.widthSpr___72980 = undefined;
-    s.heightSpr___72985 = undefined;
-    s.dir___72990 = undefined;
-    s.texSpr___73006 = undefined;
-    s.particle___73041 = undefined;
+    s.widthSpr___97816 = undefined;
+    s.heightSpr___97821 = undefined;
+    s.dir___97826 = undefined;
+    s.texSpr___97842 = undefined;
+    s.particle___97878 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -48093,23 +48093,23 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_1 = Sprite_width__P65386_mk(s);
     s.tmp_1.arg0 = s.arg1;
     s.callLocIdx = 248; s.pc = 9; return s.tmp_1;
   case 9:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * globals.Scale___70231);
-    s.widthSpr___72980 = (r0);
+    r0 = (s.tmp_0 * globals.Scale___94998);
+    s.widthSpr___97816 = (r0);
     s.tmp_1 = Sprite_height__P65387_mk(s);
     s.tmp_1.arg0 = s.arg1;
     s.callLocIdx = 249; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 * globals.Scale___70231);
-    s.heightSpr___72985 = (r0);
+    r0 = (s.tmp_0 * globals.Scale___94998);
+    s.heightSpr___97821 = (r0);
     r0 = s.arg1.fields["_vx"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 0);
@@ -48132,7 +48132,7 @@ switch (step) {
     r0 = (s.tmp_4 / 2);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + 0.25);
-    s.dir___72990 = (r0);
+    s.dir___97826 = (r0);
     r0 = s.arg0.fields["spriteAnimations"];
     s.tmp_3 = r0;
     r0 = s.arg1.fields["id"];
@@ -48148,34 +48148,34 @@ switch (step) {
     r0 = s.arg1.fields["_image"];
     { step = 4; continue; }
   case 3:
-    s.tmp_5 = Render_Animations_getFrameByDir__P67418_mk(s);
+    s.tmp_5 = Render_Animations_getFrameByDir__P108068_mk(s);
     r0 = s.arg0.fields["spriteAnimations"];
     s.tmp_6 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_7 = r0;
     r0 = pxsim_Array__getAt(s.tmp_6, s.tmp_7);
     s.tmp_5.arg0 = r0;
-    s.tmp_5.arg1 = s.dir___72990;
+    s.tmp_5.arg1 = s.dir___97826;
     s.callLocIdx = 251; s.pc = 11; return s.tmp_5;
   case 11:
     r0 = s.retval;
   case 4:
     // jmp value (already in r0)
     s.tmp_8 = r0;
-    s.texSpr___73006 = (s.tmp_8);
+    s.texSpr___97842 = (s.tmp_8);
     s.tmp_0 = helpers_imageBlit__P64942_mk(s);
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
     s.tmp_1 = r0 = s.arg2;
-    r0 = (s.widthSpr___72980 >> 1);
+    r0 = (s.widthSpr___97816 >> 1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 - s.tmp_2);
     s.tmp_0.arg1 = r0;
-    r0 = (s.arg3 - s.heightSpr___72985);
+    r0 = (s.arg3 - s.heightSpr___97821);
     s.tmp_0.arg2 = r0;
-    s.tmp_0.arg3 = s.widthSpr___72980;
-    s.tmp_0.arg4 = s.heightSpr___72985;
-    s.tmp_0.arg5 = s.texSpr___73006;
+    s.tmp_0.arg3 = s.widthSpr___97816;
+    s.tmp_0.arg4 = s.heightSpr___97821;
+    s.tmp_0.arg5 = s.texSpr___97842;
     s.tmp_0.arg6 = 0;
     s.tmp_0.arg7 = 0;
     r0 = s.arg1.fields["_image"];
@@ -48196,10 +48196,10 @@ switch (step) {
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.tmp_1);
-    s.particle___73041 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.particle___73041);
+    s.particle___97878 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.particle___97878);
     if (!r0) { step = 7; continue; }
-    r0 = s.particle___73041.fields["lifespan"];
+    r0 = s.particle___97878.fields["lifespan"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
@@ -48217,7 +48217,7 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.tmp_6 = r0;
-    r0 = (s.tmp_6 * globals.Scale___70231);
+    r0 = (s.tmp_6 * globals.Scale___94998);
     s.tmp_5 = r0;
     r0 = (s.tmp_5 >> 1);
     s.tmp_4 = r0;
@@ -48227,7 +48227,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["drawOffsetY"] = (s.tmp_1);
     s.tmp_0 = particles_ParticleSource__C66140_v1_2_mk(s);
-    s.tmp_0.arg0 = s.particle___73041;
+    s.tmp_0.arg0 = s.particle___97878;
     r0 = s.arg0.fields["camera"];
     s.tmp_0.arg1 = r0;
     if (!checkSubtype(s.tmp_0.arg0, particles_ParticleSource__C66140_VT)) failedCast(s.tmp_0.arg0);
@@ -48249,12 +48249,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_drawSprite__P67398.info = {"start":37131,"length":998,"line":871,"column":8,"endLine":889,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"drawSprite","argumentNames":["this","spr","x","y"]}
+Render_IsometricRender_Sideview_drawSprite__P95150.info = {"start":37123,"length":998,"line":871,"column":8,"endLine":889,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"drawSprite","argumentNames":["this","spr","x","y"]}
 
-function Render_RayCastingRender_drawSprite__P67398_mk(s) {
+function Render_IsometricRender_Sideview_drawSprite__P95150_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_drawSprite__P67398, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_drawSprite__P95150, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -48265,11 +48265,11 @@ function Render_RayCastingRender_drawSprite__P67398_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  widthSpr___72980: undefined,
-  heightSpr___72985: undefined,
-  dir___72990: undefined,
-  texSpr___73006: undefined,
-  particle___73041: undefined,
+  widthSpr___97816: undefined,
+  heightSpr___97821: undefined,
+  dir___97826: undefined,
+  texSpr___97842: undefined,
+  particle___97878: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -48399,7 +48399,7 @@ function helpers_imageBlit__P64942_mk(s) {
 
 
 
-function Render_Animations_getFrameByDir__P67418(s) {
+function Render_Animations_getFrameByDir__P108068(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -48415,7 +48415,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_Animations__C67413_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_Animations__C108077_VT)) failedCast(r0);
     r0 = pxsim.control.millis();
     s.tmp_2 = r0;
     r0 = s.arg0.fields["msLast"];
@@ -48495,12 +48495,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_Animations_getFrameByDir__P67418.info = {"start":1307,"length":536,"line":47,"column":8,"endLine":57,"endColumn":9,"fileName":"render_blocks.ts","functionName":"getFrameByDir","argumentNames":["this","dir"]}
+Render_Animations_getFrameByDir__P108068.info = {"start":1292,"length":536,"line":47,"column":8,"endLine":57,"endColumn":9,"fileName":"render_blocks.ts","functionName":"getFrameByDir","argumentNames":["this","dir"]}
 
-function Render_Animations_getFrameByDir__P67418_mk(s) {
+function Render_Animations_getFrameByDir__P108068_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_Animations_getFrameByDir__P67418, depth: s.depth + 1,
+        parent: s, fn: Render_Animations_getFrameByDir__P108068, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -48605,7 +48605,7 @@ function helpers_arrayConcat__P63102_mk(s) {
 
 
 
-function Render_RayCastingRender_pasteShearedTile__P67387(s) {
+function Render_IsometricRender_Sideview_pasteShearedTile__P95144(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -48615,12 +48615,12 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.p0x___71925 = undefined;
-    s.width___71930 = undefined;
-    s.p0y___71941 = undefined;
-    s.p1y___71946 = undefined;
-    s.y___71953 = undefined;
-    s.height___71959 = undefined;
+    s.p0x___96757 = undefined;
+    s.width___96762 = undefined;
+    s.p0y___96773 = undefined;
+    s.p1y___96778 = undefined;
+    s.y___96785 = undefined;
+    s.height___96791 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -48631,7 +48631,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -48647,7 +48647,7 @@ switch (step) {
     }
   case 5:
     r0 = s.retval;
-    s.p0x___71925 = (r0);
+    s.p0x___96757 = (r0);
     s.tmp_2 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_3 = r0;
@@ -48666,10 +48666,10 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 - s.p0x___71925);
+    r0 = (s.tmp_1 - s.p0x___96757);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 + 1);
-    s.width___71930 = (r0);
+    s.width___96762 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -48685,7 +48685,7 @@ switch (step) {
     }
   case 7:
     r0 = s.retval;
-    s.p0y___71941 = (r0);
+    s.p0y___96773 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -48703,49 +48703,49 @@ switch (step) {
     }
   case 8:
     r0 = s.retval;
-    s.p1y___71946 = (r0);
+    s.p1y___96778 = (r0);
     r0 = (s.arg5 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = s.p0y___71941;
+    r0 = s.p0y___96773;
     { step = 2; continue; }
   case 1:
-    r0 = s.p1y___71946;
+    r0 = s.p1y___96778;
   case 2:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    s.y___71953 = (s.tmp_1);
+    s.y___96785 = (s.tmp_1);
     r0 = (s.arg5 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    r0 = (s.p1y___71946 - s.p0y___71941);
+    r0 = (s.p1y___96778 - s.p0y___96773);
     { step = 4; continue; }
   case 3:
-    r0 = (s.p0y___71941 - s.p1y___71946);
+    r0 = (s.p0y___96773 - s.p1y___96778);
   case 4:
     // jmp value (already in r0)
     s.tmp_1 = r0;
-    r0 = (globals.WallHeight___70242 + s.tmp_1);
-    s.height___71959 = (r0);
+    r0 = (globals.WallHeight___95009 + s.tmp_1);
+    s.height___96791 = (r0);
     s.tmp_0 = helpers_imageBlit__P64942_mk(s);
     r0 = s.arg0.fields["tempScreen"];
     s.tmp_0.arg0 = r0;
-    r0 = (s.arg2 + s.p0x___71925);
+    r0 = (s.arg2 + s.p0x___96757);
     s.tmp_0.arg1 = r0;
-    r0 = (s.arg3 + s.y___71953);
+    r0 = (s.arg3 + s.y___96785);
     s.tmp_0.arg2 = r0;
-    s.tmp_0.arg3 = s.width___71930;
-    s.tmp_0.arg4 = s.height___71959;
+    s.tmp_0.arg3 = s.width___96762;
+    s.tmp_0.arg4 = s.height___96791;
     r0 = s.arg0.fields["shearedTiles"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_1, s.arg4);
     s.tmp_0.arg5 = r0;
-    s.tmp_0.arg6 = s.p0x___71925;
-    s.tmp_0.arg7 = s.y___71953;
-    s.tmp_0.arg8 = s.width___71930;
-    s.tmp_0.arg9 = s.height___71959;
+    s.tmp_0.arg6 = s.p0x___96757;
+    s.tmp_0.arg7 = s.y___96785;
+    s.tmp_0.arg8 = s.width___96762;
+    s.tmp_0.arg9 = s.height___96791;
     s.tmp_0.arg10 = true;
     s.tmp_0.arg11 = false;
     s.callLocIdx = 166; s.pc = 9; return s.tmp_0;
@@ -48755,24 +48755,24 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_pasteShearedTile__P67387.info = {"start":25796,"length":654,"line":649,"column":8,"endLine":658,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"pasteShearedTile","argumentNames":["this","targetImg","offsetX","offsetY","tileIndex","startCornerIndex"]}
+Render_IsometricRender_Sideview_pasteShearedTile__P95144.info = {"start":25788,"length":654,"line":649,"column":8,"endLine":658,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"pasteShearedTile","argumentNames":["this","targetImg","offsetX","offsetY","tileIndex","startCornerIndex"]}
 
-function Render_RayCastingRender_pasteShearedTile__P67387_mk(s) {
+function Render_IsometricRender_Sideview_pasteShearedTile__P95144_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_pasteShearedTile__P67387, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_pasteShearedTile__P95144, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  p0x___71925: undefined,
-  width___71930: undefined,
-  p0y___71941: undefined,
-  p1y___71946: undefined,
-  y___71953: undefined,
-  height___71959: undefined,
+  p0x___96757: undefined,
+  width___96762: undefined,
+  p0y___96773: undefined,
+  p1y___96778: undefined,
+  y___96785: undefined,
+  height___96791: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -48871,7 +48871,7 @@ function Math_roundWithPrecision__P63121_mk(s) {
 
 
 
-function Render_RayCastingRender_pasteWall__P67388(s) {
+function Render_IsometricRender_Sideview_pasteWall__P95145(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -48881,7 +48881,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.texture___71998 = undefined;
+    s.texture___96832 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -48890,7 +48890,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["wallCached"];
     s.tmp_3 = r0;
     r0 = pxsim_Array__getAt(s.tmp_3, s.arg3);
@@ -48929,10 +48929,10 @@ switch (step) {
   case 4:
     // jmp value (already in r0)
     s.tmp_10 = r0;
-    s.texture___71998 = (s.tmp_10);
-    s.tmp_0 = Render_RayCastingRender_shear__P67385_mk(s);
+    s.texture___96832 = (s.tmp_10);
+    s.tmp_0 = Render_IsometricRender_Sideview_shear__P95142_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.texture___71998;
+    s.tmp_0.arg1 = s.texture___96832;
     r0 = s.arg0.fields["wholeWalls"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_1, s.arg3);
@@ -48941,9 +48941,9 @@ switch (step) {
     s.callLocIdx = 168; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_shear__P67385_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_shear__P95142_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.texture___71998;
+    s.tmp_0.arg1 = s.texture___96832;
     r0 = s.arg0.fields["wholeWalls"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_1, s.arg3);
@@ -48952,7 +48952,7 @@ switch (step) {
     s.callLocIdx = 169; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.tmp_0 = Render_RayCastingRender_rotate__P67384_mk(s);
+    s.tmp_0 = Render_IsometricRender_Sideview_rotate__P95141_mk(s);
     s.tmp_0.arg0 = s.arg0;
     r0 = s.arg0.fields["map"];
     s.tmp_2 = r0;
@@ -48983,12 +48983,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_pasteWall__P67388.info = {"start":26460,"length":770,"line":660,"column":8,"endLine":671,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"pasteWall","argumentNames":["this","offsetX","offsetY","tileIndex"]}
+Render_IsometricRender_Sideview_pasteWall__P95145.info = {"start":26452,"length":770,"line":660,"column":8,"endLine":671,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"pasteWall","argumentNames":["this","offsetX","offsetY","tileIndex"]}
 
-function Render_RayCastingRender_pasteWall__P67388_mk(s) {
+function Render_IsometricRender_Sideview_pasteWall__P95145_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_pasteWall__P67388, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_pasteWall__P95145, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -49001,7 +49001,7 @@ function Render_RayCastingRender_pasteWall__P67388_mk(s) {
   tmp_8: undefined,
   tmp_9: undefined,
   tmp_10: undefined,
-  texture___71998: undefined,
+  texture___96832: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -49012,7 +49012,7 @@ function Render_RayCastingRender_pasteWall__P67388_mk(s) {
 
 
 
-function Render_RayCastingRender_rotate__P67384(s) {
+function Render_IsometricRender_Sideview_rotate__P95141(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49022,15 +49022,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.xIn0_FX___71595 = undefined;
-    s.yIn0_FX___71614 = undefined;
-    s.rowStepX___71633 = undefined;
-    s.rowStepY___71639 = undefined;
-    s.xOut___71649 = undefined;
-    s.xIn_FX___71656 = undefined;
-    s.yIn_FX___71658 = undefined;
-    s.yOut___71660 = undefined;
-    s.c___71682 = undefined;
+    s.xIn0_FX___96427 = undefined;
+    s.yIn0_FX___96446 = undefined;
+    s.rowStepX___96465 = undefined;
+    s.rowStepY___96471 = undefined;
+    s.xOut___96481 = undefined;
+    s.xIn_FX___96488 = undefined;
+    s.yIn_FX___96490 = undefined;
+    s.yOut___96492 = undefined;
+    s.c___96514 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -49038,73 +49038,73 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
-    s.tmp_2 = r0 = globals.A_Fpx___70268;
-    r0 = (globals.H___70254 - 8);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
+    s.tmp_2 = r0 = globals.A_Fpx___95035;
+    r0 = (globals.H___95021 - 8);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 * s.tmp_3);
     s.tmp_1 = r0;
-    s.tmp_5 = r0 = globals.B_Fpx___70270;
-    r0 = (globals.V___70260 - 8);
+    s.tmp_5 = r0 = globals.B_Fpx___95037;
+    r0 = (globals.V___95027 - 8);
     s.tmp_6 = r0;
     r0 = (s.tmp_5 * s.tmp_6);
     s.tmp_4 = r0;
     r0 = (s.tmp_1 + s.tmp_4);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 + 2048);
-    s.xIn0_FX___71595 = (r0);
-    s.tmp_2 = r0 = globals.C_Fpx___70274;
-    r0 = (globals.H___70254 - 8);
+    s.xIn0_FX___96427 = (r0);
+    s.tmp_2 = r0 = globals.C_Fpx___95041;
+    r0 = (globals.H___95021 - 8);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 * s.tmp_3);
     s.tmp_1 = r0;
-    s.tmp_5 = r0 = globals.D_Fpx___70272;
-    r0 = (globals.V___70260 - 8);
+    s.tmp_5 = r0 = globals.D_Fpx___95039;
+    r0 = (globals.V___95027 - 8);
     s.tmp_6 = r0;
     r0 = (s.tmp_5 * s.tmp_6);
     s.tmp_4 = r0;
     r0 = (s.tmp_1 + s.tmp_4);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 + 2048);
-    s.yIn0_FX___71614 = (r0);
-    s.tmp_0 = r0 = globals.B_Fpx___70270;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.yIn0_FX___96446 = (r0);
+    s.tmp_0 = r0 = globals.B_Fpx___95037;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.rowStepX___71633 = (r0);
-    s.tmp_0 = r0 = globals.D_Fpx___70272;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.rowStepX___96465 = (r0);
+    s.tmp_0 = r0 = globals.D_Fpx___95039;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.rowStepY___71639 = (r0);
-    s.xOut___71649 = (0);
+    s.rowStepY___96471 = (r0);
+    s.xOut___96481 = (0);
   case 1:
-    s.tmp_1 = r0 = s.xOut___71649;
-    r0 = (16 * globals.TileImgScaleX___70225);
+    s.tmp_1 = r0 = s.xOut___96481;
+    r0 = (16 * globals.TileImgScaleX___94992);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 14; continue; }
-    s.xIn_FX___71656 = (s.xIn0_FX___71595);
-    s.yIn_FX___71658 = (s.yIn0_FX___71614);
-    s.yOut___71660 = (0);
+    s.xIn_FX___96488 = (s.xIn0_FX___96427);
+    s.yIn_FX___96490 = (s.yIn0_FX___96446);
+    s.yOut___96492 = (0);
   case 2:
-    s.tmp_1 = r0 = s.yOut___71660;
-    r0 = (16 * globals.TileImgScaleY___70228);
+    s.tmp_1 = r0 = s.yOut___96492;
+    r0 = (16 * globals.TileImgScaleY___94995);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 13; continue; }
-    r0 = (0 <= s.xIn_FX___71656);
+    r0 = (0 <= s.xIn_FX___96488);
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBool(s.tmp_3);
     if (r0) { step = 3; continue; }
     r0 = s.tmp_3;
     { step = 4; continue; }
   case 3:
-    r0 = (s.xIn_FX___71656 < 4096);
+    r0 = (s.xIn_FX___96488 < 4096);
   case 4:
     // jmp value (already in r0)
     s.tmp_4 = r0;
@@ -49113,7 +49113,7 @@ switch (step) {
     r0 = s.tmp_4;
     { step = 6; continue; }
   case 5:
-    r0 = (0 <= s.yIn_FX___71658);
+    r0 = (0 <= s.yIn_FX___96490);
   case 6:
     // jmp value (already in r0)
     s.tmp_5 = r0;
@@ -49122,52 +49122,52 @@ switch (step) {
     r0 = s.tmp_5;
     { step = 8; continue; }
   case 7:
-    r0 = (s.yIn_FX___71658 < 4096);
+    r0 = (s.yIn_FX___96490 < 4096);
   case 8:
     // jmp value (already in r0)
     s.tmp_6 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_6);
     if (!r0) { step = 11; continue; }
     s.tmp_7 = r0 = s.arg1;
-    r0 = (s.xIn_FX___71656 >> 8);
+    r0 = (s.xIn_FX___96488 >> 8);
     s.tmp_8 = r0;
-    r0 = (s.yIn_FX___71658 >> 8);
+    r0 = (s.yIn_FX___96490 >> 8);
     s.tmp_9 = r0;
     r0 = pxsim_ImageMethods.getPixel(s.tmp_7, s.tmp_8, s.tmp_9);
-    s.c___71682 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.c___71682);
+    s.c___96514 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.c___96514);
     if (!r0) { step = 9; continue; }
-    r0 = pxsim_ImageMethods.setPixel(s.arg2, s.xOut___71649, s.yOut___71660, s.c___71682);
+    r0 = pxsim_ImageMethods.setPixel(s.arg2, s.xOut___96481, s.yOut___96492, s.c___96514);
   case 9:
   case 10:
   case 11:
   case 12:
-    r0 = (s.xIn_FX___71656 + s.rowStepX___71633);
-    s.xIn_FX___71656 = (r0);
-    r0 = (s.yIn_FX___71658 + s.rowStepY___71639);
-    s.yIn_FX___71658 = (r0);
-    r0 = (s.yOut___71660 + 1);
-    s.yOut___71660 = (r0);
+    r0 = (s.xIn_FX___96488 + s.rowStepX___96465);
+    s.xIn_FX___96488 = (r0);
+    r0 = (s.yIn_FX___96490 + s.rowStepY___96471);
+    s.yIn_FX___96490 = (r0);
+    r0 = (s.yOut___96492 + 1);
+    s.yOut___96492 = (r0);
     { step = 2; continue; }
   case 13:
-    r0 = (s.xIn0_FX___71595 + globals.A_Fpx___70268);
-    s.xIn0_FX___71595 = (r0);
-    r0 = (s.yIn0_FX___71614 + globals.C_Fpx___70274);
-    s.yIn0_FX___71614 = (r0);
-    r0 = (s.xOut___71649 + 1);
-    s.xOut___71649 = (r0);
+    r0 = (s.xIn0_FX___96427 + globals.A_Fpx___95035);
+    s.xIn0_FX___96427 = (r0);
+    r0 = (s.yIn0_FX___96446 + globals.C_Fpx___95041);
+    s.yIn0_FX___96446 = (r0);
+    r0 = (s.xOut___96481 + 1);
+    s.xOut___96481 = (r0);
     { step = 1; continue; }
   case 14:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_rotate__P67384.info = {"start":22725,"length":1088,"line":590,"column":8,"endLine":612,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"rotate","argumentNames":["this","inImg","outImg"]}
+Render_IsometricRender_Sideview_rotate__P95141.info = {"start":22717,"length":1088,"line":590,"column":8,"endLine":612,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"rotate","argumentNames":["this","inImg","outImg"]}
 
-function Render_RayCastingRender_rotate__P67384_mk(s) {
+function Render_IsometricRender_Sideview_rotate__P95141_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_rotate__P67384, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_rotate__P95141, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -49179,15 +49179,15 @@ function Render_RayCastingRender_rotate__P67384_mk(s) {
   tmp_7: undefined,
   tmp_8: undefined,
   tmp_9: undefined,
-  xIn0_FX___71595: undefined,
-  yIn0_FX___71614: undefined,
-  rowStepX___71633: undefined,
-  rowStepY___71639: undefined,
-  xOut___71649: undefined,
-  xIn_FX___71656: undefined,
-  yIn_FX___71658: undefined,
-  yOut___71660: undefined,
-  c___71682: undefined,
+  xIn0_FX___96427: undefined,
+  yIn0_FX___96446: undefined,
+  rowStepX___96465: undefined,
+  rowStepY___96471: undefined,
+  xOut___96481: undefined,
+  xIn_FX___96488: undefined,
+  yIn_FX___96490: undefined,
+  yOut___96492: undefined,
+  c___96514: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -49197,7 +49197,7 @@ function Render_RayCastingRender_rotate__P67384_mk(s) {
 
 
 
-function Render_RayCastingRender_shear__P67385(s) {
+function Render_IsometricRender_Sideview_shear__P95142(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49207,16 +49207,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.p0x___71723 = undefined;
-    s.p0y___71729 = undefined;
-    s.p1x___71735 = undefined;
-    s.p1y___71742 = undefined;
-    s.y___71749 = undefined;
-    s.diffX0_1___71756 = undefined;
-    s.texX___71762 = undefined;
-    s.texXStep___71763 = undefined;
-    s.yStep___71773 = undefined;
-    s.x___71783 = undefined;
+    s.p0x___96555 = undefined;
+    s.p0y___96561 = undefined;
+    s.p1x___96567 = undefined;
+    s.p1y___96574 = undefined;
+    s.y___96581 = undefined;
+    s.diffX0_1___96588 = undefined;
+    s.texX___96594 = undefined;
+    s.texXStep___96595 = undefined;
+    s.yStep___96605 = undefined;
+    s.x___96615 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -49225,7 +49225,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49241,7 +49241,7 @@ switch (step) {
     }
   case 6:
     r0 = s.retval;
-    s.p0x___71723 = (r0);
+    s.p0x___96555 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49257,7 +49257,7 @@ switch (step) {
     }
   case 7:
     r0 = s.retval;
-    s.p0y___71729 = (r0);
+    s.p0y___96561 = (r0);
     s.tmp_0 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49275,7 +49275,7 @@ switch (step) {
     }
   case 8:
     r0 = s.retval;
-    s.p1x___71735 = (r0);
+    s.p1x___96567 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49293,61 +49293,61 @@ switch (step) {
     }
   case 9:
     r0 = s.retval;
-    s.p1y___71742 = (r0);
-    r0 = (s.p0y___71729 + 1);
+    s.p1y___96574 = (r0);
+    r0 = (s.p0y___96561 + 1);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 << 8);
-    s.y___71749 = (r0);
-    r0 = (s.p1x___71735 - s.p0x___71723);
-    s.diffX0_1___71756 = (r0);
-    r0 = (s.diffX0_1___71756 <= 0);
+    s.y___96581 = (r0);
+    r0 = (s.p1x___96567 - s.p0x___96555);
+    s.diffX0_1___96588 = (r0);
+    r0 = (s.diffX0_1___96588 <= 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     { step = 5; continue; }
   case 1:
   case 2:
-    s.texX___71762 = (0);
+    s.texX___96594 = (0);
     r0 = (16 << 8);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 1);
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___71756);
-    s.texXStep___71763 = (r0);
-    r0 = (s.p1y___71742 - s.p0y___71729);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___96588);
+    s.texXStep___96595 = (r0);
+    r0 = (s.p1y___96574 - s.p0y___96561);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 * 256);
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___71756);
-    s.yStep___71773 = (r0);
-    s.x___71783 = (0);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___96588);
+    s.yStep___96605 = (r0);
+    s.x___96615 = (0);
   case 3:
-    r0 = (s.x___71783 <= s.diffX0_1___71756);
+    r0 = (s.x___96615 <= s.diffX0_1___96588);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
     s.tmp_1 = helpers_imageBlitRow__P64943_mk(s);
     s.tmp_1.arg0 = s.arg2;
-    r0 = (s.x___71783 + s.p0x___71723);
+    r0 = (s.x___96615 + s.p0x___96555);
     s.tmp_1.arg1 = r0;
-    r0 = (s.y___71749 >> 8);
+    r0 = (s.y___96581 >> 8);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 - 1);
     s.tmp_1.arg2 = r0;
     s.tmp_1.arg3 = s.arg1;
-    r0 = (s.texX___71762 >> 8);
+    r0 = (s.texX___96594 >> 8);
     s.tmp_1.arg4 = r0;
-    r0 = (globals.WallHeight___70242 + 1);
+    r0 = (globals.WallHeight___95009 + 1);
     s.tmp_1.arg5 = r0;
     s.callLocIdx = 156; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
-    r0 = (s.texX___71762 + s.texXStep___71763);
-    s.texX___71762 = (r0);
-    r0 = (s.y___71749 + s.yStep___71773);
-    s.y___71749 = (r0);
-    r0 = (s.x___71783 + 1);
-    s.x___71783 = (r0);
+    r0 = (s.texX___96594 + s.texXStep___96595);
+    s.texX___96594 = (r0);
+    r0 = (s.y___96581 + s.yStep___96605);
+    s.y___96581 = (r0);
+    r0 = (s.x___96615 + 1);
+    s.x___96615 = (r0);
     { step = 3; continue; }
   case 4:
   case 5:
@@ -49355,26 +49355,26 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_shear__P67385.info = {"start":23823,"length":927,"line":614,"column":8,"endLine":629,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"shear","argumentNames":["this","inImg","outImg","startCornerIndex"]}
+Render_IsometricRender_Sideview_shear__P95142.info = {"start":23815,"length":927,"line":614,"column":8,"endLine":629,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"shear","argumentNames":["this","inImg","outImg","startCornerIndex"]}
 
-function Render_RayCastingRender_shear__P67385_mk(s) {
+function Render_IsometricRender_Sideview_shear__P95142_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_shear__P67385, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_shear__P95142, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  p0x___71723: undefined,
-  p0y___71729: undefined,
-  p1x___71735: undefined,
-  p1y___71742: undefined,
-  y___71749: undefined,
-  diffX0_1___71756: undefined,
-  texX___71762: undefined,
-  texXStep___71763: undefined,
-  yStep___71773: undefined,
-  x___71783: undefined,
+  p0x___96555: undefined,
+  p0y___96561: undefined,
+  p1x___96567: undefined,
+  p1y___96574: undefined,
+  y___96581: undefined,
+  diffX0_1___96588: undefined,
+  texX___96594: undefined,
+  texXStep___96595: undefined,
+  yStep___96605: undefined,
+  x___96615: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -49450,7 +49450,7 @@ function helpers_imageBlitRow__P64943_mk(s) {
 
 
 
-function Render_RayCastingRender_shearAndCache_AllTiles__P67386(s) {
+function Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49460,17 +49460,17 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.p0x___71819 = undefined;
-    s.p0y___71824 = undefined;
-    s.p1x___71829 = undefined;
-    s.p1y___71836 = undefined;
-    s.y___71843 = undefined;
-    s.diffX0_1___71850 = undefined;
-    s.texX___71856 = undefined;
-    s.texXStep___71857 = undefined;
-    s.yStep___71867 = undefined;
-    s.x___71877 = undefined;
-    s.i___71882 = undefined;
+    s.p0x___96651 = undefined;
+    s.p0y___96656 = undefined;
+    s.p1x___96661 = undefined;
+    s.p1y___96668 = undefined;
+    s.y___96675 = undefined;
+    s.diffX0_1___96682 = undefined;
+    s.texX___96688 = undefined;
+    s.texXStep___96689 = undefined;
+    s.yStep___96699 = undefined;
+    s.x___96709 = undefined;
+    s.i___96714 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -49479,7 +49479,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_0 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49495,7 +49495,7 @@ switch (step) {
     }
   case 8:
     r0 = s.retval;
-    s.p0x___71819 = (r0);
+    s.p0x___96651 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49511,7 +49511,7 @@ switch (step) {
     }
   case 9:
     r0 = s.retval;
-    s.p0y___71824 = (r0);
+    s.p0y___96656 = (r0);
     s.tmp_0 = if_x_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49529,7 +49529,7 @@ switch (step) {
     }
   case 10:
     r0 = s.retval;
-    s.p1x___71829 = (r0);
+    s.p1x___96661 = (r0);
     s.tmp_0 = if_y_1_mk(s);
     r0 = s.arg0.fields["corners"];
     s.tmp_1 = r0;
@@ -49547,42 +49547,42 @@ switch (step) {
     }
   case 11:
     r0 = s.retval;
-    s.p1y___71836 = (r0);
-    r0 = (s.p0y___71824 + 1);
+    s.p1y___96668 = (r0);
+    r0 = (s.p0y___96656 + 1);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 << 8);
-    s.y___71843 = (r0);
-    r0 = (s.p1x___71829 - s.p0x___71819);
-    s.diffX0_1___71850 = (r0);
-    r0 = (s.diffX0_1___71850 <= 0);
+    s.y___96675 = (r0);
+    r0 = (s.p1x___96661 - s.p0x___96651);
+    s.diffX0_1___96682 = (r0);
+    r0 = (s.diffX0_1___96682 <= 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     { step = 7; continue; }
   case 1:
   case 2:
-    s.texX___71856 = (0);
+    s.texX___96688 = (0);
     r0 = (16 << 8);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 1);
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___71850);
-    s.texXStep___71857 = (r0);
-    r0 = (s.p1y___71836 - s.p0y___71824);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___96682);
+    s.texXStep___96689 = (r0);
+    r0 = (s.p1y___96668 - s.p0y___96656);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 * 256);
     s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___71850);
-    s.yStep___71867 = (r0);
-    s.x___71877 = (0);
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.diffX0_1___96682);
+    s.yStep___96699 = (r0);
+    s.x___96709 = (0);
   case 3:
-    r0 = (s.x___71877 <= s.diffX0_1___71850);
+    r0 = (s.x___96709 <= s.diffX0_1___96682);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 6; continue; }
-    s.i___71882 = (1);
+    s.i___96714 = (1);
   case 4:
-    s.tmp_1 = r0 = s.i___71882;
+    s.tmp_1 = r0 = s.i___96714;
     r0 = pxsim_Array__length(s.arg1);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
@@ -49590,33 +49590,33 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
     s.tmp_3 = helpers_imageBlitRow__P64943_mk(s);
-    r0 = pxsim_Array__getAt(s.arg2, s.i___71882);
+    r0 = pxsim_Array__getAt(s.arg2, s.i___96714);
     s.tmp_3.arg0 = r0;
-    r0 = (s.x___71877 + s.p0x___71819);
+    r0 = (s.x___96709 + s.p0x___96651);
     s.tmp_3.arg1 = r0;
-    r0 = (s.y___71843 >> 8);
+    r0 = (s.y___96675 >> 8);
     s.tmp_4 = r0;
     r0 = (s.tmp_4 - 1);
     s.tmp_3.arg2 = r0;
-    r0 = pxsim_Array__getAt(s.arg1, s.i___71882);
+    r0 = pxsim_Array__getAt(s.arg1, s.i___96714);
     s.tmp_3.arg3 = r0;
-    r0 = (s.texX___71856 >> 8);
+    r0 = (s.texX___96688 >> 8);
     s.tmp_3.arg4 = r0;
-    r0 = (globals.WallHeight___70242 + 1);
+    r0 = (globals.WallHeight___95009 + 1);
     s.tmp_3.arg5 = r0;
     s.callLocIdx = 161; s.pc = 12; return s.tmp_3;
   case 12:
     r0 = s.retval;
-    r0 = (s.i___71882 + 1);
-    s.i___71882 = (r0);
+    r0 = (s.i___96714 + 1);
+    s.i___96714 = (r0);
     { step = 4; continue; }
   case 5:
-    r0 = (s.texX___71856 + s.texXStep___71857);
-    s.texX___71856 = (r0);
-    r0 = (s.y___71843 + s.yStep___71867);
-    s.y___71843 = (r0);
-    r0 = (s.x___71877 + 1);
-    s.x___71877 = (r0);
+    r0 = (s.texX___96688 + s.texXStep___96689);
+    s.texX___96688 = (r0);
+    r0 = (s.y___96675 + s.yStep___96699);
+    s.y___96675 = (r0);
+    r0 = (s.x___96709 + 1);
+    s.x___96709 = (r0);
     { step = 3; continue; }
   case 6:
   case 7:
@@ -49624,29 +49624,29 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_shearAndCache_AllTiles__P67386.info = {"start":24760,"length":1026,"line":631,"column":8,"endLine":647,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"shearAndCache_AllTiles","argumentNames":["this","inImgs","outImgs","startCornerIndex"]}
+Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143.info = {"start":24752,"length":1026,"line":631,"column":8,"endLine":647,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"shearAndCache_AllTiles","argumentNames":["this","inImgs","outImgs","startCornerIndex"]}
 
-function Render_RayCastingRender_shearAndCache_AllTiles__P67386_mk(s) {
+function Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_shearAndCache_AllTiles__P67386, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  p0x___71819: undefined,
-  p0y___71824: undefined,
-  p1x___71829: undefined,
-  p1y___71836: undefined,
-  y___71843: undefined,
-  diffX0_1___71850: undefined,
-  texX___71856: undefined,
-  texXStep___71857: undefined,
-  yStep___71867: undefined,
-  x___71877: undefined,
-  i___71882: undefined,
+  p0x___96651: undefined,
+  p0y___96656: undefined,
+  p1x___96661: undefined,
+  p1y___96668: undefined,
+  y___96675: undefined,
+  diffX0_1___96682: undefined,
+  texX___96688: undefined,
+  texXStep___96689: undefined,
+  yStep___96699: undefined,
+  x___96709: undefined,
+  i___96714: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -49657,7 +49657,7 @@ function Render_RayCastingRender_shearAndCache_AllTiles__P67386_mk(s) {
 
 
 
-function Render_RayCastingRender_updateCorners__P67390(s) {
+function Render_IsometricRender_Sideview_updateCorners__P95147(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49667,17 +49667,17 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.topCornerId___72082 = undefined;
-    s.i___72106 = undefined;
+    s.topCornerId___96917 = undefined;
+    s.i___96941 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = pxsim_Array__mk();
     s.tmp_0 = r0;
-    s.tmp_2 = Render_rotatePoint__P70364_mk(s);
+    s.tmp_2 = Render_rotatePoint__P95179_mk(s);
     s.tmp_2.arg0 = 0;
     s.tmp_2.arg1 = 0;
     s.callLocIdx = 174; s.pc = 5; return s.tmp_2;
@@ -49685,7 +49685,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_1);
-    s.tmp_4 = Render_rotatePoint__P70364_mk(s);
+    s.tmp_4 = Render_rotatePoint__P95179_mk(s);
     s.tmp_4.arg0 = 0;
     s.tmp_4.arg1 = 15.99;
     s.callLocIdx = 175; s.pc = 6; return s.tmp_4;
@@ -49693,7 +49693,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_3 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_3);
-    s.tmp_6 = Render_rotatePoint__P70364_mk(s);
+    s.tmp_6 = Render_rotatePoint__P95179_mk(s);
     s.tmp_6.arg0 = 15.99;
     s.tmp_6.arg1 = 15.99;
     s.callLocIdx = 176; s.pc = 7; return s.tmp_6;
@@ -49701,7 +49701,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_5 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_5);
-    s.tmp_8 = Render_rotatePoint__P70364_mk(s);
+    s.tmp_8 = Render_rotatePoint__P95179_mk(s);
     s.tmp_8.arg0 = 15.99;
     s.tmp_8.arg1 = 0;
     s.callLocIdx = 177; s.pc = 8; return s.tmp_8;
@@ -49710,7 +49710,7 @@ switch (step) {
     s.tmp_7 = r0;
     r0 = pxsim_Array__push(s.tmp_0, s.tmp_7);
     r0 = (s.arg0).fields["corners"] = (s.tmp_0);
-    r0 = pxsim_pxtcore_mkAction(1, topCornerId_inline__P72087);
+    r0 = pxsim_pxtcore_mkAction(1, topCornerId_inline__P96922);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = helpers_arrayReduce__P63101_mk(s);
@@ -49721,16 +49721,16 @@ switch (step) {
     s.callLocIdx = 180; s.pc = 9; return s.tmp_1;
   case 9:
     r0 = s.retval;
-    s.topCornerId___72082 = (r0);
+    s.topCornerId___96917 = (r0);
     r0 = s.arg0.fields["corners"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array_.removeAt(s.tmp_0, s.topCornerId___72082);
-    r0 = pxsim_numops_toBoolDecr(s.topCornerId___72082);
+    r0 = pxsim_Array_.removeAt(s.tmp_0, s.topCornerId___96917);
+    r0 = pxsim_numops_toBoolDecr(s.topCornerId___96917);
     if (!r0) { step = 3; continue; }
-    s.i___72106 = (0);
+    s.i___96941 = (0);
   case 1:
-    s.tmp_1 = r0 = s.i___72106;
-    r0 = (3 - s.topCornerId___72082);
+    s.tmp_1 = r0 = s.i___96941;
+    r0 = (3 - s.topCornerId___96917);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
@@ -49743,8 +49743,8 @@ switch (step) {
     r0 = pxsim_Array_.pop(s.tmp_5);
     s.tmp_4 = r0;
     r0 = pxsim_Array_.insertAt(s.tmp_3, 0, s.tmp_4);
-    r0 = (s.i___72106 + 1);
-    s.i___72106 = (r0);
+    r0 = (s.i___96941 + 1);
+    s.i___96941 = (r0);
     { step = 1; continue; }
   case 2:
   case 3:
@@ -49753,12 +49753,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_updateCorners__P67390.info = {"start":27759,"length":744,"line":689,"column":8,"endLine":702,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateCorners","argumentNames":["this"]}
+Render_IsometricRender_Sideview_updateCorners__P95147.info = {"start":27751,"length":744,"line":689,"column":8,"endLine":702,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateCorners","argumentNames":["this"]}
 
-function Render_RayCastingRender_updateCorners__P67390_mk(s) {
+function Render_IsometricRender_Sideview_updateCorners__P95147_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_updateCorners__P67390, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_updateCorners__P95147, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -49769,8 +49769,8 @@ function Render_RayCastingRender_updateCorners__P67390_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  topCornerId___72082: undefined,
-  i___72106: undefined,
+  topCornerId___96917: undefined,
+  i___96941: undefined,
   arg0: undefined,
 } }
 
@@ -49778,7 +49778,7 @@ function Render_RayCastingRender_updateCorners__P67390_mk(s) {
 
 
 
-function topCornerId_inline__P72087(s) {
+function topCornerId_inline__P96922(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49838,12 +49838,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-topCornerId_inline__P72087.info = {"start":28072,"length":61,"line":697,"column":52,"endLine":697,"endColumn":113,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["tId","p","i"]}
+topCornerId_inline__P96922.info = {"start":28064,"length":61,"line":697,"column":52,"endLine":697,"endColumn":113,"fileName":"render_raycasting.ts","functionName":"inline","argumentNames":["tId","p","i"]}
 
-function topCornerId_inline__P72087_mk(s) {
+function topCornerId_inline__P96922_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: topCornerId_inline__P72087, depth: s.depth + 1,
+        parent: s, fn: topCornerId_inline__P96922, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -49861,7 +49861,7 @@ function topCornerId_inline__P72087_mk(s) {
 
 
 
-function Render_rotatePoint__P70364(s) {
+function Render_rotatePoint__P95179(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49871,19 +49871,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.xOut___70367 = undefined;
-    s.yOut___70389 = undefined;
+    s.xOut___95182 = undefined;
+    s.yOut___95204 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_4 = r0 = globals.D_Fpx___70272;
+    s.tmp_4 = r0 = globals.D_Fpx___95039;
     r0 = (s.arg0 - 8);
     s.tmp_5 = r0;
     r0 = (s.tmp_4 * s.tmp_5);
     s.tmp_3 = r0;
-    s.tmp_7 = r0 = globals.B_Fpx___70270;
+    s.tmp_7 = r0 = globals.B_Fpx___95037;
     r0 = (s.arg1 - 8);
     s.tmp_8 = r0;
     r0 = (s.tmp_7 * s.tmp_8);
@@ -49892,18 +49892,18 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = (s.tmp_2 << 8);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 / globals.AD_BC_Fpx2___70263);
+    r0 = (s.tmp_1 / globals.AD_BC_Fpx2___95030);
     s.tmp_0 = r0;
-    r0 = (globals.H___70254 - 8);
+    r0 = (globals.H___95021 - 8);
     s.tmp_9 = r0;
     r0 = (s.tmp_0 - s.tmp_9);
-    s.xOut___70367 = (r0);
-    s.tmp_5 = r0 = globals.C_Fpx___70274;
+    s.xOut___95182 = (r0);
+    s.tmp_5 = r0 = globals.C_Fpx___95041;
     r0 = (s.arg0 - 8);
     s.tmp_6 = r0;
     r0 = (s.tmp_5 * s.tmp_6);
     s.tmp_4 = r0;
-    s.tmp_8 = r0 = globals.A_Fpx___70268;
+    s.tmp_8 = r0 = globals.A_Fpx___95035;
     r0 = (s.arg1 - 8);
     s.tmp_9 = r0;
     r0 = (s.tmp_8 * s.tmp_9);
@@ -49914,19 +49914,19 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = (0 - s.tmp_2);
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 / globals.AD_BC_Fpx2___70263);
+    r0 = (s.tmp_1 / globals.AD_BC_Fpx2___95030);
     s.tmp_0 = r0;
-    r0 = (globals.V___70260 - 8);
+    r0 = (globals.V___95027 - 8);
     s.tmp_10 = r0;
     r0 = (s.tmp_0 - s.tmp_10);
-    s.yOut___70389 = (r0);
+    s.yOut___95204 = (r0);
     r0 = pxsim_pxtrt.mkMap();
     s.tmp_0 = r0;
-    r0 = (s.xOut___70367 | 0);
+    r0 = (s.xOut___95182 | 0);
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt.mapSetByString(s.tmp_0, "x", s.tmp_1);
-    s.tmp_3 = r0 = s.yOut___70389;
-    r0 = (globals.TileImgScaleX___70225 / globals.TileImgScaleY___70228);
+    s.tmp_3 = r0 = s.yOut___95204;
+    r0 = (globals.TileImgScaleX___94992 / globals.TileImgScaleY___94995);
     s.tmp_4 = r0;
     r0 = (s.tmp_3 / s.tmp_4);
     s.tmp_2 = r0;
@@ -49935,12 +49935,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_rotatePoint__P70364.info = {"start":3270,"length":319,"line":86,"column":4,"endLine":90,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"rotatePoint","argumentNames":["xIn","yIn"]}
+Render_rotatePoint__P95179.info = {"start":3254,"length":319,"line":86,"column":4,"endLine":90,"endColumn":5,"fileName":"render_raycasting.ts","functionName":"rotatePoint","argumentNames":["xIn","yIn"]}
 
-function Render_rotatePoint__P70364_mk(s) {
+function Render_rotatePoint__P95179_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_rotatePoint__P70364, depth: s.depth + 1,
+        parent: s, fn: Render_rotatePoint__P95179, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -49953,8 +49953,8 @@ function Render_rotatePoint__P70364_mk(s) {
   tmp_8: undefined,
   tmp_9: undefined,
   tmp_10: undefined,
-  xOut___70367: undefined,
-  yOut___70389: undefined,
+  xOut___95182: undefined,
+  yOut___95204: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -70759,7 +70759,7 @@ function sprites_BaseSprite___update__P65091_mk(s) {
 
 
 
-function Render_RayCastingRender_updateSprite__P67381(s) {
+function Render_IsometricRender_Sideview_updateSprite__P95138(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -70769,16 +70769,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.dt___71334 = undefined;
-    s.spr___71338 = undefined;
-    s.unnamed486___U2 = undefined;
-    s.unnamed487___U3 = undefined;
+    s.dt___96167 = undefined;
+    s.spr___96171 = undefined;
+    s.unnamed838___U2 = undefined;
+    s.unnamed839___U3 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     s.tmp_1 = game_eventContext__P65991_mk(s);
     s.callLocIdx = 144; s.pc = 3; return s.tmp_1;
   case 3:
@@ -70787,36 +70787,36 @@ switch (step) {
     r0 = s.tmp_0.fields["deltaTimeMillis"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 1000);
-    s.dt___71334 = (r0);
-    s.spr___71338 = (undefined);
+    s.dt___96167 = (r0);
+    s.spr___96171 = (undefined);
     r0 = s.arg0.fields["sprites"];
-    s.unnamed486___U2 = (r0);
-    s.unnamed487___U3 = (0);
+    s.unnamed838___U2 = (r0);
+    s.unnamed839___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed487___U3;
-    r0 = pxsim_Array__length(s.unnamed486___U2);
+    s.tmp_0 = r0 = s.unnamed839___U3;
+    r0 = pxsim_Array__length(s.unnamed838___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed486___U2, s.unnamed487___U3);
-    s.spr___71338 = (r0);
-    s.tmp_2 = Render_RayCastingRender_updateMotionZ__P67382_mk(s);
+    r0 = pxsim_Array__getAt(s.unnamed838___U2, s.unnamed839___U3);
+    s.spr___96171 = (r0);
+    s.tmp_2 = Render_IsometricRender_Sideview_updateMotionZ__P95139_mk(s);
     s.tmp_2.arg0 = s.arg0;
-    s.tmp_2.arg1 = s.spr___71338;
-    s.tmp_2.arg2 = s.dt___71334;
+    s.tmp_2.arg1 = s.spr___96171;
+    s.tmp_2.arg2 = s.dt___96167;
     s.callLocIdx = 146; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
-    r0 = (s.unnamed487___U3 + 1);
-    s.unnamed487___U3 = (r0);
+    r0 = (s.unnamed839___U3 + 1);
+    s.unnamed839___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed486___U2 = (undefined);
-    s.tmp_0 = Render_RayCastingRender_updateMotionZ__P67382_mk(s);
+    s.unnamed838___U2 = (undefined);
+    s.tmp_0 = Render_IsometricRender_Sideview_updateMotionZ__P95139_mk(s);
     s.tmp_0.arg0 = s.arg0;
     r0 = s.arg0.fields["sprSelf"];
     s.tmp_0.arg1 = r0;
-    s.tmp_0.arg2 = s.dt___71334;
+    s.tmp_0.arg2 = s.dt___96167;
     s.callLocIdx = 147; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
@@ -70824,20 +70824,20 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_updateSprite__P67381.info = {"start":20190,"length":231,"line":532,"column":8,"endLine":538,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateSprite","argumentNames":["this"]}
+Render_IsometricRender_Sideview_updateSprite__P95138.info = {"start":20182,"length":231,"line":532,"column":8,"endLine":538,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateSprite","argumentNames":["this"]}
 
-function Render_RayCastingRender_updateSprite__P67381_mk(s) {
+function Render_IsometricRender_Sideview_updateSprite__P95138_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_updateSprite__P67381, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_updateSprite__P95138, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  dt___71334: undefined,
-  spr___71338: undefined,
-  unnamed486___U2: undefined,
-  unnamed487___U3: undefined,
+  dt___96167: undefined,
+  spr___96171: undefined,
+  unnamed838___U2: undefined,
+  unnamed839___U3: undefined,
   arg0: undefined,
 } }
 
@@ -70845,7 +70845,7 @@ function Render_RayCastingRender_updateSprite__P67381_mk(s) {
 
 
 
-function Render_RayCastingRender_updateMotionZ__P67382(s) {
+function Render_IsometricRender_Sideview_updateMotionZ__P95139(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -70855,9 +70855,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.motionZ___71351 = undefined;
-    s.floorHeight___71357 = undefined;
-    s.isLevel2___71436 = undefined;
+    s.motionZ___96184 = undefined;
+    s.floorHeight___96190 = undefined;
+    s.isLevel2___96269 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -70865,15 +70865,15 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Render_RayCastingRender__C67335_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Render_IsometricRender_Sideview__C95112_VT)) failedCast(r0);
     r0 = s.arg0.fields["spriteMotionZ"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, s.tmp_1);
-    s.motionZ___71351 = (r0);
-    r0 = s.motionZ___71351.fields["offset"];
-    s.floorHeight___71357 = (r0);
+    s.motionZ___96184 = (r0);
+    r0 = s.motionZ___96184.fields["offset"];
+    s.floorHeight___96190 = (r0);
     s.tmp_1 = tiles_tileAtLocationIsWall__P65760_mk(s);
     s.tmp_2 = Sprite_tilemapLocation__P65413_mk(s);
     s.tmp_2.arg0 = s.arg1;
@@ -70887,11 +70887,11 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = (s.floorHeight___71357 + 4096);
-    s.floorHeight___71357 = (r0);
+    r0 = (s.floorHeight___96190 + 4096);
+    s.floorHeight___96190 = (r0);
   case 1:
   case 2:
-    r0 = s.motionZ___71351.fields["v"];
+    r0 = s.motionZ___96184.fields["v"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != 0);
     s.tmp_0 = r0;
@@ -70900,28 +70900,28 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 4; continue; }
   case 3:
-    r0 = s.motionZ___71351.fields["p"];
+    r0 = s.motionZ___96184.fields["p"];
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 != s.floorHeight___71357);
+    r0 = (s.tmp_2 != s.floorHeight___96190);
   case 4:
     // jmp value (already in r0)
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 19; continue; }
-    s.tmp_4 = r0 = s.motionZ___71351;
+    s.tmp_4 = r0 = s.motionZ___96184;
     r0 = s.tmp_4.fields["v"];
     s.tmp_6 = r0;
-    r0 = s.motionZ___71351.fields["a"];
+    r0 = s.motionZ___96184.fields["a"];
     s.tmp_8 = r0;
     r0 = (s.tmp_8 * s.arg2);
     s.tmp_7 = r0;
     r0 = (s.tmp_6 + s.tmp_7);
     s.tmp_5 = r0;
     r0 = (s.tmp_4).fields["v"] = (s.tmp_5);
-    s.tmp_9 = r0 = s.motionZ___71351;
+    s.tmp_9 = r0 = s.motionZ___96184;
     r0 = s.tmp_9.fields["p"];
     s.tmp_11 = r0;
-    r0 = s.motionZ___71351.fields["v"];
+    r0 = s.motionZ___96184.fields["v"];
     s.tmp_13 = r0;
     r0 = (s.tmp_13 * s.arg2);
     s.tmp_12 = r0;
@@ -70929,7 +70929,7 @@ switch (step) {
     s.tmp_10 = r0;
     r0 = (s.tmp_9).fields["p"] = (s.tmp_10);
     r0 = s.tmp_10;
-    r0 = s.motionZ___71351.fields["a"];
+    r0 = s.motionZ___96184.fields["a"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 >= 0);
     s.tmp_0 = r0;
@@ -70938,7 +70938,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 6; continue; }
   case 5:
-    r0 = s.motionZ___71351.fields["v"];
+    r0 = s.motionZ___96184.fields["v"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 > 0);
   case 6:
@@ -70949,9 +70949,9 @@ switch (step) {
     r0 = s.tmp_3;
     { step = 8; continue; }
   case 7:
-    r0 = s.motionZ___71351.fields["p"];
+    r0 = s.motionZ___96184.fields["p"];
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 >= s.floorHeight___71357);
+    r0 = (s.tmp_4 >= s.floorHeight___96190);
   case 8:
     // jmp value (already in r0)
     s.tmp_5 = r0;
@@ -70960,7 +70960,7 @@ switch (step) {
     r0 = s.tmp_5;
     { step = 14; continue; }
   case 9:
-    r0 = s.motionZ___71351.fields["a"];
+    r0 = s.motionZ___96184.fields["a"];
     s.tmp_7 = r0;
     r0 = (s.tmp_7 <= 0);
     s.tmp_6 = r0;
@@ -70969,7 +70969,7 @@ switch (step) {
     r0 = s.tmp_6;
     { step = 11; continue; }
   case 10:
-    r0 = s.motionZ___71351.fields["v"];
+    r0 = s.motionZ___96184.fields["v"];
     s.tmp_8 = r0;
     r0 = (s.tmp_8 < 0);
   case 11:
@@ -70980,9 +70980,9 @@ switch (step) {
     r0 = s.tmp_9;
     { step = 13; continue; }
   case 12:
-    r0 = s.motionZ___71351.fields["p"];
+    r0 = s.motionZ___96184.fields["p"];
     s.tmp_10 = r0;
-    r0 = (s.tmp_10 <= s.floorHeight___71357);
+    r0 = (s.tmp_10 <= s.floorHeight___96190);
   case 13:
     // jmp value (already in r0)
     s.tmp_11 = r0;
@@ -70992,8 +70992,8 @@ switch (step) {
     s.tmp_12 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_12);
     if (!r0) { step = 15; continue; }
-    r0 = (s.motionZ___71351).fields["p"] = (s.floorHeight___71357);
-    r0 = (s.motionZ___71351).fields["v"] = (0);
+    r0 = (s.motionZ___96184).fields["p"] = (s.floorHeight___96190);
+    r0 = (s.motionZ___96184).fields["v"] = (0);
     r0 = 0;
   case 15:
   case 16:
@@ -71003,7 +71003,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 17; continue; }
-    s.tmp_2 = Render_RayCastingRender_updateViewZPos__P67375_mk(s);
+    s.tmp_2 = Render_IsometricRender_Sideview_updateViewZPos__P95133_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 150; s.pc = 27; return s.tmp_2;
   case 27:
@@ -71018,18 +71018,18 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 23; continue; }
-    r0 = s.motionZ___71351.fields["p"];
+    r0 = s.motionZ___96184.fields["p"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 >= 4096);
-    s.isLevel2___71436 = (r0);
+    s.isLevel2___96269 = (r0);
     s.tmp_0 = Sprite_setFlag__P65408_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = 7168;
-    s.tmp_0.arg2 = s.isLevel2___71436;
+    s.tmp_0.arg2 = s.isLevel2___96269;
     s.callLocIdx = 151; s.pc = 28; return s.tmp_0;
   case 28:
     r0 = s.retval;
-    r0 = pxsim_numops_toBoolDecr(s.isLevel2___71436);
+    r0 = pxsim_numops_toBoolDecr(s.isLevel2___96269);
     if (!r0) { step = 21; continue; }
     r0 = 2;
     { step = 22; continue; }
@@ -71045,12 +71045,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Render_RayCastingRender_updateMotionZ__P67382.info = {"start":20431,"length":982,"line":540,"column":8,"endLine":560,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateMotionZ","argumentNames":["this","spr","dt"]}
+Render_IsometricRender_Sideview_updateMotionZ__P95139.info = {"start":20423,"length":982,"line":540,"column":8,"endLine":560,"endColumn":9,"fileName":"render_raycasting.ts","functionName":"updateMotionZ","argumentNames":["this","spr","dt"]}
 
-function Render_RayCastingRender_updateMotionZ__P67382_mk(s) {
+function Render_IsometricRender_Sideview_updateMotionZ__P95139_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Render_RayCastingRender_updateMotionZ__P67382, depth: s.depth + 1,
+        parent: s, fn: Render_IsometricRender_Sideview_updateMotionZ__P95139, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -71066,9 +71066,9 @@ function Render_RayCastingRender_updateMotionZ__P67382_mk(s) {
   tmp_11: undefined,
   tmp_12: undefined,
   tmp_13: undefined,
-  motionZ___71351: undefined,
-  floorHeight___71357: undefined,
-  isLevel2___71436: undefined,
+  motionZ___96184: undefined,
+  floorHeight___96190: undefined,
+  isLevel2___96269: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -73345,8 +73345,8 @@ const Math_FastRandom__C66048_VT = mkVTable({
     "percentChance": Math_FastRandom_percentChance__P66055,
   },
 });
-const Render_RayCastingRender__C67335_VT = mkVTable({
-  name: "RayCastingRender",
+const Render_IsometricRender_Sideview__C95112_VT = mkVTable({
+  name: "IsometricRender_Sideview",
   numFields: 49,
   classNo: 21,
   lastSubtypeNo: 21,
@@ -73452,27 +73452,27 @@ const Render_RayCastingRender__C67335_VT = mkVTable({
     "set/lastRenderAngle": null,
     "corners": null,
     "set/corners": null,
-    "viewAngle": Render_RayCastingRender_viewAngle__P67363,
-    "set/viewAngle": Render_RayCastingRender_viewAngle__P67364,
-    "getMotionZ": Render_RayCastingRender_getMotionZ__P67365,
-    "viewMode": Render_RayCastingRender_viewMode__P67373,
-    "set/viewMode": Render_RayCastingRender_viewMode__P67374,
-    "updateViewZPos": Render_RayCastingRender_updateViewZPos__P67375,
-    "takeoverSceneSprites": Render_RayCastingRender_takeoverSceneSprites__P67376,
-    "takeoverSayRenderOfSprite": Render_RayCastingRender_takeoverSayRenderOfSprite__P67377,
-    "tilemapLoaded": Render_RayCastingRender_tilemapLoaded__P67378,
-    "updateSprite": Render_RayCastingRender_updateSprite__P67381,
-    "updateMotionZ": Render_RayCastingRender_updateMotionZ__P67382,
-    "rotate": Render_RayCastingRender_rotate__P67384,
-    "shear": Render_RayCastingRender_shear__P67385,
-    "shearAndCache_AllTiles": Render_RayCastingRender_shearAndCache_AllTiles__P67386,
-    "pasteShearedTile": Render_RayCastingRender_pasteShearedTile__P67387,
-    "pasteWall": Render_RayCastingRender_pasteWall__P67388,
-    "setWallSideTexture": Render_RayCastingRender_setWallSideTexture__P67389,
-    "updateCorners": Render_RayCastingRender_updateCorners__P67390,
-    "render": Render_RayCastingRender_render__P67396,
-    "drawSprite": Render_RayCastingRender_drawSprite__P67398,
-    "drawSprite_SayText": Render_RayCastingRender_drawSprite_SayText__P67399,
+    "viewAngle": Render_IsometricRender_Sideview_viewAngle__P95121,
+    "set/viewAngle": Render_IsometricRender_Sideview_viewAngle__P95122,
+    "getMotionZ": Render_IsometricRender_Sideview_getMotionZ__P95123,
+    "viewMode": Render_IsometricRender_Sideview_viewMode__P95131,
+    "set/viewMode": Render_IsometricRender_Sideview_viewMode__P95132,
+    "updateViewZPos": Render_IsometricRender_Sideview_updateViewZPos__P95133,
+    "takeoverSceneSprites": Render_IsometricRender_Sideview_takeoverSceneSprites__P95134,
+    "takeoverSayRenderOfSprite": Render_IsometricRender_Sideview_takeoverSayRenderOfSprite__P95135,
+    "tilemapLoaded": Render_IsometricRender_Sideview_tilemapLoaded__P95136,
+    "updateSprite": Render_IsometricRender_Sideview_updateSprite__P95138,
+    "updateMotionZ": Render_IsometricRender_Sideview_updateMotionZ__P95139,
+    "rotate": Render_IsometricRender_Sideview_rotate__P95141,
+    "shear": Render_IsometricRender_Sideview_shear__P95142,
+    "shearAndCache_AllTiles": Render_IsometricRender_Sideview_shearAndCache_AllTiles__P95143,
+    "pasteShearedTile": Render_IsometricRender_Sideview_pasteShearedTile__P95144,
+    "pasteWall": Render_IsometricRender_Sideview_pasteWall__P95145,
+    "setWallSideTexture": Render_IsometricRender_Sideview_setWallSideTexture__P95146,
+    "updateCorners": Render_IsometricRender_Sideview_updateCorners__P95147,
+    "render": Render_IsometricRender_Sideview_render__P95148,
+    "drawSprite": Render_IsometricRender_Sideview_drawSprite__P95150,
+    "drawSprite_SayText": Render_IsometricRender_Sideview_drawSprite_SayText__P95151,
   },
 });
 const sprites_BaseSprite__C65083_VT = mkVTable({
@@ -74962,7 +74962,7 @@ const scene_OverlapHandler__C65803_VT = mkVTable({
     "set/handler": null,
   },
 });
-const Render_Animations__C67413_VT = mkVTable({
+const Render_Animations__C108077_VT = mkVTable({
   name: "Animations",
   numFields: 5,
   classNo: 73,
@@ -74981,7 +74981,7 @@ const Render_Animations__C67413_VT = mkVTable({
     "set/index": null,
     "iAnimation": null,
     "set/iAnimation": null,
-    "getFrameByDir": Render_Animations_getFrameByDir__P67418,
+    "getFrameByDir": Render_Animations_getFrameByDir__P108068,
   },
 });
 const controller_ControlledSprite__C65119_VT = mkVTable({
@@ -75003,7 +75003,7 @@ const controller_ControlledSprite__C65119_VT = mkVTable({
     "set/vy": null,
   },
 });
-const Render_MotionSet1D__C70419_VT = mkVTable({
+const Render_MotionSet1D__C95234_VT = mkVTable({
   name: "MotionSet1D",
   numFields: 4,
   classNo: 75,
@@ -75325,7 +75325,7 @@ const sprites_StaticObstacle__C65487_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["SH___70140","SHHalf___70144","SW___70146","SWHalf___70150","one2___70177","FPX_MAX___70183","ScreenCenterX___70189","ScreenCenterY___70194","IsConsole___70208","Max_TileImgScaleX___70214","Max_TileImgScaleY___70217","TileImgScale___70220","HalfTileImgScale___70223","TileImgScaleX___70225","TileImgScaleY___70228","Scale___70231","Scale_Square___70236","WallScale___70238","WallHeight___70242","H___70254","V___70260","AD_BC_Fpx2___70263","defaultFov___67334","raycastingRender___67400","texturesDuck___67436","texturesPlane___67437","texturesFish___67438","texturesPrincess___67442","transparency16___67461","tile5___67462","tile1___67463","spawnTile___67447","rcRender___67448","angle___67449","texturesHero___67439","sprPriness2___67453","texturesPrincess2___67440","sprSkelly___67454","texturesSkelly___67441","sprPriness___67455","sprPlane___67456","fish___67457","isAdjusting___67458","adjusted___67459","texturesCoin___67434","A_Fpx___70268","B_Fpx___70270","D_Fpx___70272","C_Fpx___70274"])
+const breakpoints = setupDebugger(1, ["SH___94905","SHHalf___94909","SW___94911","SWHalf___94915","one2___94944","FPX_MAX___94950","ScreenCenterX___94956","ScreenCenterY___94961","IsConsole___94975","Max_TileImgScaleX___94981","Max_TileImgScaleY___94984","TileImgScale___94987","HalfTileImgScale___94990","TileImgScaleX___94992","TileImgScaleY___94995","Scale___94998","Scale_Square___95003","WallScale___95005","WallHeight___95009","H___95021","V___95027","AD_BC_Fpx2___95030","defaultFov___95247","myRender___95152","texturesDuck___67436","texturesPlane___67437","texturesFish___67438","texturesPrincess___67442","transparency16___67461","tile5___67462","tile1___67463","spawnTile___110987","myRender___110990","angle___110992","texturesHero___67439","sprPriness2___111084","texturesPrincess2___67440","sprSkelly___111089","texturesSkelly___67441","sprPriness___111094","sprPlane___111099","fish___111104","isAdjusting___111206","adjusted___111208","texturesCoin___67434","A_Fpx___95035","B_Fpx___95037","D_Fpx___95039","C_Fpx___95041"])
 
-return _main___P93353
+return _main___P111861
 })
